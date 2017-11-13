@@ -1,0 +1,5 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/Azure-C-Shared-Utility:bincrafters'}
+urls:
+  github: Azure/azure-c-shared-utility
+  docs: https://docs.microsoft.com/en-us/azure/iot-hub/

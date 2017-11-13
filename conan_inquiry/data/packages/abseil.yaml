@@ -1,0 +1,11 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/Abseil:bincrafters'}
+urls:
+  github: abseil/abseil-cpp
+  docs: https://abseil.io/docs/cpp.html
+authors:
+  - name: The Abseil Project
+    github: abseil
+    website: http://www.abseil.io/
+  - name: Google
+    email: abseil-admin@google.com

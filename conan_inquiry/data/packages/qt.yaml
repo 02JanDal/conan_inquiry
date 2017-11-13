@@ -1,0 +1,9 @@
+recipies:
+  - repo:
+      bintray: osechet/Conan/Qt:osechet
+urls:
+  website: https://qt.io/
+  docs: https://doc.qt.io/
+  issues: https://bugreports.qt.io/
+  code: https://code.qt.io/
+name: Qt

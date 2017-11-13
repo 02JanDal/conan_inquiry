@@ -1,0 +1,6 @@
+recipies:
+  - repo:
+      bintray: osechet/Conan/Protobuf:memsharded
+urls:
+  github: google/protobuf
+name: Protobuf

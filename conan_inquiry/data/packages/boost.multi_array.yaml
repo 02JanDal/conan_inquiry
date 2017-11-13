@@ -1,0 +1,2 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/Boost.Multi_Array:bincrafters'}

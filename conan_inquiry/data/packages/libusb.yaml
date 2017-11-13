@@ -1,0 +1,5 @@
+recipies:
+  - repo:
+      bintray: uilianries/conan/libusb:uilianries
+urls:
+  github: libusb/libusb

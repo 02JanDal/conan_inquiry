@@ -1,0 +1,20 @@
+recipies:
+  - repo:
+      bintray: conan-community/conan/zlib:conan
+  - repo:
+      bintray: osechet/Conan/zlib:conan
+  - repo:
+      bintray: osechet/Conan/zlib:lasote
+  - repo:
+      bintray: lasote/conan-repo/zlib:conan
+  - repo:
+      bintray: uilianries/conan/zlib:conan
+urls:
+  docs: http://zlib.net/manual.html
+  github: madler/zlib
+authors:
+  - name: Jean-loup Gailly
+    email: zlib@gzip.org
+  - name: Mark Adler
+    email: zlib@gzip.org
+    github: madler

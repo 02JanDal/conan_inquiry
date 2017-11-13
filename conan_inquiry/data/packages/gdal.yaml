@@ -1,0 +1,10 @@
+recipies:
+  - repo:
+      bintray: osechet/Conan/Gdal:osechet
+urls:
+  website: http://www.gdal.org/
+  docs: http://www.gdal.org/
+  wiki: https://trac.osgeo.org/gdal/
+  issues: https://trac.osgeo.org/gdal/
+  github: OSGeo/gdal
+name: GDAL

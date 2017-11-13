@@ -1,0 +1,13 @@
+Requests
+cachecontrol
+PyYAML
+dotmap
+PyGitHub
+python-gitlab
+travispy
+nltk
+graphqlclient
+docutils
+jsonschema
+beautifulsoup4
+tqdm

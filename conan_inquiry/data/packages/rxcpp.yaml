@@ -1,0 +1,34 @@
+recipies:
+  - repo:
+      bintray: vthiery/conan-packages/rxcpp:vthiery
+  - repo:
+      bintray: vthiery/conan-packages/conan-rxcpp
+    user: vthiery
+name: RxCpp
+urls:
+  github: Reactive-Extensions/RxCpp
+  website: http://reactivex.io/
+  docs: http://reactivex.io/intro.html
+code_example: |
+  auto keys = rx::observable<>::create<int>(
+      [](rx::subscriber<int> dest){
+          for (;;) {
+              int key = std::cin.get();
+              dest.on_next(key);
+          }
+      }).
+      publish();
+
+  auto a = keys.
+      filter([](int key){return std::tolower(key) == 'a';});
+
+  auto g = keys.
+      filter([](int key){return std::tolower(key) == 'g';});
+
+  a.merge(g).
+      subscribe([](int key){
+          std::cout << key << std::endl;
+      });
+
+  // run the loop in create
+  keys.connect();

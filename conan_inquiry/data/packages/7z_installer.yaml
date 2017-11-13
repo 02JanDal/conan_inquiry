@@ -1,0 +1,8 @@
+recipies:
+  - repo:
+      bintray: conan-community/conan/7z_installer:conan
+authors:
+  - name: Igor Pavlov
+name: 7zip
+urls:
+  issues: https://sourceforge.net/p/sevenzip/bugs/

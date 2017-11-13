@@ -1,0 +1,9 @@
+recipies:
+  - repo:
+      bintray: dimi309/conan-packages/ogg:dimi309
+urls:
+  website: https://www.xiph.org/ogg/
+  docs: https://www.xiph.org/ogg/doc/libogg/index.html
+  code: https://git.xiph.org/?p=ogg.git;a=summary
+  git: https://git.xiph.org/ogg.git
+name: libogg

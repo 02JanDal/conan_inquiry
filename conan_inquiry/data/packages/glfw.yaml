@@ -1,0 +1,10 @@
+recipies:
+  - repo:
+      bintray: dimi309/conan-packages/glfw:dimi309
+urls:
+  website: http://www.glfw.org/
+  github: glfw/glfw
+name: GLFW
+description: |
+  GLFW is an Open Source, multi-platform library for OpenGL, OpenGL ES and Vulkan application development. It provides a simple, platform-independent API for creating windows, contexts and surfaces, reading input, handling events, etc.
+  GLFW natively supports Windows, macOS and Linux and other Unix-like systems. Experimental implementations for the Wayland protocol and the Mir display server are available but not yet officially supported.

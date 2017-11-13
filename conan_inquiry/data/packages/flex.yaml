@@ -1,0 +1,5 @@
+recipies:
+  - repo:
+      bintray: uilianries/conan/flex:uilianries
+urls:
+  github: westes/flex

@@ -1,0 +1,5 @@
+recipies:
+  - repo:
+      bintray: jacmoe/Conan/Nana:jacmoe
+urls:
+  github: cnjinhao/nana

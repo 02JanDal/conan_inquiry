@@ -1,0 +1,4 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/Boost.Build:bincrafters'}
+urls:
+  docs: http://www.boost.org/build/doc/html/index.html

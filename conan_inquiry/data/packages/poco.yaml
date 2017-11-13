@@ -1,0 +1,8 @@
+recipies:
+  - repo:
+      bintray: pocoproject/conan/Poco:pocoproject
+  - repo:
+      bintray: uilianries/conan/Poco:pocoproject
+urls:
+  docs: https://pocoproject.org/documentation/index.html
+  github: pocoproject/poco

@@ -1,0 +1,5 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/Azure-uMQTT-C:bincrafters'}
+urls:
+  github: Azure/azure-umqtt-c
+  docs: https://docs.microsoft.com/en-us/azure/iot-hub/

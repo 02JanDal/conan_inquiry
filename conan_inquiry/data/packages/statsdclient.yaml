@@ -1,0 +1,27 @@
+recipies:
+  - repo:
+      bintray: vthiery/conan-packages/statsdclient:vthiery
+name: StatsD Client
+urls:
+  github: vthiery/cpp-statsd-client
+code_example: |
+  // Define the client
+  StatsdClient client{ "127.0.0.1", 5005, "myPrefix_", true };
+
+  // Increment "coco"
+  client.increment("coco");
+
+  // Decrement "kiki"
+  client.decrement("kiki");
+
+  // Adjusts "toto" by +3
+  client.count("toto", 2, 0.1f);
+
+  // Record a gauge "titi" to 3
+  client.gauge("titi", 3);
+
+  // Record a timing of 2ms for "myTiming"
+  client.timing("myTiming", 2, 0.1f);
+
+  // Send a metric explicitly
+  client.send("tutu", 4, "c", 2.0f);

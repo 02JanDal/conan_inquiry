@@ -1,0 +1,10 @@
+recipies:
+  - repo:
+      bintray: conan-community/conan/OpenSSL:conan
+  - repo:
+      bintray: lasote/conan-repo/OpenSSL:conan
+  - repo:
+      bintray: uilianries/conan/OpenSSL:conan
+urls:
+  docs: https://www.openssl.org/docs/
+  github: openssl/openssl

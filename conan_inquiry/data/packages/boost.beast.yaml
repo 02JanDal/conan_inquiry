@@ -1,0 +1,5 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/Boost.Beast:bincrafters'}
+urls:
+  docs: http://www.boost.org/doc/libs/master/libs/beast/doc/html/index.html
+  github: boostorg/beast

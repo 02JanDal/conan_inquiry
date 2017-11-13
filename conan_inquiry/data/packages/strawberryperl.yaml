@@ -1,0 +1,9 @@
+recipies:
+  - repo:
+      bintray: conan-community/conan/strawberryperl:conan
+  - repo:
+      bintray: lasote/conan-repo/strawberryperl:conan
+urls:
+  docs: http://strawberryperl.com/support.html
+  issues: https://rt.cpan.org/Public/Dist/Display.html?Name=Perl-Dist-Strawberry
+  github: StrawberryPerl/Perl-Dist-Strawberry
