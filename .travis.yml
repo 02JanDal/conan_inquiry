@@ -1,0 +1,28 @@
+language: python
+cache:
+  pip: true
+  directories:
+    - $HOME/nltk_data
+    - $HOME/cache
+python:
+  - 3.5
+install:
+  - pip install -r requirements.txt
+before_script:
+  - pip install flake8
+  - flake8 conan_inquiry
+script:
+  - rm -r $HOME/cache || true && mkdir $HOME/cache
+  - CACHE_FILE=$HOME/cache/.cache PYTHONPATH=. python conan_inquiry/runner.py generate
+  - PYTHONPATH=. python conan_inquiry/runner.py validate
+  - mkdir build && cp packages.json conan_inquiry/data/web/* build && ls build
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: build
+  github_token:
+    secure: DqC6V4ol1OYIwZiUKpgaYI+UXzCFLsasF64vdyYG7mEs1uwRSOXcP+iKENaNFoiChoJxeR8CZCFGbcPOKEhWHX9xI2ZIoAS1R56EcuwmhogMsyyptI7Ww/ZVedxgAZHvGcoqzcQ/7bPqV3zOQbRz50vAknqDWOan+2GFYWT1niOi987FS/64XZtD8LI4qA8MzpjK9dR++qQFCZiiDoO0Pq+npb89oKVP0+SDEP4iEzjoPa0xsjhRJYdbUyngcz10m0orupwLKZt40ywJ23ABOEuRiNoiOGcZoinnXELdc0/DF719WFwNv/bHn+Sti2fj3KFbwk+pMC8CG3FmPvVGOqg7Sakovcgubp9zuM3YrU4N+5R21Ctxd/8Jp7qIibs3jEZp4QN6fnAXjum+dg3YggIqLCauuciLvb8xgnJzh+MF2kTAAgrPQSfdlmQ0nA74ZYN9niYPxa91QPkpazbszLR8dUM4B4X1hvOlTELKLASsbeEgKR70HsGU5DSBiwULqZDc/18juhhkzN+OkHUdwhQwsrOrByHYHYQ4ThnAM07xntzNu6kw0uKATGSW7s+oqV4sVESB+C4wenfuU+cYNhG30imZWCSZPyKuIxNPzKrzowJoJgeZFKFADyGwcDfIN6qnc1Rt3OzxloTm9yi0uWYMabjW0a3MFCqml6fVIH4=
+  on:
+    branch: master
+notifications:
+  email: false
