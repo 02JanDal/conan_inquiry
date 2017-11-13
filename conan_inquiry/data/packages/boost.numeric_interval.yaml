@@ -1,0 +1,5 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/Boost.Numeric_Interval:bincrafters'}
+urls:
+  boost: numeric/interval
+  github: boostorg/interval

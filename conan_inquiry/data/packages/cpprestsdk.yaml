@@ -1,0 +1,5 @@
+recipies:
+  - repo:
+      bintray: uilianries/conan/cpprestsdk:uilianries
+urls:
+  github: Microsoft/cpprestsdk

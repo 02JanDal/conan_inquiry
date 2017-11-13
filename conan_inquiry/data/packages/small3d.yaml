@@ -1,0 +1,7 @@
+recipies:
+  - repo:
+      bintray: dimi309/conan-packages/small3d:dimi309
+urls:
+  docs: https://dimi309.github.io/small3d/
+  github: dimi309/small3d
+name: small3d

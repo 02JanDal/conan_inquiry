@@ -1,0 +1,5 @@
+recipies:
+  - repo:
+      bintray: jacmoe/Conan/Assimp:jacmoe
+urls:
+  github: assimp/assimp

@@ -1,0 +1,7 @@
+recipies:
+  - repo:
+      bintray: uilianries/conan/winpcap:uilianries
+urls:
+  website: https://www.winpcap.org/
+  docs: https://www.winpcap.org/docs/default.htm
+  github: wireshark/winpcap

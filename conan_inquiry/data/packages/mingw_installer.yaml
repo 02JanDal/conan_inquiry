@@ -1,0 +1,12 @@
+recipies:
+  - repo:
+      bintray: conan-community/conan/mingw_installer:conan
+urls:
+  website: https://cmake.org/
+  docs: http://www.mingw.org/wiki
+  issues: http://www.mingw.org/Reporting_Bugs
+  wiki: http://www.mingw.org/wiki
+  code: https://sourceforge.net/p/mingw/mingw-org-wsl/ci/master/tree/
+authors:
+  - name: MinGW Project
+name: MinGW

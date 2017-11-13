@@ -1,0 +1,5 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/Asio:bincrafters'}
+urls:
+  github: chriskohlhoff/asio
+  docs: https://think-async.com/Asio/Documentation

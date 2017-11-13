@@ -1,0 +1,5 @@
+recipies:
+  - repo:
+      bintray: uilianries/conan/libpcap:uilianries
+urls:
+  github: the-tcpdump-group/libpcap

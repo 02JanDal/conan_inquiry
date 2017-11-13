@@ -1,0 +1,4 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/Boost.Generator:bincrafters'}
+urls: {}
+exclude: true

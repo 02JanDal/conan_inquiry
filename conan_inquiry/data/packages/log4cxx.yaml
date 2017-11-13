@@ -1,0 +1,20 @@
+recipies:
+  - repo:
+      bintray: vthiery/conan-packages/log4cxx:vthiery
+urls:
+  code: https://git-wip-us.apache.org/repos/asf?p=logging-log4cxx.git
+  git: http://git-wip-us.apache.org/repos/asf/logging-log4cxx.git
+  issues: https://issues.apache.org/jira/browse/LOGCXX
+  wiki: https://wiki.apache.org/logging-log4cxx
+  docs: https://logging.apache.org/log4cxx/latest_stable/usage.html
+  github: apache/logging-log4cxx
+code_example: |
+  log4cxx::LoggerPtr logger(log4cxx::Logger::getLogger("com.foo"));
+  const char* region = "World";
+  LOG4CXX_INFO(logger, "Simple message text.")
+  LOG4CXX_INFO(logger, "Hello, " << region)
+  LOG4CXX_DEBUG(logger, L"Iteration " << i)
+  LOG4CXX_DEBUG(logger, "e^10 = " << std::scientific << exp(10.0))
+authors:
+  - name: The Apache Software Foundation
+    website: https://www.apache.org/

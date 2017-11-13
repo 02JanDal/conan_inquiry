@@ -1,0 +1,5 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/Azure-uHTTP-C:bincrafters'}
+urls:
+  github: Azure/azure-uhttp-c
+  docs: https://docs.microsoft.com/en-us/azure/iot-hub/

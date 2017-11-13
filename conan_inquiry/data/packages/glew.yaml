@@ -1,0 +1,7 @@
+recipies:
+  - repo:
+      bintray: dimi309/conan-packages/glew:dimi309
+urls:
+  website: http://glew.sourceforge.net/
+  github: nigels-com/glew
+name: GLEW

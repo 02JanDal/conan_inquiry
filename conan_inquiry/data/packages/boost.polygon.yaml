@@ -1,0 +1,3 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/Boost.Polygon:bincrafters'}
+urls: {}

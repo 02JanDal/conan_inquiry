@@ -1,0 +1,4 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/Boost.Numeric_Conversion:bincrafters'}
+urls:
+  boost: numeric/conversion

@@ -1,0 +1,5 @@
+recipies:
+  - repo:
+      bintray: uilianries/conan/Catch:uilianries
+urls:
+  github: catchorg/Catch2

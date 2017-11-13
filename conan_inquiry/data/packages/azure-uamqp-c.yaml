@@ -1,0 +1,5 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/Azure-uAMQP-C:bincrafters'}
+urls:
+  github: Azure/azure-uamqp-c
+  docs: https://docs.microsoft.com/en-us/azure/iot-hub/

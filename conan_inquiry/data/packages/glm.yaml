@@ -1,0 +1,7 @@
+recipies:
+  - repo:
+      bintray: dimi309/conan-packages/glm:g-truc
+urls:
+  website: https://glm.g-truc.net
+  github: g-truc/glm
+name: OpenGL Mathematics

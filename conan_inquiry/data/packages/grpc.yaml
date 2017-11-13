@@ -1,0 +1,11 @@
+recipies:
+  - repo:
+      bintray: osechet/Conan/gRPC:osechet
+  - repo:
+      bintray: osechet/Conan/conan-grpc
+    user: osechet
+urls:
+  website: https://grpc.io/
+  docs: https://grpc.io/docs/
+  github: grpc/grpc
+name: gRPC

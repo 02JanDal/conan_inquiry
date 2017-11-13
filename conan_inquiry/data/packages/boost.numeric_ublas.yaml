@@ -1,0 +1,5 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/Boost.Numeric_Ublas:bincrafters'}
+urls:
+  boost: numeric/ublas
+  github: boostorg/ublas

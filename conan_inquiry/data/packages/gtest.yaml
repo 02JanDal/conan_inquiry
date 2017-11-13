@@ -1,0 +1,26 @@
+name: Google Test
+recipies:
+  - repo:
+      bintray: conan-community/conan/gtest:conan
+    urls:
+      github: lasote/conan-gtest
+  - repo:
+      bintray: lasote/conan-repo/gtest:conan
+urls:
+  docs: https://github.com/google/googletest/blob/master/googletest/docs/Primer.md
+description: |
+  Google C++ Testing Framework helps you write better C++ tests.
+  No matter whether you work on Linux, Windows, or a Mac, if you write C++ code, Google Test can help you.
+example_code: |
+  // Tests factorial of 0.
+  TEST(FactorialTest, HandlesZeroInput) {
+    EXPECT_EQ(1, Factorial(0));
+  }
+
+  // Tests factorial of positive numbers.
+  TEST(FactorialTest, HandlesPositiveInput) {
+    EXPECT_EQ(1, Factorial(1));
+    EXPECT_EQ(2, Factorial(2));
+    EXPECT_EQ(6, Factorial(3));
+    EXPECT_EQ(40320, Factorial(8));
+  }

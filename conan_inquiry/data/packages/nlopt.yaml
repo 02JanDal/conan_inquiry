@@ -1,0 +1,8 @@
+recipies:
+  - repo:
+      bintray: vthiery/conan-packages/nlopt:vthiery
+name: NLopt
+urls:
+  github: stevengj/nlopt
+  website: https://nlopt.readthedocs.io/en/latest/
+  docs: https://nlopt.readthedocs.io/en/latest/NLopt_Introduction/
