@@ -2,16 +2,23 @@
 
 An alternative to the [official package search](conan.io/search) for conan packages. You can find it [here](https://02jandal.github.io/conan_inquiry).
 
-This repository consist of three things:
+## Features
 
-* Static data files ([conan_inquiry/data/packages](https://github.com/02JanDal/conan_inquiry/tree/master/conan_inquiry/data/packages))
-* Scripts to find new packages, generate the full JSON file from the static data files and validate the result ([conan_inquiry](https://github.com/02JanDal/conan_inquiry/tree/master/conan_inquiry))
-* A web interface using the generated JSON ([conan_inquiry/data/web](https://github.com/02JanDal/conan_inquiry/tree/master/conan_inquiry/data/web))
+* Search results updated-as-you-type
+* Packages from repositories outside conan-central
+* Quick information about what is packaged (description, licenses, authors, links, code example, etc.)
+* View README, the `conanfile.py` and more
 
 ## Getting started
 
 If you just want to report an error in an existing package or notify us about a missing package you can skip the steps
 below and head straight to [reporting an issues](/issues/new).
+
+This repository consist of three things:
+
+* Static data files ([conan_inquiry/data/packages](https://github.com/02JanDal/conan_inquiry/tree/master/conan_inquiry/data/packages))
+* Scripts to find new packages, generate the full JSON file from the static data files and validate the result ([conan_inquiry](https://github.com/02JanDal/conan_inquiry/tree/master/conan_inquiry))
+* A web interface using the generated JSON ([conan_inquiry/data/web](https://github.com/02JanDal/conan_inquiry/tree/master/conan_inquiry/data/web))
 
 ### Prerequisites
 
