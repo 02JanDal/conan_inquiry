@@ -1,5 +1,9 @@
 $(function() {
     $('#numPackages').html(packages_data.length);
+    var repos = _.uniq(_.flatten(_.map(packages_data, function(pkg) {
+        return _.map(pkg.recipies, function(r) { return r.repo.bintray.split('/').splice(0, 2).join('/'); })
+    })));
+    $('#numRemotes').html(repos.length);
 
     var App = {
         templates: {
