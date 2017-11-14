@@ -1,0 +1,45 @@
+html, body {
+    height: 100%;
+}
+.navbar {
+    min-height: 56px;
+}
+
+.container > section {
+    margin-top: 10px;
+    display: none;
+}
+.highlighted_search_term {
+    background-color: lightgrey;
+}
+.card, .card-deck, .card-group {
+    margin-bottom: 10px;
+}
+.card > .table th {
+    padding-left: 10pt;
+}
+.card > .table td {
+    padding-right: 10pt;
+}
+.authors a {
+    margin-left: 0 !important;
+}
+
+#results > a.hidden {
+    display: none;
+}
+
+.ribbon {
+    z-index: 2000;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0;
+}
+
+footer {
+    margin-top: 10px;
+}
+footer > div {
+    width: 100%;
+}

@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Conan Inquiry</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Search and browse amongst dozens of conan.io packages, get more information and installation instructions to top it off"/>
+    <link rel="canonical" href="https://02jandal.github.com/conan_inquiry"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css" integrity="sha256-jBpMJWNNWEGSSqsYSKzJ3Lw9VnIYMFPItx/yE5tl18M=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" integrity="sha256-3YM6A3pH4QFCl9WbSU8oXF5N6W/2ylvW0o2g+Z6TmLQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha256-NuCn4IvuZXdBaFKJOAcsU2Q3ZpwbdFisd5dux4jkQ5w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="d-flex flex-column">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Conan Inquiry</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="librariesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-cubes"></i> Libraries
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="librariesDropdown" data-menu-prefix="topic.library.">
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="toolsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-cubes"></i> Tools
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="toolsDropdown" data-menu-prefix="topic.tool.">
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="standardsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-language"></i> By Standard
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="standardsDropdown" data-menu-prefix="standard.">
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="remoteDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-server"></i> By Remote
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="remoteDropdown" data-menu-remote>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!stats">
+                        <i class="fa fa-pie-chart"></i> Statistics
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <a href="https://github.com/02JanDal/conan_inquiry" class="ribbon d-none d-md-block">
+        <img src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub">
+    </a>
+
+    <div class="container">
+        <section data-state="search" id="searchView">
+            <section id="information">
+                <h1>Welcome to Conan Inquiry!</h1>
+                <p>
+                    This page allows you to search amongst <span class="badge badge-light" id="numPackages"></span> packages
+                    across <span class="badge badge-light" id="numRemotes"></span> conan remotes. You get information about
+                    the packaged libraries popularity and quick instructions for adding it to your project.
+                </p>
+                <p>
+                    The data for this site is generated based on static data available on
+                    <a href="https://github.com/02JanDal/conan_inquiry">GitHub</a>. The scripts used for generation are also
+                    available there. If you want to add a package, report (or even fix!) an error or extend this webpage
+                    then that repo is the place to be!
+                </p>
+                <p>
+                    Start searching using the bar below:
+                </p>
+            </section>
+
+            <input class="form-control mb-3" type="search" id="searchInput" placeholder="Search"/>
+
+            <p>
+                <i class="fa fa-star text-muted"></i> Signifies libraries available in conan-center or from the author<br/>
+                <i class="fa fa-star-o text-muted"></i> Signifies libraries available from a major 3rd-party like Bincrafters
+            </p>
+
+            <section class="list-group" id="results">
+                <a class="list-group-item disabled package_result rounded">
+                    No packages found!
+                </a>
+            </section>
+        </section>
+
+        <section data-state="package" id="packageView"></section>
+
+        <section data-state="category" id="categoryView"></section>
+
+        <section data-state="remote" id="remoteView"></section>
+
+        <section data-state="statistics" id="statisticsView">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Topics</h1>
+                    <div class="embed-responsive embed-responsive-1by1">
+                        <div class="embed-responsive-item" id="chartA"></div>
+                    </div>
+                    <div id="chartAButton" class="text-center mt-2">
+                        Go to <span></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h1>Standards</h1>
+                    <div class="embed-responsive embed-responsive-1by1">
+                        <div class="embed-responsive-item" id="chartB"></div>
+                    </div>
+                    <div id="chartBButton" class="text-center mt-2">
+                        Go to <span></span>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+
+            <h1>Packages per remote</h1>
+            <div class="embed-responsive embed-responsive-21by9">
+                <div class="embed-responsive-item" id="chartC"></div>
+            </div>
+            <hr/>
+
+            <h1>Versions per remote</h1>
+            <div class="embed-responsive embed-responsive-21by9">
+                <div class="embed-responsive-item" id="chartD"></div>
+            </div>
+            <hr/>
+
+            <h1>Findings</h1>
+            <small class="text-muted">All of these are automatically generated, so take them with a grain of salt</small>
+            <div id="findings"></div>
+        </section>
+    </div>
+
+    <footer class="navbar navbar-light bg-light mt-auto">
+        <div class="navbar-text text-center">Copyright &copy; 2017 <a href="https://github.com/02JanDal">@02JanDal</a></div>
+    </footer>
+
+    <script type="text/html-template" id="packageItemTemplate"><a href="<%= App.router.generate('package', {id: id}) %>" class="list-group-item list-group-item-action flex-column align-items-start package_result" id="package_<%= id %>">
+<div class="d-flex w-100 justify-content-between">
+    <h5 class="mb-1">
+        <% if (officiallity === 'conan-center' || officiallity == 'author') { %>
+            <i class="fa fa-star text-muted"></i>
+        <% } else if (officiallity === 'major-3rdparty') { %>
+            <i class="fa fa-star-o text-muted"></i>
+        <% } %>
+        <span class="attribute_name"><%= name %></span>
+        <% if (author) { %>
+            <small>by <span class="attribute_author"><%= author %></span></small>
+        <% } %>
+    </h5>
+    <small><%= _.map(licenses, _.property('name')).join(', ') %></small>
+</div>
+<p class="mb-1"><span class="attribute_short_description"><%= short_description %></span></p>
+<div class="d-flex w-100 justify-content-between align-items-end">
+    <% if (!noTags) { %>
+        <div class="d-flex w-100 flex-wrap">
+            <% _.each(keywords, function(keyword) { %>
+                <span class="badge badge-secondary mr-1 mb-1" style="background-color: <%= randomColor({luminosity: 'bright', hue: 'blue'}) %>"><%= keyword %></span>
+            <% }); %>
+        </div>
+    <% } else { %><div></div><% } %>
+    <small><%= App.category.readableStandards(categories) %></small>
+</div>
+</a></script>
+    <script type="text/html-template" id="packageTemplate"><h3><%= name %></h3>
+<p><%= description %></p>
+<% if (typeof(example_code) !== 'undefined') { %>
+    <pre><code class="lang-cpp"><%= example_code %></code></pre>
+<% } %>
+<p class="keywords">
+    <% _.each(keywords, function(keyword) { %>
+        <span class="badge badge-secondary"><%= keyword %></span>
+    <% }); %>
+</p>
+<div class="card-deck">
+    <% if (_.has(urls, 'github')) { %>
+        <div class="card">
+            <div class="card-header">
+                <i class="fa fa-github" aria-hidden="true"></i> GitHub
+            </div>
+            <table class="table table-sm">
+                <tr><th>Watchers</th><td><%= stats.github_watchers %></td></tr>
+                <tr><th>Stars</th><td><%= stats.github_stars %></td></tr>
+                <tr><th>Forks</th><td><%= stats.github_forks %></td></tr>
+                <tr><th>Issues</th><td><%= stats.github_issues %></td></tr>
+                <tr><th>PRs</th><td><%= stats.github_prs %></td></tr>
+                <tr><th>Commits</th><td><%= stats.github_commits %></td></tr>
+                <tr><th>Last Commit</th><td><span class="timeago" datetime="<%= stats.github_latest_commit %>"></span></td></tr>
+            </table>
+            <div class="card-footer text-center">
+                <a href="https://github.com/<%= urls.github %>">Visit this project on GitHub</a>
+            </div>
+        </div>
+    <% } %>
+    <div class="card">
+        <div class="card-header">
+            <i class="fa fa-link" aria-hidden="true"></i> Links
+        </div>
+        <div class="list-group list-group-flush">
+            <% var link_data = [['docs', 'Documentation'], ['website', 'Website'], ['issues', 'Issues'], ['git', 'Git'], ['wiki', 'Wiki'], ['code', 'Code Browser']]; %>
+            <% link_data = _.filter(link_data, function(link) { return _.has(urls, link[0]); }); %>
+            <% _.each(link_data, function(link) { %>
+                <a href="<%= urls[link[0]] %>" class="list-group-item list-group-item-action"><%= link[1] %></a>
+            <% }); %>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <i class="fa fa-info" aria-hidden="true"></i> Information
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Author<% if (authors.length > 1) { %>s<% } %></h5>
+            <p class="authors">
+                <% _.each(authors, function(author, index) { %>
+                    <% var url = 'javascript:'; %>
+                    <% if (author.github) { url = 'https://github.com/' + author.github; }
+                       else if (author.website) { url = author.website; }
+                       else if (author.email) { url = 'mailto:' + author.email; } %>
+                    <a href="<%= url %>" class="card-link"><%= author.name %></a><% if (index < authors.length-1) { %>, <% } %>
+                <% }); %>
+            </p>
+            <h5 class="card-title">License<% if (licenses.length > 1) { %>s<% } %></h5>
+            <p class="licenses">
+                <% _.each(licenses, function(license) { %>
+                    <a href="<%= license.url %>" class="card-link">
+                        <% if (license.longname ) { %><abbr title="<%= license.longname %>"><% } %><%= license.name %><% if (license.longname ) { %></abbr><% } %>
+                    </a>
+                <% }); %>
+            </p>
+            <h5 class="card-title">Categories</h5>
+            <ul class="categories">
+                <% _.each(App.category.filter(categories), function(category) { %>
+                    <li>
+                        <%= App.category.readable(category) %>
+                    </li>
+                <% }) %>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="card-header">
+        <span class="fa fa-download"></span> Installation
+    </div>
+    <div class="card-body">
+        <h5>1. Add Remote:</h5>
+        <code>conan remote add &lt;REMOTE&gt; <span data-field="remote"></span></code>
+        <h5>2. Install:</h5>
+        <code>conan install <span data-field="package"></span>/<span data-field="name"></span>@<span data-field="user"></span>/<span data-field="channel"></span> -r &ltREMOTE&gt;</code>
+        <select class="form-control mt-3 version-selector" data-package="<%= name %>">
+            <% _.each(versions, function(version, index) { %>
+                <option value="<%= index %>" <% if (index === 0) { %>selected<% } %>>
+                    <%= version.name %> (<%= version.user %>/<%= version.channel %> in <%= version.remote.replace('https://api.bintray.com/conan/', '') %>)
+                </option>
+            <% }) %>
+        </select>
+    </div>
+</div>
+<% /* array of arrays containing: files key, name, icon, language */ %>
+<% var file_data = [['readme', 'README', 'info-circle', ''], ['conanfile', 'conanfile.py', 'code', 'python']]; %>
+<% file_data = _.filter(file_data, function(list) { return _.has(files, list[0]); }); %>
+<% if (file_data.length > 0) { %>
+    <div class="card">
+        <div class="card-header">
+            <nav class="nav nav-tabs card-header-tabs" role="tablist">
+                <% var is_first = true; %>
+                <% _.each(file_data, function(file) { %>
+                    <a class="nav-item nav-link <% if (is_first) { %>active<% } %>" data-toggle="tab" href="#tab_file_<%= file[0] %>">
+                        <i class="fa fa-<%= file[2] %>" aria-hidden="true"></i> <%= file[1] %>
+                    </a>
+                    <% is_first = false; %>
+                <% }); %>
+            </nav>
+        </div>
+        <div class="tab-content">
+            <% var is_first = true; %>
+            <% _.each(file_data, function(file) { %>
+                <% var is_readme = file[0] === 'readme'; %>
+                <div class="tab-pane fade <% if (is_first) { %>show active<% } %>" id="tab_file_<%= file[0] %>" role="tabpanel">
+                    <div class="card-body">
+                            <% if (!is_readme) { %><pre id="file_<%= file[0] %>" class="lang-<%= file[3] %>"><code><% } %><%= files[file[0]].content %><% if (!is_readme) { %></code></pre><% } %>
+                    </div>
+                    <div class="card-footer">
+                            <a class="text-muted" href="<%= files[file[0]].url %>">Original file</a>
+                    </div>
+                </div>
+                <% is_first = false; %>
+            <% }) %>
+        </div>
+    </div>
+<% } %></script>
+    <script type="text/html-template" id="categoryTemplate"><h1 class="border-bottom"><%= App.category.readable(category) %></h1>
+
+<nav class="nav justify-content-around border-bottom pb-1 mb-3">
+    <% _.each(subcats, function(subcat) { %>
+    <a class="nav-link" href="<%= App.router.generate('category', {name: subcat}) %>">
+        <%= App.category.readable(subcat, true, true) %>
+    </a>
+    <% }) %>
+</nav>
+
+<div class="list-group mb-2">
+    <% _.each(App.category.forCategory(category, false), function(package) { %>
+    <%= App.templates.pkgResult(_.extend({noTags: true}, package)) %>
+    <% }) %>
+</div>
+
+<% _.each(subcats, function(subcat) { %>
+    <h2 class="border-bottom mt-2"><a id="<%= category %>"><%= App.category.readable(subcat, true) %></a></h2>
+    <div class="list-group mb-2">
+        <% _.each(App.category.forCategory(subcat, true), function(package) { %>
+            <%= App.templates.pkgResult(_.extend({noTags: true}, package)) %>
+        <% }) %>
+    </div>
+<% }) %></script>
+    <script type="text/html-template" id="remoteTemplate"><h1 class="border-bottom">Remote: <%= remote %></h1>
+
+<div class="list-group mb-2">
+    <% _.each(App.remote.forRemote(remote), function(package) { %>
+        <%= App.templates.pkgResult(_.extend({noTags: true}, package)) %>
+    <% }) %>
+</div>
+</script>
+    <script type="text/html-template" id="menuItemTemplate"><a class="dropdown-item d-flex justify-content-between align-items-center" href="<%= href %>">
+    <%= name %> <span class="badge badge-light ml-2"><%= count %></span>
+</a></script>
+    <script type="text/html-template" id="findingManyRemotes"><h3>Packages available in many remotes but not in conan-center</h3>
+<ol>
+    <% _.each(packages, function(pkg) { %>
+        <li>
+            <a href="<%= App.router.generate('package', {'id': pkg.id}) %>"><%= pkg.name %></a>
+            has <%= pkg.recipies.length %> remotes
+        </li>
+    <% }) %>
+</ol></script>
+
+    <script defer src="https://cdn.rawgit.com/krasimir/navigo/4f731552/lib/navigo.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js" integrity="sha256-CB/G+xw3ep7+dlklAxcIvF20YMfFtF+7xbtauQSMi78=" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.js" integrity="sha256-1ZZ6Lg3Hw6WTFbtJZyum54xC4i/nqHLSd+qrfA85nQU=" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha256-5+02zu5UULQkO7w1GIr6vftCgMfFdZcAHeDtFnKZsBs=" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js" integrity="sha256-obZACiHd7gkOk9iIL/pimWMTJ4W/pBsKu+oZnSeBIek=" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/3.0.2/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.2/randomColor.min.js" integrity="sha256-wMQrtOX6Wcd+W3fOZ8JG6NGYqoZfAKZ6yH+DHd+yGwg=" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js" integrity="sha256-CfcERD4Ov4+lKbWbYqXD6aFM9M51gN4GUEtDhkWABMo=" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/chartkick/2.3.0/chartkick.min.js" integrity="sha256-pKi+C/L3JqiD10GzkevwyZ+pUZuKi5BxbPZiCg/Val4=" crossorigin="anonymous"></script>
+    <script defer src="https://unpkg.com/sunburst-chart@1.0.5/dist/sunburst-chart.min.js"></script>
+    <script defer src="packages.js?cache_buster=a185e11b77605579bcdcc6a234d21db2"></script>
+    <script defer src="script.js?cache_buster=a185e11b77605579bcdcc6a234d21db2"></script>
+</body>
+</html>
