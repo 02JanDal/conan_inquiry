@@ -1,8 +1,10 @@
 #!/usr/bin/env python
+
 import argparse
 import logging
 import os
 
+from conan_inquiry.deployment import deploy
 from conan_inquiry.finder import BintrayFinder
 from conan_inquiry.generator import Generator
 from conan_inquiry.validator import validate_packages
@@ -17,6 +19,7 @@ def main():
     subparsers.add_parser('generate', help='generates final json file from yaml files')
     subparsers.add_parser('find', help='finds conan recipies')
     subparsers.add_parser('validate', help='validates the generated json file')
+    subparsers.add_parser('deploy', help='deploys files to GitHub pages')
 
     args = parser.parse_args()
 
@@ -28,6 +31,8 @@ def main():
         BintrayFinder('bincrafters', 'public-conan').generate_stubs(dir)
     elif args.subparser_name == 'validate':
         validate_packages(os.getcwd())
+    elif args.subparser_name == 'deploy':
+        deploy()
 
 
 if __name__ == '__main__':
