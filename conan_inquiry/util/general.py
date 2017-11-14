@@ -1,5 +1,20 @@
 import re
+
+import os
+
+import yaml
 from docutils.core import publish_parts as rst_publish_parts
+
+
+def packages_directory():
+    return os.path.join(os.path.dirname(__file__), '..', 'data', 'packages')
+
+
+def load_packages():
+    dir = packages_directory()
+    return [yaml.load(open(os.path.join(dir, f), 'r'))
+            for f in os.listdir(dir)
+            if os.path.isfile(os.path.join(dir, f))]
 
 
 def render_readme(path, raw_str, absolute_url, github_renderer=None):

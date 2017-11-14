@@ -28,7 +28,7 @@ def main():
         Generator(dir).transform_packages()
     elif args.subparser_name == 'find':
         # Finder(create_github()).generate_stubs(dir)
-        BintrayFinder('bincrafters', 'public-conan').generate_stubs(dir)
+        BintrayFinder().print()
     elif args.subparser_name == 'validate':
         validate_packages(os.getcwd())
     elif args.subparser_name == 'deploy':

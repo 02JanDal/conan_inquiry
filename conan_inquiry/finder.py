@@ -4,6 +4,8 @@ import os
 import requests
 import yaml
 
+from conan_inquiry.util.general import load_packages, packages_directory
+
 
 class GithubFinder:
     def __init__(self, github):
@@ -29,20 +31,53 @@ class GithubFinder:
 
 
 class BintrayFinder:
-    def __init__(self, owner, subject):
-        self.owner = owner
-        self.subject = subject
-        self.url = 'https://api.bintray.com/repos/' + self.owner + '/' + self.subject
+    def __init__(self):
         self.http = requests.session()
+        self.packages = load_packages()
+        self.existing_repos = [r['repo']['bintray']
+                               for p in self.packages
+                               for r in p['recipies']]
 
-    def _find_packages(self):
-        return [p['name'] for p in self.http.get(self.url + '/packages').json()]
+    def _gather_repos(self):
+        repos = set()
+        for pkg in self.packages:
+            for recipie in pkg['recipies']:
+                repos.add(tuple(recipie['repo']['bintray'].split('/')[:2]))
+        return repos
 
-    def generate_stubs(self, directory):
+    def _find_packages(self, repos):
+        return [(owner, subject, p['name'])
+                for owner, subject in repos
+                for p in self.http.get('https://api.bintray.com/repos/' + owner + '/' + subject + '/packages').json()]
+
+    def _filter_missing_repo(self, packages):
+        return [p
+                for p in packages
+                if '/'.join(p) not in self.existing_repos]
+
+    def _filter_missing_package(self, packages):
+        return [p
+                for p in packages
+                if not os.path.exists(os.path.join(packages_directory(), p[2].split(':')[0].lower().replace('conan-', '') + '.yaml'))]
+
+    def run(self):
+        found = self._find_packages(self._gather_repos())
+        missing_repo = self._filter_missing_repo(found)
+        missing_package = self._filter_missing_package(found)
+        return missing_repo, missing_package
+
+    def print(self):
+        missing_repo, missing_package = self.run()
+        for repo in missing_repo:
+            print('Missing repo:', '/'.join(repo))
+        for pkg in missing_package:
+            print('Missing package:', '/'.join(pkg))
+
+    def generate_stubs(self):
         for name in self._find_packages():
             # pkg = self.http.get(self.url + '/' + name).json()
             clean_name = name.split(':')[0]
-            fname = os.path.join(directory, clean_name.lower() + '.yaml')
+            fname = os.path.join(packages_directory(), clean_name.lower() + '.yaml')
             if not os.path.exists(fname):
                 logging.getLogger(__name__).info('Found %s', clean_name)
                 with open(fname, 'w') as f:

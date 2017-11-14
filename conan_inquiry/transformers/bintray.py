@@ -26,8 +26,7 @@ class BintrayTransformer(BaseHTTPTransformer):
                     self._set_unless_exists(recipie, 'user', parts[2].split(':')[1])
 
                 # TODO fetch all available versions
-                latest_version = self.bt.get(
-                    '/packages/' + recipie.repo.bintray + '/versions/_latest')
+                latest_version = self.bt.get('/packages/' + recipie.repo.bintray + '/versions/_latest')
                 if 'name' in latest_version:
                     versions = [
                         DotMap(name=latest_version['name'].split(':')[0],
