@@ -35,11 +35,18 @@
             right: 0;
             border: 0;
         }
+
+        footer {
+            margin-top: 10px;
+        }
+        footer > div {
+            width: 100%;
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Conan Package Search</a>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Conan Inquiry</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -59,7 +66,7 @@
 
     <div class="container">
         <section id="information">
-            <h1>Welcome to Conan Package Search!</h1>
+            <h1>Welcome to Conan Inquiry!</h1>
             <p>
                 This page allows you to search amongst <span class="badge badge-light" id="numPackages"></span> packages
                 across <span class="badge badge-light" id="numRemotes"></span> conan remotes. You get information about
@@ -86,6 +93,10 @@
 
         <section id="package"></section>
     </div>
+
+    <footer class="navbar navbar-light bg-light">
+        <div class="navbar-text text-center">Copyright &copy; 2017 <a href="https://github.com/02JanDal">@02JanDal</a></div>
+    </footer>
 
     <script type="text/html-template" id="packageItemTemplate">
         <a href="<%= App.router.generate('package', {id: id}) %>" class="list-group-item list-group-item-action flex-column align-items-start package_result" id="package_<%= id %>">
