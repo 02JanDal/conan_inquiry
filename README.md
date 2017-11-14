@@ -1,6 +1,6 @@
-# Conan Inquiry
+# [Conan Inquiry](https://02jandal.github.io/conan_inquiry)
 
-An alternative to the [official package search](conan.io/search) for conan packages.
+An alternative to the [official package search](conan.io/search) for conan packages. You can find it [here](https://02jandal.github.io/conan_inquiry).
 
 This repository consist of three things:
 
