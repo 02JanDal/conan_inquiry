@@ -27,7 +27,7 @@ You need to have Git and Python 3 installed. Then clone the project using git an
 ```commandline
 git clone https://github.com/02JanDal/conan_inquiry
 cd conan_inquiry
-python setup.py install
+pip install -r requirements.txt
 ```
 
 **Note:** It is highly recommended that you use a [virtualenv](http://docs.python-guide.org/en/latest/dev/virtualenvs/).
@@ -62,6 +62,10 @@ Then put them in environment variables before running the generator:
 mkdir build && cd build
 python conan_inquiry.py generate
 ```
+
+### Developing the web interface
+
+Copy a generated `packages.js` to `conan_inquiry/data/web` and open `index.html` in your browser of choice.
 
 ## Contributing
 
