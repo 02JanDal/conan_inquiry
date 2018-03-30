@@ -1,16 +1,1 @@
-recipies:
-  - repo:
-      bintray: conan-community/conan/nasm:conan
-  - repo:
-      bintray: lasote/conan-repo/nasm:conan
-urls:
-  docs: http://www.nasm.us/docs.php
-  code: http://repo.or.cz/w/nasm.git
-  git: http://repo.or.cz/nasm.git
-  issues: https://bugzilla.nasm.us/
-authors:
-  - name: H. Peter Anvin
-  - name: Cyrill Gorcunov
-  - name: Chang Seok Bae
-  - name: Jim Kukunas
-  - name: Frank B. Kotler
+see: nasm_installer

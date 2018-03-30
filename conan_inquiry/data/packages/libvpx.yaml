@@ -1,0 +1,14 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/libvpx:bincrafters'}
+urls:
+  github: webmproject/libvpx
+  website: https://www.webmproject.org/code/
+  code: https://chromium.googlesource.com/webm/libvpx/
+  docs: https://www.webmproject.org/docs/webm-sdk/
+categories:
+  - topic.library.fileformat.video
+  - topic.library.fileformat.audio
+  - topic.library.fileformat.image
+  - topic.library.multimedia.codecs
+  - standard.c
+  - status.5stable

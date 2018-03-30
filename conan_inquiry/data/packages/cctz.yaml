@@ -1,0 +1,29 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/cctz:bincrafters'}
+urls:
+  github: google/cctz
+code_example: |
+  #include <iostream>
+  #include "cctz/civil_time.h"
+  #include "cctz/time_zone.h"
+
+  int main() {
+    cctz::time_zone nyc;
+    cctz::load_time_zone("America/New_York", &nyc);
+
+    // Converts the input civil time in NYC to an absolute time.
+    const auto moon_walk =
+      cctz::convert(cctz::civil_second(1969, 7, 20, 22, 56, 0), nyc);
+
+    std::cout << "Moon walk in NYC: "
+              << cctz::format("%Y-%m-%d %H:%M:%S %Ez\n", moon_walk, nyc);
+
+    cctz::time_zone syd;
+    if (!cctz::load_time_zone("Australia/Sydney", &syd)) return -1;
+    std::cout << "Moon walk in SYD: "
+              << cctz::format("%Y-%m-%d %H:%M:%S %Ez\n", moon_walk, syd);
+  }
+categories:
+  - topic.library.datetime
+  - standard.cpp.11
+  - status.5stable

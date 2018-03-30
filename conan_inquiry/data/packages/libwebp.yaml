@@ -1,0 +1,10 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/libwebp:bincrafters'}
+urls:
+  github: webmproject/libwebp
+  code: https://chromium.googlesource.com/webm/libwebp
+  docs: https://developers.google.com/speed/webp/docs/api
+categories:
+  - topic.library.fileformat.image
+  - standard.c
+  - status.5stable

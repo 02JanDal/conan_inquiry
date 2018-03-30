@@ -1,0 +1,6 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/python_dev_config:bincrafters'}
+urls: {}
+short_description: Configuration of Python interpreter for use as a development dependency
+categories:
+  - topic.tool.language

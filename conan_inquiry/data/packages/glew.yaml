@@ -5,3 +5,8 @@ urls:
   website: http://glew.sourceforge.net/
   github: nigels-com/glew
 name: GLEW
+categories:
+  - standard.c
+  - status.5mature
+  - topic.library.games
+  - topic.library.graphics.3d.opengl

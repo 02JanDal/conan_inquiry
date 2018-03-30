@@ -1,0 +1,15 @@
+recipies:
+  - repo:
+      bintray: uilianries/conan/mysql-connector-c:uilianries
+  - repo:
+      bintray: bincrafters/public-conan/mysql-connector-c:bincrafters
+urls:
+  docs: https://dev.mysql.com/doc/connector-c/en/
+  website: https://dev.mysql.com/doc/connector-c/en/
+description: Connector/C is a client library that implements the C API for client/server communication. It is a standalone replacement for the MySQL client library shipped with MySQL Server distributions.
+short_description: Connector/C is a client library that implements the C API for client/server communication.
+categories:
+  - topic.library.database.lowlevel
+  - topic.library.database.mysql
+  - status.5stable
+  - standard.c

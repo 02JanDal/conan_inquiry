@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/imgui:bincrafters'}
+urls: {}
+categories:
+  - topic.library.graphics.highlevel
+  - topic.library.games
+  - standard.cpp.98
+  - status.5stable

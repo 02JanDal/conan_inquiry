@@ -1,0 +1,10 @@
+recipies:
+- repo: {bintray: 'conan-community/conan/docopt:conan'}
+urls:
+  github: docopt/docopt.cpp
+  website: http://docopt.org/
+  docs: http://docopt.org/
+categories:
+  - topic.library.terminal.cli_parsing
+  - standard.cpp.11
+  - status.5stable

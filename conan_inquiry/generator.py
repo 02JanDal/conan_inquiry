@@ -18,21 +18,25 @@ from conan_inquiry.transformers.github import GithubTransformer
 from conan_inquiry.transformers.gitlab import GitLabTransformer
 from conan_inquiry.transformers.simple import (LicenseDetectorTransformer, AuthorCombinerTransformer,
                                                ShortDescriptionTransformer, KeywordDuplicateEliminator, ReadmeFetcher,
-                                               RemoveTemporariesTransformer)
+                                               RemoveTemporariesTransformer, AddEmptyTransformer, CategoriesTransformer)
 from conan_inquiry.util.bintray import BintrayRateLimitExceeded
 from conan_inquiry.util.cache import Cache
 from conan_inquiry.util.github import get_github_client
 
 
 def transform_package(file):
+    # Get pre-transform data
     data = yaml.load(open(file, 'r'))
     if data is None:
         print(file)
     data['id'] = os.path.basename(os.path.splitext(file)[0]).replace('.', '_')
-    if 'exclude' in data and data['exclude']:
+    if 'exclude' in data and data['exclude'] or 'see' in data:
         return None
 
     # TODO: share transformer chains in the same thread
+    # TODO: bitbucket transformer
+    # TODO: sourceforge transformer
+    # TODO: generic gitlab transformer
     transformers = TransformerChain([
         BoostTransformer,
         BintrayTransformer,
@@ -43,7 +47,9 @@ def transform_package(file):
         ShortDescriptionTransformer,
         KeywordDuplicateEliminator,
         ReadmeFetcher,
-        RemoveTemporariesTransformer
+        CategoriesTransformer,
+        RemoveTemporariesTransformer,
+        AddEmptyTransformer
     ])
     try:
         return transformers.transform(DotMap(data)).toDict()
@@ -59,19 +65,26 @@ class Generator:
         ShortDescriptionTransformer.prepare()
 
     def transform_packages(self):
+        """"""
+
         github = get_github_client(3)
+        # Used to calculate the resources used
         rate_before = github.get_rate_limit().rate
         try:
             with Cache(os.getenv('CACHE_FILE')):
+                # Collect package files
                 packages = [os.path.join(self.packages_dir, f)
                             for f in os.listdir(self.packages_dir)
                             if os.path.isfile(os.path.join(self.packages_dir, f))]
                 with ThreadPoolExecutor(len(packages)) as executor:
+                    # Generate for all packages
                     futures = [executor.submit(transform_package, package) for package in packages]
-                    for f in tqdm(as_completed(futures),
+                    for _ in tqdm(as_completed(futures),
                                   total=len(futures), unit='package', unit_scale=True,
                                   leave=True, position=0, ncols=80):
                         pass
+
+                    # Get results from futures and filter/print errors
                     results = [f.result() for f in futures]
                     errors = [r for r in results if isinstance(r, tuple)]
                     for error in errors:
@@ -82,6 +95,7 @@ class Generator:
                     if len(errors) > 0:
                         sys.exit(1)
 
+                    # Write new package files
                     data = json.dumps([r for r in results if r is not None], indent=2)
                     with open('packages.json', 'w') as file:
                         file.write(data)

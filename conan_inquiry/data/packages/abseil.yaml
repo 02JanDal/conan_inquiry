@@ -1,5 +1,5 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/Abseil:bincrafters'}
+- repo: {bintray: 'bincrafters/public-conan/abseil:bincrafters'}
 urls:
   github: abseil/abseil-cpp
   docs: https://abseil.io/docs/cpp.html
@@ -9,3 +9,7 @@ authors:
     website: http://www.abseil.io/
   - name: Google
     email: abseil-admin@google.com
+categories:
+  - standard.cpp.11
+  - topic.library
+  - status.5stable

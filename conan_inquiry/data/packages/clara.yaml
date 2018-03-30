@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/clara:bincrafters'}
+urls:
+  github: catchorg/Clara
+categories:
+  - topic.library.terminal.cli_parsing
+  - standard.cpp.11
+  - status.5stable

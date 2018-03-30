@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/catch2:bincrafters'}
+urls:
+  github: catchorg/Catch2
+  docs: https://github.com/catchorg/Catch2/blob/master/docs/Readme.md
+categories:
+  - topic.library.development.testing
+  - standard.cpp.11
+  - status.5stable

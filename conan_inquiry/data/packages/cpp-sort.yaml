@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'uilianries/conan/cpp-sort:morwenn'}
+urls:
+  github: Morwenn/cpp-sort
+categories:
+  - topic.library
+  - status.5stable
+  - standard.cpp.14

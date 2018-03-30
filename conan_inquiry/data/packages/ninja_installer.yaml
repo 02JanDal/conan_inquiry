@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/ninja_installer:bincrafters'}
+urls:
+  github: ninja-build/ninja
+  docs: https://ninja-build.org/manual.html
+categories:
+  - topic.tool.build_tools
+  - status.5stable

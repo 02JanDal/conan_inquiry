@@ -1,0 +1,10 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/libcurl:bincrafters'}
+urls:
+  github: curl/curl
+categories:
+  - topic.library.network.http
+  - topic.library.network.mail
+  - topic.library.network.crypto
+  - standard.c
+  - status.6mature

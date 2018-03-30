@@ -1,0 +1,13 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/libmp3lame:bincrafters'}
+urls:
+  website: http://lame.sourceforge.net/
+  code: https://sourceforge.net/p/lame/svn/HEAD/tree/
+  issues: https://sourceforge.net/p/lame/_list/tickets
+short_description: LAME is a high quality MPEG Audio Layer III (MP3) encoder licensed under the LGPL.
+categories:
+  - topic.library.fileformat.audio
+  - topic.library.multimedia.codecs
+  - topic.library.multimedia.audio
+  - standard.c
+  - status.5stable

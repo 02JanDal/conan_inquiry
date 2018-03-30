@@ -1,0 +1,14 @@
+recipies:
+  - repo:
+      bintray: uilianries/conan/flatbuffers:uilianries
+  - repo:
+      bintray: bincrafters/public-conan/flatbuffers:uilianries
+urls:
+  github: google/flatbuffers
+categories:
+  - topic.library.serialization.highlevel
+  - topic.library.fileformat.generic.binary
+  - topic.library.fileformat.generic.json
+  - standard.cpp.11
+  - standard.c
+  - status.5stable

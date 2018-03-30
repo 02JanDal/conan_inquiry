@@ -25,3 +25,8 @@ code_example: |
 
   // Send a metric explicitly
   client.send("tutu", 4, "c", 2.0f);
+categories:
+  - topic.library.logging
+  - topic.library.database
+  - standard.cpp.11
+  - status.5stable

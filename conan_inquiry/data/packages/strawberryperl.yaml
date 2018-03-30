@@ -7,3 +7,5 @@ urls:
   docs: http://strawberryperl.com/support.html
   issues: https://rt.cpan.org/Public/Dist/Display.html?Name=Perl-Dist-Strawberry
   github: StrawberryPerl/Perl-Dist-Strawberry
+categories:
+  - topic.tool.language

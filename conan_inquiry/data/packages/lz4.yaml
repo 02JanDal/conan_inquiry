@@ -1,0 +1,7 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/lz4:bincrafters'}
+urls: {}
+categories:
+  - topic.library.fileformat.compression
+  - standard.c
+  - status.5stable

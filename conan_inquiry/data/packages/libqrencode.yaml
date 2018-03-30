@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/libqrencode:bincrafters'}
+urls:
+  github: fukuchi/libqrencode
+categories:
+  - standard.c
+  - status.5stable
+  - topic.library.graphics

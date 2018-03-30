@@ -1,0 +1,7 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/variant:bincrafters'}
+urls: {}
+categories:
+  - standard.cpp.11
+  - status.5stable
+  - topic.library

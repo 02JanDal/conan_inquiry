@@ -1,3 +1,3 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/Boost.Config:bincrafters'}
+- repo: {bintray: 'bincrafters/public-conan/boost_config:bincrafters'}
 urls: {}

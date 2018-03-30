@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'conan-community/conan/c-ares:conan'}
+urls:
+  website: https://c-ares.haxx.se/
+  docs: https://c-ares.haxx.se/docs.html
+  github: c-ares/c-ares
+categories:
+  - standard.c.89
+  - topic.library.network.dns

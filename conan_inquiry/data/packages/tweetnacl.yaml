@@ -1,0 +1,7 @@
+recipies:
+- repo: {bintray: 'conan-community/conan/tweetnacl:conan'}
+urls: {}
+categories:
+  - topic.library.network.crypto
+  - standard.c
+  - status.5stable

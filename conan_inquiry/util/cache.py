@@ -8,7 +8,8 @@ from typing import Callable, Union, Dict, Any
 class Cache:
     """This class provides a simple cache with "expiry-on-retrieval"""
 
-    current_cache = None
+    current_cache = None  # type: Cache
+    _global_context = '_'
 
     def __init__(self, file: str = None):
         self.file = file if file is not None else os.path.join(os.getcwd(), '.cache')
@@ -31,22 +32,30 @@ class Cache:
             os.makedirs(os.path.dirname(self.file), exist_ok=True)
             json_dump(self.cache, open(self.file, 'w'))
 
+    def remove(self, key, context):
+        if context is None:
+            self.remove(key, self._global_context)
+        else:
+            with self.lock:
+                del self.cache[context][key]
+
+    def _set(self, key: str, value: Union[str, int, float, Dict[str, Any]], context: str = None):
+        if context is None:
+            self._set(key, value, self._global_context)
+        else:
+            if context not in self.cache:
+                self.cache[context] = dict()
+            self.cache[context][key] = dict(value=value, time=datetime.now().timestamp())
+
     def set(self, key: str, value: Union[str, int, float, Dict[str, Any]], context: str = None):
         """Insert or update a value"""
 
         with self.lock:
-            if context is None:
-                self.cache[key] = dict(value=value, time=datetime.now().timestamp())
-            else:
-                if context not in self.cache:
-                    self.cache[context] = dict()
-                self.cache[context][key] = dict(value=value, time=datetime.now().timestamp())
+            self._set(key, value, context)
 
     def _has(self, key: str, maxage: timedelta, context: str = None) -> bool:
         if context is None:
-            if key not in self.cache:
-                return False
-            time = self.cache[key]['time']
+            return self._has(key, maxage, self._global_context)
         else:
             if context not in self.cache or key not in self.cache[context]:
                 return False
@@ -60,7 +69,8 @@ class Cache:
             return self._has(key, maxage, context)
 
     def get(self, key: str, maxage: timedelta, context: str = None,
-            func: Callable[[], object] = None):
+            func: Callable[[], Union[str, int, float, Dict[str, Any]]] = None,
+            locked_getter=True):
         """Retrieve, if possible, a value. Optionally compute and set it if not available"""
 
         with self.lock:
@@ -68,10 +78,17 @@ class Cache:
                 if func is None:
                     return None
                 else:
-                    value = func()
-                    self.set(key, value, context)
+                    if not locked_getter:
+                        try:
+                            self.lock.release()
+                            value = func()
+                        finally:
+                            self.lock.acquire()
+                    else:
+                        value = func()
+                    self._set(key, value, context)
                     return value
             elif context is None:
-                return self.cache[key]['value']
+                return self.cache[self._global_context][key]['value']
             else:
                 return self.cache[context][key]['value']

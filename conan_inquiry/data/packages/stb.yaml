@@ -1,0 +1,13 @@
+recipies:
+- repo: {bintray: 'conan-community/conan/stb:conan'}
+urls: {}
+categories:
+  - topic.library.fileformat.audio
+  - topic.library.multimedia.codecs
+  - topic.library.fileformat.image
+  - topic.library.graphics.lowlevel
+  - topic.library.graphics.image_processing
+  - topic.library.graphics.3d
+  - topic.library.math
+  - standard.c.89
+  - status.5stable

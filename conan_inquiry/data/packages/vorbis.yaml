@@ -1,9 +1,16 @@
 recipies:
   - repo:
       bintray: dimi309/conan-packages/vorbis:dimi309
+  - repo:
+      bintray: bincrafters/public-conan/vorbis:bincrafters
 urls:
   website: https://www.xiph.org/vorbis/
   docs: https://www.xiph.org/vorbis/doc/libvorbis/index.html
   code: https://git.xiph.org/?p=vorbis.git;a=summary
   git: https://git.xiph.org/vorbis.git
 name: libvorbis
+categories:
+  - topic.library.multimedia.codecs
+  - topic.library.fileformat.audio
+  - standard.c
+  - status.5stable

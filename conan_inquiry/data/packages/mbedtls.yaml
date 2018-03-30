@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/mbedtls:bincrafters'}
+urls:
+  github: ARMmbed/mbedtls
+categories:
+  - topic.library.network.crypto
+  - standard.c
+  - status.5stable

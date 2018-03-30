@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/cryptopp:bincrafters'}
+urls:
+  github: weidai11/cryptopp
+categories:
+  - status.5stable
+  - topic.library.network.crypto
+  - standard.cpp.03
+  - standard.cpp.11

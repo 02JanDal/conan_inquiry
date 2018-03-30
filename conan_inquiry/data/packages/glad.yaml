@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/glad:bincrafters'}
+urls:
+  github: Dav1dde/glad
+categories:
+  - standard.c
+  - status.5stable
+  - topic.library.games
+  - topic.library.graphics.3d.opengl

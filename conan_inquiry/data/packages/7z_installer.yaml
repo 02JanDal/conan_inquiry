@@ -6,3 +6,6 @@ authors:
 name: 7zip
 urls:
   issues: https://sourceforge.net/p/sevenzip/bugs/
+description: 7-Zip is a file archiver with a high compression ratio
+categories:
+  - topic.tool

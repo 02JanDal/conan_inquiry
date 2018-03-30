@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/libjpeg-turbo:bincrafters'}
+urls:
+  github: libjpeg-turbo/libjpeg-turbo
+categories:
+  - topic.library.fileformat.image.jpeg
+  - topic.library.graphics.lowlevel
+  - standard.c
+  - status.5stable

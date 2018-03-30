@@ -1,0 +1,7 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/gflags:bincrafters'}
+urls: {}
+categories:
+  - status.5stable
+  - standard.cpp
+  - topic.library.terminal.cli_parsing

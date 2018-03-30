@@ -1,0 +1,10 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/fmt:bincrafters'}
+urls:
+  github: fmtlib/fmt
+  docs: http://fmtlib.net/latest/
+categories:
+  - topic.library
+  - standard.cpp.98
+  - standard.cpp.11
+  - status.5stable

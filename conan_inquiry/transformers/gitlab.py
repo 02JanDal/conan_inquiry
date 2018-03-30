@@ -33,7 +33,7 @@ class GitLabTransformer(BaseTransformer):
                 )
 
             proj = self.cache.get(package.urls.gitlab_host + '#' + package.urls.gitlab,
-                                  timedelta(hours=6), 'gitlab',
+                                  timedelta(days=7), 'gitlab',
                                   lambda: get_gitlab_project(package.urls.gitlab_host,
                                                              package.urls.gitlab))
 

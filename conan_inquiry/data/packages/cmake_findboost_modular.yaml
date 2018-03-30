@@ -1,0 +1,5 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/cmake_findboost_modular:bincrafters'}
+urls:
+  github: bincrafters/conan-cmake_findboost_modular
+  website: https://github.com/bincrafters/conan-cmake_findboost_modular

@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'lasote/conan-repo/c-blosc:francescalted'}
+urls:
+  github: Blosc/c-blosc
+  website: http://blosc.org/
+categories:
+  - topic.library.fileformat.compression
+  - standard.c.89
+  - status.5stable

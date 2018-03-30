@@ -1,0 +1,12 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/botan:bincrafters'}
+- repo: {bintray: 'bincrafters/public-conan/Botan:bincrafters'}
+urls:
+  website: https://botan.randombit.net/
+  docs: https://botan.randombit.net/
+  github: randombit/botan
+categories:
+  - standard.c.89
+  - standard.cpp.11
+  - status.5stable
+  - topic.library.network.crypto

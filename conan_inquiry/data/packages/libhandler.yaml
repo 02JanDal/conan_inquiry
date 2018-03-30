@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/libhandler:bincrafters'}
+urls:
+  github: koka-lang/libhandler
+  website: https://github.com/koka-lang/libhandler
+categories:
+  - topic.library.async
+  - standard.c.99
+  - status.4beta

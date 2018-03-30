@@ -6,6 +6,8 @@ recipies:
       github: lasote/conan-gtest
   - repo:
       bintray: lasote/conan-repo/gtest:conan
+  - repo:
+      bintray: bincrafters/public-conan/gtest:bincrafters
 urls:
   docs: https://github.com/google/googletest/blob/master/googletest/docs/Primer.md
 description: |
@@ -24,3 +26,7 @@ example_code: |
     EXPECT_EQ(6, Factorial(3));
     EXPECT_EQ(40320, Factorial(8));
   }
+categories:
+  - topic.library.development.testing
+  - standard.cpp
+  - status.5stable

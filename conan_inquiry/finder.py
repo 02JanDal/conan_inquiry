@@ -1,10 +1,18 @@
 import logging
 import os
+from collections import namedtuple
+from typing import Tuple, Set
 
+import re
 import requests
 import yaml
 
+from conan_inquiry.util.bintray import Bintray
 from conan_inquiry.util.general import load_packages, packages_directory
+
+
+BintrayRepoDescriptor = namedtuple('BintrayRepoDescriptor', ['repoowner', 'reponame'])
+BintrayPackageDescriptor = namedtuple('BintrayPackageDescriptor', ['repoowner', 'reponame', 'name'])
 
 
 class GithubFinder:
@@ -31,59 +39,74 @@ class GithubFinder:
 
 
 class BintrayFinder:
+    """Class to detect, print and generate stubs for Bintray packages"""
+
     def __init__(self):
-        self.http = requests.session()
+        self.client = Bintray()
         self.packages = load_packages()
         self.existing_repos = [r['repo']['bintray']
                                for p in self.packages
                                for r in p['recipies']]
+        self.missing_packages = []
+        self.missing_repos = []
 
-    def _gather_repos(self):
+    def _gather_repos(self) -> Set[BintrayRepoDescriptor]:
+        """
+        Returns all repositories (tuple of repository owner and repository name) that are currently known
+        """
         repos = set()
         for pkg in self.packages:
             for recipie in pkg['recipies']:
-                repos.add(tuple(recipie['repo']['bintray'].split('/')[:2]))
+                parts = recipie['repo']['bintray'].split('/')
+                repos.add(BintrayRepoDescriptor(parts[0], parts[1]))
         return repos
 
-    def _find_packages(self, repos):
-        return [(owner, subject, p['name'])
-                for owner, subject in repos
-                for p in self.http.get('https://api.bintray.com/repos/' + owner + '/' + subject + '/packages').json()]
+    def _find_packages(self, repos: Set[BintrayRepoDescriptor]) -> [BintrayPackageDescriptor]:
+        """
+        Returns all packages in the known repositories
+        """
+        return [BintrayPackageDescriptor(repo.repoowner, repo.reponame, p['name'])
+                for repo in repos
+                for p in self.client.get_all('/repos/' + repo.repoowner + '/' + repo.reponame + '/packages')]
 
-    def _filter_missing_repo(self, packages):
+    @classmethod
+    def _default_package_filename(cls, pkg: BintrayPackageDescriptor):
+        clean_name = pkg.name.split(':')[0].lower().replace('conan-', '')
+        clean_name = re.sub(r'^boost_', 'boost.', clean_name)
+        return os.path.join(packages_directory(), clean_name + '.yaml')
+
+    def _filter_missing_package(self, packages: [BintrayPackageDescriptor]) -> [BintrayPackageDescriptor]:
+        """Only return packages for those there is no package file available currently"""
         return [p
                 for p in packages
-                if '/'.join(p) not in self.existing_repos]
+                if not os.path.exists(self._default_package_filename(p))]
 
-    def _filter_missing_package(self, packages):
+    def _filter_missing_repository(self, packages: [BintrayPackageDescriptor]) -> [BintrayPackageDescriptor]:
+        """Only return packages that have missing repository descriptors"""
         return [p
                 for p in packages
-                if not os.path.exists(os.path.join(packages_directory(), p[2].split(':')[0].lower().replace('conan-', '') + '.yaml'))]
+                if '/'.join(p) not in self.existing_repos and not p.name.startswith('Boost')]
 
     def run(self):
         found = self._find_packages(self._gather_repos())
-        missing_repo = self._filter_missing_repo(found)
-        missing_package = self._filter_missing_package(found)
-        return missing_repo, missing_package
+        self.missing_packages = self._filter_missing_package(found)
+        self.missing_repos = sorted(self._filter_missing_repository(found))
 
     def print(self):
-        missing_repo, missing_package = self.run()
-        for repo in missing_repo:
-            print('Missing repo:', '/'.join(repo))
-        for pkg in missing_package:
+        for pkg in self.missing_packages:
             print('Missing package:', '/'.join(pkg))
+        for pkg in self.missing_repos:
+            print('Missing repository:', '/'.join(pkg))
 
     def generate_stubs(self):
-        for name in self._find_packages():
+        for name in self.missing_packages:
             # pkg = self.http.get(self.url + '/' + name).json()
-            clean_name = name.split(':')[0]
-            fname = os.path.join(packages_directory(), clean_name.lower() + '.yaml')
-            if not os.path.exists(fname):
-                logging.getLogger(__name__).info('Found %s', clean_name)
-                with open(fname, 'w') as f:
-                    yaml.dump(dict(
-                        recipies=[
-                            dict(repo=dict(bintray=self.owner + '/' + self.subject + '/' + name))
-                        ],
-                        urls=dict()
-                    ), f)
+            fname = self._default_package_filename(name)
+            logging.getLogger(__name__).info('Generating %s', os.path.basename(fname))
+            with open(fname, 'w') as f:
+                yaml.dump(dict(
+                    recipies=[
+                        dict(repo=dict(bintray=name.repoowner + '/' + name.reponame + '/' + name.name))
+                    ],
+                    urls=dict()
+                ), f)

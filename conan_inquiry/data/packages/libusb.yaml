@@ -1,5 +1,11 @@
 recipies:
   - repo:
       bintray: uilianries/conan/libusb:uilianries
+  - repo:
+      bintray: bincrafters/public-conan/libusb:bincrafters
 urls:
   github: libusb/libusb
+categories:
+  - topic.library.io
+  - standard.c
+  - status.5stable

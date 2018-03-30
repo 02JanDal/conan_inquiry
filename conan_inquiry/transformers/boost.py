@@ -46,6 +46,8 @@ class BoostTransformer(BaseHTTPTransformer):
             metares = self.cache.get(metaurl, timedelta(days=1), 'boost_docs',
                                      lambda: http_get_json(metaurl))
             if metares['code'] == 200:
+                package.urls.github = 'boostorg/' + boost_id
+
                 meta = metares['json']
                 if isinstance(meta, list):
                     meta = meta[0]

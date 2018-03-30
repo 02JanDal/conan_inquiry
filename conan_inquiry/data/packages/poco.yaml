@@ -6,3 +6,24 @@ recipies:
 urls:
   docs: https://pocoproject.org/documentation/index.html
   github: pocoproject/poco
+categories:
+  - topic.library.serialization.lowlevel
+  - topic.library.fileformat.generic.json
+  - topic.library.fileformat.generic.xml
+  - topic.library.fileformat.compression.zip
+  - topic.library.datetime
+  - topic.library.async
+  - topic.library.regexp
+  - topic.library.database.lowlevel
+  - topic.library.database.sqlite
+  - topic.library.database.mysql
+  - topic.library.database.odbc
+  - topic.library.io
+  - topic.library.logging
+  - topic.library.network.lowlevel
+  - topic.library.network.websockets
+  - topic.library.network.http
+  - topic.library.network.mail
+  - topic.library.network.crypto
+  - standard.cpp
+  - status.5stable

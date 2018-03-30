@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/libsodium:bincrafters'}
+urls:
+  github: jedisct1/libsodium
+  docs: https://download.libsodium.org/doc/
+categories:
+  - topic.library.network.crypto
+  - standard.c
+  - status.5stable

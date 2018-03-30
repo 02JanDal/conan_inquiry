@@ -1,0 +1,7 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/npcap-wlanhelper:bincrafters'}
+urls:
+  github: nmap/npcap
+
+categories:
+  - topic.tool

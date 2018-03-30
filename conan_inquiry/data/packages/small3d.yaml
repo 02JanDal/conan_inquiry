@@ -5,3 +5,12 @@ urls:
   docs: https://dimi309.github.io/small3d/
   github: dimi309/small3d
 name: small3d
+categories:
+  - topic.library.games
+  - topic.library.graphics.3d
+  - topic.library.fileformat.audio
+  - topic.library.multimedia.audio
+  - topic.library.multimedia.codecs
+  - topic.library.fileformat.3dmodel
+  - standard.cpp.11
+  - status.5stable

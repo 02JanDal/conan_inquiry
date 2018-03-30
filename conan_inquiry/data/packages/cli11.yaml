@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/cli11:bincrafters'}
+urls:
+  docs: https://cliutils.gitlab.io/CLI11Tutorial/
+categories:
+  - topic.library.terminal.cli_parsing
+  - status.5stable
+  - standard.cpp.11

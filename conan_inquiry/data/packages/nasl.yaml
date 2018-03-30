@@ -3,3 +3,7 @@ recipies:
       bintray: jacmoe/Conan/nasl:jacmoe
 urls:
   github: jacmoe/nasl
+categories:
+  - standard.c.99
+  - topic.library.graphics
+  - status.5stable

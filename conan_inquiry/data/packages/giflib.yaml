@@ -1,0 +1,12 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/giflib:bincrafters'}
+urls:
+  website: http://giflib.sourceforge.net/
+  docs: http://giflib.sourceforge.net/intro.html
+  code: https://sourceforge.net/p/giflib/code/ci/master/tree/
+  issues: https://sourceforge.net/p/giflib/_list/tickets
+categories:
+  - topic.library.graphics
+  - topic.library.fileformat.image.gif
+  - standard.c
+  - status.6mature

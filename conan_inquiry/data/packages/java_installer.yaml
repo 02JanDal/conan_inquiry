@@ -1,0 +1,5 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/java_installer:bincrafters'}
+urls: {}
+categories:
+  - topic.tool.language

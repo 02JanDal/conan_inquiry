@@ -9,3 +9,8 @@ urls:
   docs: https://grpc.io/docs/
   github: grpc/grpc
 name: gRPC
+categories:
+  - topic.library.network.messages
+  - topic.library.network.rpc
+  - standard.cpp
+  - status.5stable

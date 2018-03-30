@@ -1,0 +1,10 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/libuv:bincrafters'}
+urls: {}
+categories:
+  - status.5stable
+  - topic.library.io
+  - topic.library.async
+  - topic.library.network.dns
+  - topic.library.network.lowlevel
+  - standard.c.89

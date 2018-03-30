@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/dir_monitor:bincrafters'}
+urls:
+  github: berkus/dir_monitor
+  website: https://github.com/berkus/dir_monitor
+categories:
+  - topic.library.io
+  - standard.cpp.11
+  - status.5stable

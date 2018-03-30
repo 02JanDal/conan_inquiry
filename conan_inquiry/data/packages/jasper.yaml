@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'conan-community/conan/jasper:conan'}
+urls:
+  github: mdadams/jasper
+categories:
+  - topic.library.fileformat.image.jpeg
+  - topic.library.graphics.image_processing
+  - status.6mature
+  - standard.c

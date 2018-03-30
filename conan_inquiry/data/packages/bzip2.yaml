@@ -2,8 +2,12 @@ recipies:
   - repo:
       bintray: conan-community/conan/bzip2:conan
 urls:
-  docs: http://bzip.org/docs.html
+  docs: http://www.bzip.org/docs.html
   issues: http://www.bzip.org/1.0.3/html/bugs.html
 authors:
   - name: Julian Steward
     email: julian@bzip.org
+categories:
+  - topic.library.fileformat.compression.bzip2
+  - standard.c
+  - status.6mature

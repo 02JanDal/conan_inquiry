@@ -10,3 +10,6 @@ urls:
 authors:
   - name: MinGW Project
 name: MinGW
+categories:
+  - topic.tool.compiler
+  - status.5stable

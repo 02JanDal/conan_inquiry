@@ -5,6 +5,7 @@ from inspect import isclass
 
 import requests
 from cachecontrol import CacheControl
+from dotmap import DotMap
 
 from conan_inquiry.util.cache import Cache
 from conan_inquiry.util.github import get_github_client
@@ -18,11 +19,11 @@ class BaseTransformer:
 
     @classmethod
     def _set_unless_exists(cls, obj, key, value):
-        if key not in obj or obj[key] is None:
+        if key not in obj or obj[key] is None or obj[key] == '':
             obj[key] = value
 
     @abc.abstractmethod
-    def transform(self, package):
+    def transform(self, package: DotMap) -> DotMap:
         return package
 
     @property

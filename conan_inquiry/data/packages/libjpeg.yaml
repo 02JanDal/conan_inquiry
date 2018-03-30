@@ -1,0 +1,13 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/libjpeg:bincrafters'}
+urls:
+  website: http://libjpeg.sourceforge.net/
+authors:
+  - name: Bob Friesenhahn
+  - name: Lee Howard
+  - name: Frank Warmerdam
+categories:
+  - topic.library.fileformat.image.jpeg
+  - topic.library.graphics.lowlevel
+  - standard.c
+  - status.7inactive

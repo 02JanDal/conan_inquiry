@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/eastl:bincrafters'}
+urls:
+  docs: https://rawgit.com/electronicarts/EASTL/master/doc/EASTL%20Introduction.html
+categories:
+  - topic.library
+  - standard.cpp
+  - status.5stable

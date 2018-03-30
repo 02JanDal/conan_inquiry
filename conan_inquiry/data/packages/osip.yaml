@@ -5,3 +5,11 @@ urls:
   website: https://www.gnu.org/software/osip/
   code: https://git.savannah.gnu.org/cgit/osip.git
   git: https://git.savannah.gnu.org/cgit/osip.git
+description: |
+  oSIP is an LGPL implementation of SIP. It is used mostly with eXosip2 stack (GPL) which provides simpler API for User-Agent implementation.
+
+  SIP stands for the Session Initiation Protocol and is described by the rfc3261 (wich deprecates rfc2543). This library aims to provide multimedia and telecom software developers an easy and powerful interface to initiate and control SIP based sessions in their applications. SIP is a open standard replacement from IETF for H323.
+categories:
+  - topic.library.network.sip
+  - standard.c
+  - status.5stable

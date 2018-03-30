@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/harfbuzz:bincrafters'}
+urls: {}
+categories:
+  - topic.library.graphics.lowlevel
+  - status.5stable
+  - standard.c
+  - standard.cpp

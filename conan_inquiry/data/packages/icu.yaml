@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/icu:bincrafters'}
+urls: {}
+categories:
+  - topic.library.datetime
+  - status.6mature
+  - standard.c
+  - standard.cpp
+  - topic.library.i18n

@@ -1,0 +1,7 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/greatest:bincrafters'}
+urls: {}
+categories:
+  - standard.c.89
+  - status.5stable
+  - topic.library.development.testing

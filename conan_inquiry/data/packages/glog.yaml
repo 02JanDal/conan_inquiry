@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/glog:bincrafters'}
+urls: {}
+categories:
+  - topic.library.logging
+  - standard.cpp.11
+  - standard.cpp.98
+  - status.5stable

@@ -1,0 +1,11 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/ragel_installer:bincrafters'}
+urls:
+  github: bnoordhuis/ragel
+  website: https://www.colm.net/open-source/ragel/
+categories:
+  - topic.tool.preprocessor
+  - topic.tool.compiler
+  - topic.library.statemachine
+  - standard.c
+  - standard.cpp

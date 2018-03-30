@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/libzip:bincrafters'}
+urls:
+  github: nih-at/libzip
+categories:
+  - topic.library.fileformat.compression.zip
+  - standard.c
+  - status.6mature

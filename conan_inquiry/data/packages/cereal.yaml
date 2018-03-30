@@ -1,0 +1,11 @@
+recipies:
+- repo: {bintray: 'conan-community/conan/cereal:conan'}
+urls:
+  docs: https://uscilab.github.io/cereal/
+  website: https://uscilab.github.io/cereal/
+categories:
+  - topic.library.fileformat.generic.json
+  - topic.library.fileformat.generic.xml
+  - topic.library.serialization.highlevel
+  - standard.cpp.11
+  - status.5stable

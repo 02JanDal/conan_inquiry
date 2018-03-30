@@ -5,6 +5,14 @@ name: JSON for Modern C++
 urls:
   docs: https://nlohmann.github.io/json/
   github: nlohmann/json
+description: JSON for Modern C++
+categories:
+  - topic.library.fileformat.generic.json
+  - topic.library.fileformat.generic.msgpack
+  - topic.library.fileformat.generic.binary
+  - topic.library.serialization.lowlevel
+  - standard.cpp.11
+  - status.5stable
 code_example: |
   // create an empty structure (null)
   json j;

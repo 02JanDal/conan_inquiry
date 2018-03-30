@@ -1,0 +1,32 @@
+recipies:
+- repo: {bintray: 'conan-community/conan/arduinojson:conan'}
+urls:
+  github: bblanchon/ArduinoJson
+  docs: https://arduinojson.org/doc/
+categories:
+  - topic.library.fileformat.generic.json
+  - topic.library.serialization.lowlevel
+  - environment.embedded
+  - standard.cpp.98
+  - status.5stable
+code_example: |
+  // read, modify, write
+  JsonObject& root = jsonBuffer.parseObject(myInput);
+  root["last_modification"] = time();
+  root.printTo(myOutput)
+
+  // static (stack) vs. dynamic (heap) buffer
+  StaticJsonBuffer<512> jsonBuffer
+  DynamicJsonBuffer jsonBuffer(512)
+
+  // implicit cast
+  const char* city = root["city"];
+  float temp = root["temperature"];
+
+  // explicit cast
+  auto city = root["city"].as<const char*>();
+  auto temp = root["temperature"].as<float>();
+
+  // parse or write to a stream:
+  JsonObject& root = jsonBuffer.parse(Serial);
+  root.printTo(Serial);

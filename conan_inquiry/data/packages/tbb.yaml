@@ -1,0 +1,5 @@
+recipies:
+- repo: {bintray: 'conan-community/conan/TBB:conan'}
+urls: {}
+categories:
+  - topic.library.async

@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/date:bincrafters'}
+urls:
+  github: HowardHinnant/date
+categories:
+  - topic.library.datetime
+  - standard.cpp.11
+  - status.5stable

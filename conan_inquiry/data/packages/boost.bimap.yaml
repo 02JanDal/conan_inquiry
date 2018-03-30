@@ -1,3 +1,4 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/Boost.Bimap:bincrafters'}
-urls: {}
+- repo: {bintray: 'bincrafters/public-conan/boost_bimap:bincrafters'}
+urls:
+  docs: http://www.boost.org/doc/libs/release/libs/bimap/

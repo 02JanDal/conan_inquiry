@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/libxml2:bincrafters'}
+urls:
+  github: GNOME/libxml2
+  docs: http://xmlsoft.org/html/index.html
+categories:
+  - topic.library.fileformat.generic.xml
+  - standard.c
+  - status.6mature

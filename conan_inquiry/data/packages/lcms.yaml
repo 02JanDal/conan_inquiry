@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/lcms:bincrafters'}
+urls:
+  github: mm2/Little-CMS
+name: LittleCMS
+categories:
+  - topic.library.graphics.lowlevel
+  - status.6mature
+  - standard.c

@@ -1,0 +1,11 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/libfdk_aac:bincrafters'}
+urls:
+  github: mstorsjo/fdk-aac
+  sourceforge: opencore-amr
+categories:
+  - topic.library.multimedia.codecs
+  - topic.library.multimedia.audio
+  - topic.library.fileformat.audio
+  - standard.cpp
+  - status.5stable

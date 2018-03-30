@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'conan-community/conan/openblas:conan'}
+urls:
+  github: xianyi/OpenBLAS
+categories:
+  - topic.library.math
+  - standard.c
+  - status.5stable

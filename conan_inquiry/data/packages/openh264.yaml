@@ -1,0 +1,10 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/openh264:bincrafters'}
+urls:
+  github: cisco/openh264
+  website: http://www.openh264.org/
+categories:
+  - topic.library.fileformat.video
+  - topic.library.multimedia.codecs
+  - standard.c
+  - status.5stable

@@ -1,0 +1,10 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/intel_media_sdk:bincrafters'}
+urls:
+  website: https://software.intel.com/en-us/media-sdk
+  github: Intel-Media-SDK/MediaSDK
+categories:
+  - topic.library.multimedia.codecs
+  - standard.cpp
+  - standard.c
+  - status.5stable

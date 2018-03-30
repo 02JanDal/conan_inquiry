@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/cpperomq:bincrafters'}
+urls: {}
+categories:
+  - standard.cpp.11
+  - status.7inactive
+  - topic.library.network.messages
+  - topic.library.network.pubsub
+  - topic.library.network.zeromq

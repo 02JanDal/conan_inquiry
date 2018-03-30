@@ -5,3 +5,5 @@ urls:
   website: https://www.winpcap.org/
   docs: https://www.winpcap.org/docs/default.htm
   github: wireshark/winpcap
+categories:
+  - topic.library.network.packet_capture

@@ -1,0 +1,4 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/npcap-npcaphelper:bincrafters'}
+urls:
+  github: nmap/npcap

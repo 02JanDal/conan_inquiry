@@ -1,0 +1,11 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/bullet:bincrafters'}
+urls:
+  website: http://bulletphysics.org/
+  docs: http://bulletphysics.org/Bullet/BulletFull/
+categories:
+  - topic.library.games
+  - topic.library.simulation.physics
+  - standard.cpp.03
+  - standard.cpp.11
+  - status.5stable

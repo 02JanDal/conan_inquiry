@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/flac:bincrafters'}
+urls: {}
+categories:
+  - status.6mature
+  - standard.cpp.98
+  - standard.c
+  - topic.library.multimedia.codecs
+  - topic.library.fileformat.audio

@@ -8,3 +8,7 @@ recipies:
 urls:
   docs: https://www.openssl.org/docs/
   github: openssl/openssl
+categories:
+  - topic.library.network.crypto
+  - standard.c
+  - status.5stable

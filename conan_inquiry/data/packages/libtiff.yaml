@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/libtiff:bincrafters'}
+urls:
+  gitlab: libtiff/libtiff
+categories:
+  - topic.library.fileformat.image.tiff
+  - topic.library.graphics.lowlevel
+  - standard.c
+  - status.5stable

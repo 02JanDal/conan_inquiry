@@ -1,0 +1,7 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/double-conversion:bincrafters'}
+urls: {}
+categories:
+  - topic.library
+  - standard.cpp.98
+  - status.5stable

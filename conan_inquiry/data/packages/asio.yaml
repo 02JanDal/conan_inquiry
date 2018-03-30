@@ -1,5 +1,12 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/Asio:bincrafters'}
+- repo: {bintray: 'bincrafters/public-conan/asio:bincrafters'}
 urls:
   github: chriskohlhoff/asio
   docs: https://think-async.com/Asio/Documentation
+categories:
+  - standard.cpp.98
+  - standard.cpp.11
+  - status.5stable
+  - topic.library.network
+  - topic.library.io
+  - topic.library.async

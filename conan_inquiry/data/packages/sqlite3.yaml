@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/sqlite3:bincrafters'}
+urls: {}
+categories:
+  - topic.library.database.sqlite
+  - topic.library.database.lowlevel
+  - standard.c
+  - status.5stable

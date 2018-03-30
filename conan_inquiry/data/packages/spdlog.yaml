@@ -1,0 +1,7 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/spdlog:bincrafters'}
+urls: {}
+categories:
+  - topic.library.logging
+  - standard.cpp.11
+  - status.5stable

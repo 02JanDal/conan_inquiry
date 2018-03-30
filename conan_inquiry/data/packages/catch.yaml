@@ -1,5 +1,12 @@
 recipies:
   - repo:
       bintray: uilianries/conan/Catch:uilianries
+  - repo:
+      bintray: bincrafters/public-conan/Catch:bincrafters
 urls:
   github: catchorg/Catch2
+  docs: https://github.com/catchorg/Catch2/blob/Catch1.x/docs/Readme.md
+categories:
+  - topic.library.development.testing
+  - standard.cpp.03
+  - status.7inactive

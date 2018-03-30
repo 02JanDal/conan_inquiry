@@ -1,0 +1,12 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/nanomsg:bincrafters'}
+urls:
+  github: nanomsg/nanomsg
+  website: http://nanomsg.org/
+  docs: http://nanomsg.org/documentation.html
+categories:
+  - topic.library.network.messages
+  - topic.library.network.pubsub
+  - topic.library.network.zeromq
+  - standard.c
+  - status.5stable

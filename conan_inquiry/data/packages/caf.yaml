@@ -1,0 +1,10 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/caf:bincrafters'}
+urls:
+  website: https://actor-framework.org/
+  github: actor-framework/actor-framework
+  docs: https://actor-framework.readthedocs.io/en/latest/
+categories:
+  - topic.library
+  - status.5stable
+  - standard.cpp.11

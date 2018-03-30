@@ -1,0 +1,30 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/libtins:bincrafters'}
+urls:
+  github: mfontanini/libtins
+  docs: https://libtins.github.io/tutorial/
+code_example: |
+  #include <iostream>
+  #include <tins/tins.h>
+
+  using namespace Tins;
+  using namespace std;
+
+  bool callback(const PDU &pdu) {
+      // Find the IP layer
+      const IP &ip = pdu.rfind_pdu<IP>();
+      // Find the TCP layer
+      const TCP &tcp = pdu.rfind_pdu<TCP>();
+      cout << ip.src_addr() << ':' << tcp.sport() << " -> "
+           << ip.dst_addr() << ':' << tcp.dport() << endl;
+      return true;
+  }
+
+  int main() {
+      Sniffer("eth0").sniff_loop(callback);
+  }
+categories:
+  - topic.library.network.packet_capture
+  - standard.cpp.98
+  - standard.cpp.11
+  - status.5stable

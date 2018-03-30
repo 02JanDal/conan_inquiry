@@ -3,3 +3,12 @@ recipies:
       bintray: jacmoe/Conan/Assimp:jacmoe
 urls:
   github: assimp/assimp
+  website: http://assimp.sourceforge.net/
+  docs: http://assimp.sourceforge.net/lib_html/index.html
+categories:
+  - topic.library.fileformat.3dmodel
+  - topic.library.graphics.lowlevel
+  - topic.library.games
+  - environment.desktop
+  - environment.mobile
+  - standard.cpp.11

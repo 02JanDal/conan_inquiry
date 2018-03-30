@@ -1,0 +1,5 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/cygwin_installer:bincrafters'}
+urls: {}
+categories:
+  - topic.tool

@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/openal:bincrafters'}
+urls:
+  docs: https://www.openal.org/documentation/OpenAL_Programmers_Guide.pdf
+categories:
+  - topic.library.multimedia.audio
+  - standard.c
+  - status.6mature

@@ -1,0 +1,6 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/msys2_installer:bincrafters'}
+urls: {}
+categories:
+  - topic.tool.compiler
+  - status.5stable

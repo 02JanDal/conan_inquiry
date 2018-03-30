@@ -7,6 +7,7 @@ import os
 from conan_inquiry.deployment import deploy
 from conan_inquiry.finder import BintrayFinder
 from conan_inquiry.generator import Generator
+from conan_inquiry.util.cache import Cache
 from conan_inquiry.validator import validate_packages
 
 
@@ -28,7 +29,11 @@ def main():
         Generator(dir).transform_packages()
     elif args.subparser_name == 'find':
         # Finder(create_github()).generate_stubs(dir)
-        BintrayFinder().print()
+        with Cache():
+            btfinder = BintrayFinder()
+            btfinder.run()
+            btfinder.print()
+            btfinder.generate_stubs()
     elif args.subparser_name == 'validate':
         validate_packages(os.getcwd())
     elif args.subparser_name == 'deploy':

@@ -1,0 +1,22 @@
+recipies:
+  - repo:
+      bintray: conan-community/conan/nasm:conan
+  - repo:
+      bintray: lasote/conan-repo/nasm:conan
+  - repo:
+      bintray: bincrafters/public-conan/nasm_installer:bincrafters
+urls:
+  docs: http://www.nasm.us/docs.php
+  code: http://repo.or.cz/w/nasm.git
+  git: http://repo.or.cz/nasm.git
+  issues: https://bugzilla.nasm.us/
+authors:
+  - name: H. Peter Anvin
+  - name: Cyrill Gorcunov
+  - name: Chang Seok Bae
+  - name: Jim Kukunas
+  - name: Frank B. Kotler
+description: The Netwide Assembler (NASM) is an assembler and disassembler for the Intel x86 architecture. It can be used to write 16-bit, 32-bit (IA-32) and 64-bit (x86-64) programs. NASM is considered to be one of the most popular assemblers for Linux.
+short_description: The Netwide Assembler (NASM) is an assembler and disassembler for the Intel x86 architecture.
+categories:
+  - topic.tool.compiler

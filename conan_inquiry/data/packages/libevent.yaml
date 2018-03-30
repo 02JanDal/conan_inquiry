@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/libevent:bincrafters'}
+urls: {}
+categories:
+  - standard.c
+  - topic.library.async
+  - topic.library.io
+  - topic.library.network
+  - status.6mature

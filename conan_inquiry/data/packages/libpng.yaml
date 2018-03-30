@@ -3,6 +3,8 @@ recipies:
       bintray: conan-community/conan/libpng:conan
   - repo:
       bintray: lasote/conan-repo/libpng:conan
+  - repo:
+      bintray: bincrafters/public-conan/libpng:bincrafters
 urls:
   website: http://www.libpng.org/pub/png/libpng.html
   docs: http://www.libpng.org/pub/png/libpng-manual.txt
@@ -18,3 +20,8 @@ authors:
   - name: John Bowler
   - name: Glenn Randers-Pehrson
     email: glennrp@users.sf.net
+categories:
+  - topic.library.fileformat.image.png
+  - topic.library.graphics.lowlevel
+  - standard.c
+  - status.5stable

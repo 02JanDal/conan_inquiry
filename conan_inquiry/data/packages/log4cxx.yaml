@@ -8,6 +8,7 @@ urls:
   wiki: https://wiki.apache.org/logging-log4cxx
   docs: https://logging.apache.org/log4cxx/latest_stable/usage.html
   github: apache/logging-log4cxx
+  website: https://logging.apache.org/log4cxx/latest_stable/index.html
 code_example: |
   log4cxx::LoggerPtr logger(log4cxx::Logger::getLogger("com.foo"));
   const char* region = "World";
@@ -18,3 +19,7 @@ code_example: |
 authors:
   - name: The Apache Software Foundation
     website: https://www.apache.org/
+categories:
+  - topic.library.logging
+  - standard.cpp
+  - status.5stable

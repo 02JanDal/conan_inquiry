@@ -5,6 +5,7 @@ from datetime import timedelta
 import nltk
 import os
 import requests
+from dotmap import DotMap
 
 from conan_inquiry.transformers.base import BaseTransformer, BaseHTTPTransformer
 from conan_inquiry.util.general import render_readme
@@ -114,12 +115,40 @@ class ReadmeFetcher(BaseHTTPTransformer):
         if 'readme' in package.urls and 'readme' not in package.files:
             package.files.readme = dict(
                 url=package.urls.readme,
-                content=self.cache.get(package.urls.readme, timedelta(days=1),
+                content=self.cache.get(package.urls.readme, timedelta(days=2),
                                        'rendered_readme',
                                        lambda: render_readme(package.urls.readme,
                                                              self.http.get(package.urls.readme).text,
                                                              '/'.join(package.urls.readme.split('/')[:-1])))
             )
+        return package
+
+
+class CategoriesTransformer(BaseTransformer):
+    VALID_PREFIX = [
+        'topic.library',
+        'topic.tool',
+        'environment.',
+        'standard.cpp',
+        'standard.c',
+        'status.'
+    ]
+
+    def transform(self, package):
+        categories = set(package.get('categories', set()))
+        for cat in categories:
+            prefix = [p for p in self.VALID_PREFIX if cat.startswith(p)]
+            if not prefix:
+                raise ValueError('Invalid category: {}'.format(cat))
+
+        new_categories = set()
+        for cat in categories:
+            parts = cat.split('.')
+            for i in range(2, len(parts)+1):
+                new_categories.add('.'.join(parts[0:i]))
+
+        package.categories = sorted(new_categories)
+
         return package
 
 
@@ -148,3 +177,12 @@ class RemoveTemporariesTransformer(BaseTransformer):
 
     def transform(self, package):
         return self._handle_value(package)
+
+
+class AddEmptyTransformer(BaseTransformer):
+    def transform(self, package):
+        self._set_unless_exists(package, 'keywords', [])
+        self._set_unless_exists(package, 'categories', [])
+        self._set_unless_exists(package, 'authors', [])
+
+        return package

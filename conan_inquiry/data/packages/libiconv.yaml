@@ -1,0 +1,10 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/libiconv:bincrafters'}
+urls:
+  website: https://www.gnu.org/software/libiconv/
+  docs: https://www.gnu.org/savannah-checkouts/gnu/libiconv/documentation/libiconv-1.15/
+  code: https://git.savannah.gnu.org/cgit/libiconv.git
+categories:
+  - topic.library.i18n
+  - standard.c
+  - status.6mature

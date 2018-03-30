@@ -1,0 +1,11 @@
+recipies:
+- repo: {bintray: 'conan-community/conan/eigen:conan'}
+urls:
+  website: http://eigen.tuxfamily.org/
+  bitbucket: eigen/eigen
+  github: eigenteam/eigen-git-mirror
+description: 'Eigen is a C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms'
+categories:
+  - topic.library.math
+  - standard.cpp.98
+  - status.6mature

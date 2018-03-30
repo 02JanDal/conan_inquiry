@@ -20,6 +20,19 @@ This repository consist of three things:
 * Scripts to find new packages, generate the full JSON file from the static data files and validate the result ([conan_inquiry](https://github.com/02JanDal/conan_inquiry/tree/master/conan_inquiry))
 * A web interface using the generated JSON ([conan_inquiry/data/web](https://github.com/02JanDal/conan_inquiry/tree/master/conan_inquiry/data/web))
 
+### Workflow
+
+When updating the list of packages the usual workflow is as follows:
+
+1. At at least one package for each fully new repository
+2. Run `conan_inquiry.py find` to find new packages
+3. Run `conan_inquiry.py generate` (see below for more information) to gather additional data and generate an aggregated package file
+4. Run `conan_inquiry.py validate` to find any missing fields (start from the top of the output)
+    1. Fix _all_ (otherwise you'll waste ratelimit resource) issues it reports
+    2. Repeat (generate -> validate -> fix) until there are no more issues
+5. Copy `packages.js` to `conan_inquiry/data/web` and open `index.html` from the same file in a browser
+6. Run `conan_inquiry.py deploy` to upload everything to a gh-pages branch
+
 ### Prerequisites
 
 You need to have Git and Python 3 installed. Then clone the project using git and install the dependencies using pip:

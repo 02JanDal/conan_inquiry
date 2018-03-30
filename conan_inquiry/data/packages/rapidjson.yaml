@@ -1,0 +1,10 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/rapidjson:bincrafters'}
+urls:
+  github: Tencent/rapidjson
+categories:
+  - topic.library.fileformat.generic.json
+  - topic.library.serialization.lowlevel
+  - standard.cpp.03
+  - standard.cpp.11
+  - status.5stable

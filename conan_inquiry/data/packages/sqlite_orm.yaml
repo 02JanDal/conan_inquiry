@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/sqlite_orm:bincrafters'}
+urls: {}
+categories:
+  - topic.library.database.sqlite
+  - topic.library.database.orm
+  - status.5stable
+  - standard.cpp.11

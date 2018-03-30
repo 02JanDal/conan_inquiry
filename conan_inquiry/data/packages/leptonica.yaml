@@ -1,0 +1,10 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/leptonica:bincrafters'}
+urls:
+  github: DanBloomberg/leptonica
+  website: http://www.leptonica.org/
+categories:
+  - topic.library.fileformat.image
+  - topic.library.graphics.image_processing
+  - standard.c
+  - status.5stable

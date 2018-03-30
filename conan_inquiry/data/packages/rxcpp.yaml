@@ -4,6 +4,8 @@ recipies:
   - repo:
       bintray: vthiery/conan-packages/conan-rxcpp
     user: vthiery
+  - repo:
+      bintray: bincrafters/public-conan/rxcpp:bincrafters
 name: RxCpp
 urls:
   github: Reactive-Extensions/RxCpp
@@ -32,3 +34,7 @@ code_example: |
 
   // run the loop in create
   keys.connect();
+categories:
+  - topic.library.async.reactive
+  - standard.cpp.11
+  - status.5stable

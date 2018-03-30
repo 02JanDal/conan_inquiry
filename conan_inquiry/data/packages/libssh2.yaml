@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/libssh2:bincrafters'}
+urls:
+  github: libssh2/libssh2
+  docs: https://www.libssh2.org/docs.html
+categories:
+  - topic.library.network.crypto
+  - standard.c
+  - status.5stable

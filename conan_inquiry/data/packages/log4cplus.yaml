@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/log4cplus:bincrafters'}
+urls:
+  docs: http://log4cplus.sourceforge.net/docs/html/index.html
+categories:
+  - topic.library.logging
+  - standard.cpp.11
+  - status.5stable

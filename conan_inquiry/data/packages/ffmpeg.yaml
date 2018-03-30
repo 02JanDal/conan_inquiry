@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/ffmpeg:bincrafters'}
+urls: {}
+categories:
+  - topic.library.multimedia.codecs
+  - topic.library.fileformat.audio
+  - topic.library.fileformat.video
+  - standard.c.99
+  - status.6mature

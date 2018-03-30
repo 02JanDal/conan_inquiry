@@ -3,3 +3,7 @@ recipies:
       bintray: uilianries/conan/resiprocate:uilianries
 urls:
   github: resiprocate/resiprocate
+categories:
+  - topic.library.network.sip
+  - standard.cpp
+  - status.5stable

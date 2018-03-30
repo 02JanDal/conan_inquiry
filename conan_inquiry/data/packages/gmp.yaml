@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/gmp:bincrafters'}
+urls:
+  website: https://gmplib.org/
+categories:
+  - topic.library.math
+  - status.6mature
+  - standard.c
+  - standard.cpp

@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/plibsys:bincrafters'}
+urls: {}
+categories:
+  - topic.library.async
+  - topic.library.network.lowlevel
+  - standard.c
+  - status.5stable

@@ -18,3 +18,7 @@ authors:
   - name: Mark Adler
     email: zlib@gzip.org
     github: madler
+categories:
+  - topic.library.fileformat.compression
+  - status.6mature
+  - standard.c

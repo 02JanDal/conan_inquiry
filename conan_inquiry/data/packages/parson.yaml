@@ -1,0 +1,7 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/parson:bincrafters'}
+urls: {}
+categories:
+  - topic.library.fileformat.generic.json
+  - standard.c.89
+  - status.5stable

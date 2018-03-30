@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/libuuid:bincrafters'}
+urls:
+  docs: https://linux.die.net/man/3/libuuid
+categories:
+  - standard.c
+  - topic.library
+  - status.6mature

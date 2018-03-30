@@ -1,6 +1,5 @@
-import re
-
 import os
+import re
 
 import yaml
 from docutils.core import publish_parts as rst_publish_parts
@@ -12,9 +11,10 @@ def packages_directory():
 
 def load_packages():
     dir = packages_directory()
-    return [yaml.load(open(os.path.join(dir, f), 'r'))
-            for f in os.listdir(dir)
-            if os.path.isfile(os.path.join(dir, f))]
+    packages = [yaml.load(open(os.path.join(dir, f), 'r'))
+                for f in os.listdir(dir)
+                if os.path.isfile(os.path.join(dir, f))]
+    return [p for p in packages if 'see' not in p]
 
 
 def render_readme(path, raw_str, absolute_url, github_renderer=None):

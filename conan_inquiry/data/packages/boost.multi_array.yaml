@@ -1,2 +1,2 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/Boost.Multi_Array:bincrafters'}
+- repo: {bintray: 'bincrafters/public-conan/boost_multi_array:bincrafters'}

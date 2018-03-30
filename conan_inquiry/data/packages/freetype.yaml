@@ -1,0 +1,16 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/freetype:bincrafters'}
+urls:
+  docs: https://www.freetype.org/freetype2/docs/documentation.html
+  code: https://git.savannah.gnu.org/cgit/freetype/freetype2.git/
+authors:
+  - name: David Turner
+  - name: Robert Wilhelm
+  - name: Werner Lemberg
+  - name: Alexei Podtelezhnikov
+  - name: Suzuki Toshiya
+categories:
+  - topic.library.games
+  - topic.library.graphics.lowlevel
+  - standard.c
+  - status.6mature

@@ -1,6 +1,7 @@
 from datetime import timedelta
 
 from dotmap import DotMap
+from natsort import natsorted
 
 from conan_inquiry.transformers.base import BaseHTTPTransformer
 from conan_inquiry.util.bintray import Bintray
@@ -25,32 +26,53 @@ class BintrayTransformer(BaseHTTPTransformer):
                 if ':' in parts[2]:
                     self._set_unless_exists(recipie, 'user', parts[2].split(':')[1])
 
-                # TODO fetch all available versions
-                latest_version = self.bt.get('/packages/' + recipie.repo.bintray + '/versions/_latest')
-                if 'name' in latest_version:
-                    versions = [
-                        DotMap(name=latest_version['name'].split(':')[0],
-                               channel=latest_version['name'].split(':')[1])
-                    ]
-                    self._set_unless_exists(recipie, 'versions', versions)
+                bt_package = self.bt.get('/packages/' + recipie.repo.bintray)
+                versions = [DotMap(name=v.split(':')[0],
+                                   channel=v.split(':')[1],
+                                   repo=recipie.repo.bintray,
+                                   remote=recipie.remote,
+                                   package=recipie.package,
+                                   user=recipie.user)
+                            for v in bt_package['versions']]
+                if 'versions' not in package:
+                    package.versions = []
+                package.versions.extend(versions)
+                package.versions = natsorted(package.versions, key=lambda v: v.name, reverse=True)
 
-                bt_package = self.bt.get('/packages/' + recipie.repo.bintray, timedelta(days=1))
-                if bt_package['vcs_url'] is not None:
-                    self._set_unless_exists(recipie.urls, 'website', bt_package['vcs_url'])
-                if bt_package['issue_tracker_url'] is not None:
-                    self._set_unless_exists(recipie.urls, 'issues', bt_package['issue_tracker_url'])
-                if bt_package['website_url'] is not None:
-                    self._set_unless_exists(package.urls, 'website', bt_package['website_url'])
-                if 'website' in package.urls and 'github.com' in package.urls.website:
-                    self._set_unless_exists(package.urls, 'github',
-                                            '/'.join(package.urls.website.split('/')[-2:]))
-                self._set_unless_exists(package, 'description', bt_package['desc'])
-                if 'keywords' not in package:
-                    package.keywords = []
-                package.keywords.extend(bt_package['labels'])
-                self._set_unless_exists(package, 'licenses',
-                                        [self.license(l) for l in bt_package['licenses']])
-                self._set_unless_exists(package, 'name', bt_package['name'].split(':')[0])
+                sites = []
+                if 'vcs_url' in bt_package and bt_package['vcs_url'] is not None:
+                    sites.append(bt_package['vcs_url'])
+                if 'website_url' in bt_package and bt_package['website_url'] is not None:
+                    sites.append(bt_package['website_url'])
+                sites = [s for s in sites if '/conan-' not in s]
+                for site in sites:
+                    if 'github.com' in site:
+                        path = site.split('/')[-2:]
+                        if not path[1].startswith('conan') and not path[1].endswith('conan') and path[1]:
+                            self._set_unless_exists(package.urls, 'github', '/'.join(path))
+                    else:
+                        self._set_unless_exists(package.urls, 'website', site)
+
+                if 'issue_tracker_url' in bt_package and bt_package['issue_tracker_url'] is not None:
+                    url = bt_package['issue_tracker_url']
+                    if 'github.com/bincrafters/' not in url:
+                        self._set_unless_exists(package.urls, 'issues', url)
+
+                if 'desc' in bt_package and bt_package['desc']:
+                    desc = bt_package['desc']
+                    if 'conan' in desc.lower() and ('package' in desc.lower() or 'recipe' in desc.lower()):
+                        pass  # Many descriptions on bintray are in the form "Conan package for..."
+                    else:
+                        self._set_unless_exists(package, 'description', bt_package['desc'])
+                if 'labels' in bt_package:
+                    if 'keywords' not in package:
+                        package.keywords = []
+                    package.keywords.extend(bt_package['labels'])
+                if 'licenses' in bt_package:
+                    self._set_unless_exists(package, 'licenses',
+                                            [self.license(l) for l in bt_package['licenses']])
+                if 'name' in bt_package:
+                    self._set_unless_exists(package, 'name', bt_package['name'].split(':')[0])
 
                 files = self.bt.get('/packages/' + recipie.repo.bintray + '/files')
                 conanfile = next((f for f in files if f['name'] == 'conanfile.py'), None)

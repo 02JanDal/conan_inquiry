@@ -1,0 +1,7 @@
+recipies:
+- repo: {bintray: 'conan-community/conan/pybind11:conan'}
+urls: {}
+categories:
+  - topic.library.bindings_interoperability
+  - standard.cpp.11
+  - status.5stable

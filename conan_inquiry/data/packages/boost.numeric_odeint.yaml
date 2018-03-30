@@ -1,5 +1,5 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/Boost.Numeric_Odeint:bincrafters'}
+- repo: {bintray: 'bincrafters/public-conan/boost_numeric_odeint:bincrafters'}
 urls:
   boost: numeric/odeint
   github: boostorg/odeint

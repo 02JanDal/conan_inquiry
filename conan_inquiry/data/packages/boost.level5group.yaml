@@ -1,4 +1,4 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/Boost.Level5Group:bincrafters'}
+- repo: {bintray: 'bincrafters/public-conan/boost_level5group:bincrafters'}
 urls: {}
 exclude: true

@@ -1,5 +1,19 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/Boost.Beast:bincrafters'}
+- repo: {bintray: 'bincrafters/public-conan/boost_beast:bincrafters'}
 urls:
-  docs: http://www.boost.org/doc/libs/master/libs/beast/doc/html/index.html
+  docs: http://www.boost.org/doc/libs/release/libs/beast/doc/html/index.html
   github: boostorg/beast
+description: |
+  Beast is a C++ header-only library serving as a foundation for writing interoperable networking libraries by providing low-level HTTP/1, WebSocket, and networking protocol vocabulary types and algorithms using the consistent asynchronous model of Boost.Asio.
+
+  This library is designed for:
+
+  <ul>
+    <li>Symmetry: Algorithms are role-agnostic; build clients, servers, or both.</li>
+    <li>Ease of Use: Boost.Asio users will immediately understand Beast.</li>
+    <li>Flexibility: Users make the important decisions such as buffer or thread management.</li>
+    <li>Performance: Build applications handling thousands of connections or more.</li>
+    <li>Basis for Further Abstraction. Components are well-suited for building upon.</li>
+  </ul>
+
+  This library is not a client or server, but it can be used to build those things. Many examples are provided, including clients and servers, which may be used as a starting point for writing your own program.

@@ -8,3 +8,9 @@ urls:
   issues: https://trac.osgeo.org/gdal/
   github: OSGeo/gdal
 name: GDAL
+categories:
+  - topic.library.geo
+  - topic.library.fileformat.geographic
+  - standard.cpp
+  - standard.c
+  - status.5stable

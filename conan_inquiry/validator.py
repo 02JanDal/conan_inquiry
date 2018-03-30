@@ -87,6 +87,11 @@ schema = dict(
                 items=dict(type='string'),
                 uniqueItems=True
             ),
+            categories=dict(
+                type='array',
+                items=dict(type='string'),
+                uniqueItems=True
+            ),
             licenses=dict(
                 type='array',
                 items=dict(
@@ -100,7 +105,7 @@ schema = dict(
                 )
             )
         ),
-        required=['id', 'name', 'description', 'short_description', 'author', 'authors']
+        required=['id', 'name', 'description', 'short_description', 'author', 'authors', 'categories', 'keywords']
     )
 )
 

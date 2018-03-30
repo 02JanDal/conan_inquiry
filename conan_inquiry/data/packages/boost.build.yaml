@@ -1,4 +1,4 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/Boost.Build:bincrafters'}
+- repo: {bintray: 'bincrafters/public-conan/boost_build:bincrafters'}
 urls:
   docs: http://www.boost.org/build/doc/html/index.html

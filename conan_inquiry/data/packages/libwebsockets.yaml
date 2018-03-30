@@ -1,0 +1,7 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/libwebsockets:bincrafters'}
+urls: {}
+categories:
+  - topic.library.network.websockets
+  - standard.c
+  - status.5stable

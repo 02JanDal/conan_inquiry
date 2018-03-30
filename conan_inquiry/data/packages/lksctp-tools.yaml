@@ -1,0 +1,13 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/lksctp-tools:bincrafters'}
+urls:
+  github: sctp/lksctp-tools
+  website: http://lksctp.sourceforge.net/
+description: |
+  This is the lksctp-tools package for Linux Kernel SCTP Reference Implementation.
+
+  This package is intended to supplement the Linux Kernel SCTP Reference Implementation now available in the Linux kernel source tree in versions  2.5.36 and following.  For more information on LKSCTP see the below section titled "LKSCTP - Linux Kernel SCTP."
+categories:
+  - topic.library.network.lowlevel
+  - standard.c
+  - status.5stable

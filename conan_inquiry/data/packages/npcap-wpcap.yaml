@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/npcap-wpcap:bincrafters'}
+urls:
+  github: nmap/npcap
+categories:
+  - topic.library.network.packet_capture
+  - standard.c
+  - status.5stable

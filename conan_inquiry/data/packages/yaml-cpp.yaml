@@ -1,6 +1,8 @@
 recipies:
   - repo:
       bintray: uilianries/conan/yaml-cpp:uilianries
+  - repo:
+      bintray: bincrafters/public-conan/yaml-cpp:bincrafters
 urls:
   github: jbeder/yaml-cpp
 code_example: |
@@ -17,3 +19,8 @@ code_example: |
 
   std::ofstream fout("config.yaml");
   fout << config;
+categories:
+  - topic.library.fileformat.generic.yaml
+  - topic.library.serialization.lowlevel
+  - standard.cpp.11
+  - status.5stable

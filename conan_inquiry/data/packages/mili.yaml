@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'conan-community/conan/mili:conan'}
+urls:
+  github: MariadeAnton/MiLi
+categories:
+  - topic.library
+  - status.6mature
+  - standard.cpp

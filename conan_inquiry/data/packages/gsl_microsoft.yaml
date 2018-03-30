@@ -1,0 +1,7 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/gsl_microsoft:bincrafters'}
+urls: {}
+categories:
+  - topic.library
+  - standard.cpp
+  - status.5stable

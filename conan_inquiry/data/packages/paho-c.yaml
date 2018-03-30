@@ -1,0 +1,7 @@
+recipies:
+- repo: {bintray: 'conan-community/conan/paho-c:conan'}
+urls: {}
+categories:
+  - topic.library.network.pubsub.mqtt
+  - standard.c
+  - status.5stable

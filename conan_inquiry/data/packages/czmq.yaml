@@ -1,0 +1,10 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/czmq:bincrafters'}
+urls: {}
+categories:
+  - standard.c
+  - topic.library.qt
+  - topic.library.network.zeromq
+  - topic.library.network.pubsub
+  - topic.library.network.messages
+  - status.5stable

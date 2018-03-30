@@ -1,0 +1,4 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/boost_callable_traits:bincrafters'}
+urls:
+  github: boostorg/callable_traits

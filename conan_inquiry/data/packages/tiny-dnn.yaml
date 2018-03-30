@@ -1,0 +1,7 @@
+recipies:
+- repo: {bintray: 'conan-community/conan/tiny-dnn:conan'}
+urls: {}
+categories:
+  - topic.library.ai
+  - standard.cpp
+  - status.2prealpha

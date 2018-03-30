@@ -1,0 +1,25 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/jansson:bincrafters'}
+urls:
+  github: akheron/jansson
+  docs: https://jansson.readthedocs.io/en/latest/
+code_example: |
+  commit = json_object_get(data, "commit");
+  if(!json_is_object(commit))
+  {
+      fprintf(stderr, "error: commit %d: commit is not an object\n", i + 1);
+      json_decref(root);
+      return 1;
+  }
+
+  message = json_object_get(commit, "message");
+  if(!json_is_string(message))
+  {
+      fprintf(stderr, "error: commit %d: message is not a string\n", i + 1);
+      json_decref(root);
+      return 1;
+  }
+categories:
+  - standard.c
+  - topic.library.fileformat.generic.json
+  - status.5stable

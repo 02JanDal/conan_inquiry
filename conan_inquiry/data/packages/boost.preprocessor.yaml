@@ -1,3 +1,3 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/Boost.Preprocessor:bincrafters'}
+- repo: {bintray: 'bincrafters/public-conan/boost_preprocessor:bincrafters'}
 urls: {}

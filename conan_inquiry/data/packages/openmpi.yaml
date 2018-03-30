@@ -1,0 +1,11 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/openmpi:bincrafters'}
+urls:
+  github: open-mpi/ompi
+  website: https://www.open-mpi.org/
+description: Open MPI is a Message Passing Interface library project combining technologies and resources from several other projects.
+short_description: Open MPI is a Message Passing Interface library project combining technologies and resources from several other projects.
+categories:
+  - topic.library.async
+  - standard.c
+  - status.5stable

@@ -1,0 +1,11 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/libx264:bincrafters'}
+urls:
+  code: https://git.videolan.org/?p=x264.git;a=summary
+  website: https://www.videolan.org/developers/x264.html
+short_description: x264 is a free software library and application for encoding video streams into the H.264/MPEG-4 AVC compression format, and is released under the terms of the GNU GPL
+categories:
+  - topic.library.fileformat.video
+  - topic.library.multimedia.codecs
+  - standard.c
+  - status.5stable

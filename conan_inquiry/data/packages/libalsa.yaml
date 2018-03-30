@@ -1,0 +1,10 @@
+recipies:
+- repo: {bintray: 'conan-community/conan/libalsa:conan'}
+urls:
+  website: https://www.alsa-project.org/
+  code: http://git.alsa-project.org/?p=alsa-lib.git
+categories:
+  - topic.library.multimedia.audio
+  - environment.desktop
+  - standard.c
+  - status.6mature

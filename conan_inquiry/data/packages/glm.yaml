@@ -5,3 +5,9 @@ urls:
   website: https://glm.g-truc.net
   github: g-truc/glm
 name: OpenGL Mathematics
+categories:
+  - topic.library.graphics.3d.opengl
+  - topic.library.math
+  - standard.cpp.98
+  - standard.cpp.11
+  - status.6mature

@@ -1,0 +1,12 @@
+recipies:
+- repo: {bintray: 'conan-community/conan/libmosquitto:conan'}
+urls:
+  docs: https://mosquitto.org/api/
+  website: https://mosquitto.org/
+  github: eclipse/mosquitto
+categories:
+  - topic.library.network.pubsub.mqtt
+  - topic.library.network.websockets
+  - standard.c
+  - standard.cpp
+  - status.5stable

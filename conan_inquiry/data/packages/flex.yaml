@@ -1,5 +1,11 @@
 recipies:
   - repo:
+      bintray: bincrafters/public-conan/flex:bincrafters
+  - repo:
       bintray: uilianries/conan/flex:uilianries
 urls:
   github: westes/flex
+categories:
+  - topic.tool.preprocessor
+  - topic.library.development.parser_generator
+  - status.6mature

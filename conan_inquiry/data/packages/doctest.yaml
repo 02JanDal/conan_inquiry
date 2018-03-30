@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/doctest:bincrafters'}
+urls: {}
+categories:
+  - topic.library.development.testing
+  - standard.cpp.98
+  - standard.cpp.11
+  - status.5stable

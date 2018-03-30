@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/expat:bincrafters'}
+urls:
+  website: https://libexpat.github.io/
+  github: libexpat/libexpat
+categories:
+  - topic.library.fileformat.generic.xml
+  - standard.c.89
+  - status.6mature
