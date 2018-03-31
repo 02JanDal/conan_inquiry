@@ -6,3 +6,4 @@ categories:
   - topic.library.database.orm
   - status.5stable
   - standard.cpp.11
+name: SQLite ORM

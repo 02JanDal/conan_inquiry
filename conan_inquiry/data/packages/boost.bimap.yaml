@@ -2,3 +2,7 @@ recipies:
 - repo: {bintray: 'bincrafters/public-conan/boost_bimap:bincrafters'}
 urls:
   docs: http://www.boost.org/doc/libs/release/libs/bimap/
+categories:
+  - topic.library.utility
+  - standard.cpp
+  - status.5stable

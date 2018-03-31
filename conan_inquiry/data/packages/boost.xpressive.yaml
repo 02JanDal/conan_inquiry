@@ -1,3 +1,7 @@
 recipies:
 - repo: {bintray: 'bincrafters/public-conan/boost_xpressive:bincrafters'}
 urls: {}
+categories:
+  - topic.library.string.regexp
+  - standard.cpp
+  - status.5stable

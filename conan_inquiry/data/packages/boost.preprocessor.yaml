@@ -1,3 +1,7 @@
 recipies:
 - repo: {bintray: 'bincrafters/public-conan/boost_preprocessor:bincrafters'}
 urls: {}
+categories:
+  - topic.library.utility.preprocessor
+  - standard.cpp
+  - status.5stable

@@ -2,7 +2,7 @@ recipies:
 - repo: {bintray: 'bincrafters/public-conan/optional-lite:bincrafters'}
 urls: {}
 categories:
-  - topic.library
+  - topic.library.utility.container
   - standard.cpp.03
   - standard.cpp.11
   - status.5stable

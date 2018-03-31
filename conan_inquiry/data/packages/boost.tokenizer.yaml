@@ -1,3 +1,7 @@
 recipies:
 - repo: {bintray: 'bincrafters/public-conan/boost_tokenizer:bincrafters'}
 urls: {}
+categories:
+  - topic.library.string.parsing
+  - standard.cpp
+  - status.5stable

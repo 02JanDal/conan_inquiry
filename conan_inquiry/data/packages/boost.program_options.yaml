@@ -1,3 +1,7 @@
 recipies:
 - repo: {bintray: 'bincrafters/public-conan/boost_program_options:bincrafters'}
 urls: {}
+categories:
+  - topic.library.terminal.cli_parsing
+  - standard.cpp
+  - status.5stable

@@ -2,6 +2,7 @@ recipies:
 - repo: {bintray: 'bincrafters/public-conan/gyp_installer:bincrafters'}
 urls:
   website: https://gyp.gsrc.io/
+name: GYP
 code_example: |
   {
     'targets': [

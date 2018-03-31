@@ -17,3 +17,10 @@ description: |
   </ul>
 
   This library is not a client or server, but it can be used to build those things. Many examples are provided, including clients and servers, which may be used as a starting point for writing your own program.
+
+categories:
+  - topic.library.network.lowlevel
+  - topic.library.network.http
+  - topic.library.network.websockets
+  - standard.cpp
+  - status.5stable

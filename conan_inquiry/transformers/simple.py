@@ -83,6 +83,7 @@ class AuthorCombinerTransformer(BaseTransformer):
 
 class ShortDescriptionTransformer(BaseTransformer):
     tag_re = re.compile(r'<[/a-z][^>]*>')
+    url_re = re.compile(r'https?://\S+')
 
     @classmethod
     def prepare(cls):
@@ -100,6 +101,9 @@ class ShortDescriptionTransformer(BaseTransformer):
         if len(short_descs) > 0:
             self._set_unless_exists(package, 'short_description',
                                     self.tag_re.sub('', short_descs[0]))
+
+        package.short_description = self.url_re.sub('', package.short_description)
+        package.short_description = package.short_description.strip('. -')
         return package
 
 

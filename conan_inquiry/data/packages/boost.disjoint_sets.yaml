@@ -1,3 +1,7 @@
 recipies:
 - repo: {bintray: 'bincrafters/public-conan/boost_disjoint_sets:bincrafters'}
 urls: {}
+categories:
+  - topic.library.utility.container
+  - standard.cpp
+  - status.5stable

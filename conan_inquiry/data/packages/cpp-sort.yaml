@@ -3,6 +3,6 @@ recipies:
 urls:
   github: Morwenn/cpp-sort
 categories:
-  - topic.library
+  - topic.library.utility.algorithm
   - status.5stable
   - standard.cpp.14

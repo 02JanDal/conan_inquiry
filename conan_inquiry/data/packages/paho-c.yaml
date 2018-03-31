@@ -5,3 +5,4 @@ categories:
   - topic.library.network.pubsub.mqtt
   - standard.c
   - status.5stable
+name: Paho

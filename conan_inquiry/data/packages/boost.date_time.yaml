@@ -1,3 +1,7 @@
 recipies:
 - repo: {bintray: 'bincrafters/public-conan/boost_date_time:bincrafters'}
 urls: {}
+categories:
+  - topic.library.datetime
+  - standard.cpp
+  - status.5stable

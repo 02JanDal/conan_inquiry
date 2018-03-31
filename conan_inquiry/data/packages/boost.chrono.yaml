@@ -1,3 +1,8 @@
 recipies:
 - repo: {bintray: 'bincrafters/public-conan/boost_chrono:bincrafters'}
 urls: {}
+categories:
+  - topic.library.datetime
+  - standard.cpp.11
+  - status.5stable
+short_description: Useful time utilities

@@ -1,3 +1,9 @@
 recipies:
 - repo: {bintray: 'bincrafters/public-conan/boost_asio:bincrafters'}
 urls: {}
+categories:
+  - topic.library.io
+  - topic.library.network.lowlevel
+  - standard.cpp.98
+  - standard.cpp.11
+  - status.5stable

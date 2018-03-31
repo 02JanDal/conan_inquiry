@@ -12,3 +12,4 @@ description: |
 short_description: A collection of tools for dealing with Chromium development
 categories:
   - topic.tool
+name: Depot Tools

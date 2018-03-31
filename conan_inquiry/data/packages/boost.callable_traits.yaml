@@ -2,3 +2,7 @@ recipies:
 - repo: {bintray: 'bincrafters/public-conan/boost_callable_traits:bincrafters'}
 urls:
   github: boostorg/callable_traits
+categories:
+  - topic.library.utility.functional
+  - standard.cpp.11
+  - status.5stable

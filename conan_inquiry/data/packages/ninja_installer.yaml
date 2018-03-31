@@ -6,3 +6,4 @@ urls:
 categories:
   - topic.tool.build_tools
   - status.5stable
+name: Ninja

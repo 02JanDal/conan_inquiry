@@ -2,3 +2,7 @@ recipies:
 - repo: {bintray: 'bincrafters/public-conan/boost_numeric_conversion:bincrafters'}
 urls:
   boost: numeric/conversion
+categories:
+  - topic.library.math
+  - standard.cpp
+  - status.5stable

@@ -1,3 +1,7 @@
 recipies:
 - repo: {bintray: 'bincrafters/public-conan/boost_signals2:bincrafters'}
 urls: {}
+categories:
+  - topic.library.async.signal_slots
+  - standard.cpp
+  - status.5stable

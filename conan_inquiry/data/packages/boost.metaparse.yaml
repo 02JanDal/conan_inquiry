@@ -1,3 +1,9 @@
 recipies:
 - repo: {bintray: 'bincrafters/public-conan/boost_metaparse:bincrafters'}
 urls: {}
+categories:
+  - topic.library.utility.metaprogramming
+  - topic.library.development.parser_generator
+  - topic.library.dsl
+  - standard.cpp
+  - status.5stable

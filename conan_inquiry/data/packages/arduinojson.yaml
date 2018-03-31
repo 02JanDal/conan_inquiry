@@ -3,6 +3,7 @@ recipies:
 urls:
   github: bblanchon/ArduinoJson
   docs: https://arduinojson.org/doc/
+name: ArduinoJSON
 categories:
   - topic.library.fileformat.generic.json
   - topic.library.serialization.lowlevel

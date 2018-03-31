@@ -13,3 +13,4 @@ categories:
   - topic.library.database.mysql
   - status.5stable
   - standard.c
+name: MySQL Connector/C

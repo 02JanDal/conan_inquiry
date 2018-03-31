@@ -11,3 +11,4 @@ description: |
   Yasm can be easily integrated into Visual Studio 2005/2008 and 2010 for assembly of NASM or GAS syntax code into Win32 or Win64 object files.
 categories:
   - topic.tool.compiler
+name: Yasm

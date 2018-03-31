@@ -1,3 +1,8 @@
 recipies:
 - repo: {bintray: 'bincrafters/public-conan/boost_msm:bincrafters'}
 urls: {}
+name: Boost.MetaStateMachine
+categories:
+  - topic.library.statemachine
+  - standard.cpp
+  - status.5stable

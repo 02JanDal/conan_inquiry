@@ -1,2 +1,6 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/boost_multi_array:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/boost_multi_array:bincrafters'}
+categories:
+  - topic.library.utility.container
+  - standard.cpp
+  - status.5stable

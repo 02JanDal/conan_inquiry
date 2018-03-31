@@ -1,3 +1,7 @@
 recipies:
 - repo: {bintray: 'bincrafters/public-conan/boost_mp11:bincrafters'}
 urls: {}
+categories:
+  - topic.library.utility.metaprogramming
+  - standard.cpp
+  - status.5stable

@@ -1,3 +1,8 @@
 recipies:
 - repo: {bintray: 'bincrafters/public-conan/boost_wave:bincrafters'}
 urls: {}
+categories:
+  - topic.library.utility.preprocessor
+  - topic.library.string.parsing
+  - standard.cpp
+  - status.5stable

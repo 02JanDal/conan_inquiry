@@ -20,3 +20,4 @@ description: The Netwide Assembler (NASM) is an assembler and disassembler for t
 short_description: The Netwide Assembler (NASM) is an assembler and disassembler for the Intel x86 architecture.
 categories:
   - topic.tool.compiler
+name: NASM

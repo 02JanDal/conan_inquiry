@@ -21,6 +21,7 @@
   - topic.library.games
   - topic.library.development.parser_generator
   - topic.library.development.testing
+  - topic.library.development.debugging
   - topic.library.network.messages
   - topic.library.network.pubsub
   - topic.library.network.pubsub.mqtt
@@ -35,6 +36,7 @@
   - topic.library.network.sip
   - topic.library.io
   - topic.library.async
+  - topic.library.async.signal_slots
   - topic.library.datetime
   - topic.library.terminal.cli_parsing
   - topic.library.qt
@@ -42,7 +44,8 @@
   - topic.library.geo
   - topic.library.logging
   - topic.library.i18n
-  - topic.library.regexp
+  - topic.library.string.regexp
+  - topic.library.string.parsing
   - topic.library.multimedia.codecs
   - topic.library.multimedia.audio
   - topic.library.database.lowlevel
@@ -50,6 +53,13 @@
   - topic.library.database.{sqlite,mysql,odbc}
   - topic.library.statemachine
   - topic.library.ai
+  - topic.library.utility.container
+  - topic.library.utility.metaprogramming
+  - topic.library.utility.functional
+  - topic.library.utility.errors
+  - topic.library.utility.algorithm
+  - topic.library.utility.preprocessor
+  - topic.library.utility.memory
   - topic.tool.build_tools
   - topic.tool.preprocessor
   - topic.tool.compiler

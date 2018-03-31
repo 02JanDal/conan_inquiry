@@ -1,3 +1,4 @@
 recipies:
 - repo: {bintray: 'bincrafters/public-conan/boost_winapi:bincrafters'}
 urls: {}
+name: Boost.WinAPI

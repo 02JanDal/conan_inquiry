@@ -1,3 +1,10 @@
 recipies:
 - repo: {bintray: 'bincrafters/public-conan/boost_config:bincrafters'}
 urls: {}
+categories:
+  - topic.library.utility
+  - standard.cpp.03
+  - standard.cpp.11
+  - standard.cpp.14
+  - standard.cpp.17
+  - status.5stable

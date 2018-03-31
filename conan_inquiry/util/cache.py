@@ -2,7 +2,7 @@ import os
 from datetime import datetime, timedelta
 from json import JSONDecodeError, dump as json_dump, load as json_load
 from threading import Lock
-from typing import Callable, Union, Dict, Any
+from typing import Callable, Union, Dict, Any, List
 
 
 class Cache:
@@ -47,7 +47,7 @@ class Cache:
                 self.cache[context] = dict()
             self.cache[context][key] = dict(value=value, time=datetime.now().timestamp())
 
-    def set(self, key: str, value: Union[str, int, float, Dict[str, Any]], context: str = None):
+    def set(self, key: str, value: Union[str, int, float, List[Any], Dict[str, Any]], context: str = None):
         """Insert or update a value"""
 
         with self.lock:
@@ -69,7 +69,7 @@ class Cache:
             return self._has(key, maxage, context)
 
     def get(self, key: str, maxage: timedelta, context: str = None,
-            func: Callable[[], Union[str, int, float, Dict[str, Any]]] = None,
+            func: Callable[[], Union[str, int, float, List[Any], Dict[str, Any]]] = None,
             locked_getter=True):
         """Retrieve, if possible, a value. Optionally compute and set it if not available"""
 

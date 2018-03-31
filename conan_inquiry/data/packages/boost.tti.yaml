@@ -1,3 +1,8 @@
 recipies:
 - repo: {bintray: 'bincrafters/public-conan/boost_tti:bincrafters'}
 urls: {}
+name: Boost.TTI
+categories:
+  - topic.library.utility.metaprogramming
+  - standard.cpp
+  - status.5stable

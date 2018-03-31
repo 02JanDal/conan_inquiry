@@ -1,3 +1,7 @@
 recipies:
 - repo: {bintray: 'bincrafters/public-conan/boost_python:bincrafters'}
 urls: {}
+categories:
+  - topic.library.bindings_interoperability
+  - standard.cpp
+  - status.5stable

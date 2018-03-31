@@ -19,3 +19,4 @@ categories:
   - topic.library.multimedia.audio
   - standard.c
   - status.5stable
+name: SDL2

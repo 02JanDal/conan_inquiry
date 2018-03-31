@@ -13,7 +13,7 @@ categories:
   - topic.library.fileformat.compression.zip
   - topic.library.datetime
   - topic.library.async
-  - topic.library.regexp
+  - topic.library.string.regexp
   - topic.library.database.lowlevel
   - topic.library.database.sqlite
   - topic.library.database.mysql

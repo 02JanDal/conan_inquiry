@@ -14,6 +14,29 @@ class BoostTransformer(BaseHTTPTransformer):
     first_p_re = re.compile(r'<p>(.*?)</p>')
     blockquote_re = re.compile(r'<blockquote.*?</blockquote>')
 
+    listing = None
+
+    def _listing(self):
+        raw = self.http.get('https://www.boost.org/doc/libs/')
+        bs = BeautifulSoup(raw.text, 'html.parser')
+        dl = bs.dl
+        list_of_libraries = []
+        for dt in [dt for dt in dl.children if dt.name == 'dt']:
+            name = dt.a.get_text()
+            url = dt.a['href'].replace('/doc/libs/release/libs/', '')
+            # remove some extra stuff in some URLs
+            for search in ['/doc/index.html', '/dynamic_bitset.html', '/doc/interval.htm', '/utility.htm',
+                           '/doc/boost-exception.html', '/config.htm', '/doc/html', '/doc/ios_state.html']:
+                url = url.replace(search, '')
+            dd = dt.next_sibling.next_sibling
+            description = dd.p.get_text()
+            list_of_libraries.append(dict(
+                name=name,
+                url=url.strip('/').replace('/', '_'),
+                description=description
+            ))
+        return list_of_libraries
+
     def __init__(self):
         super().__init__()
         authors_text = self.http.get(
@@ -22,11 +45,23 @@ class BoostTransformer(BaseHTTPTransformer):
                         for line in authors_text.split('\n')
                         if not line.startswith('#') and line.strip() != ''}
 
+        if self.listing is None:
+            self.listing = self.cache.get('boost_listing', maxage=timedelta(days=28),
+                                          func=self._listing, locked_getter=True)
+
     def transform(self, package):
         if package.id.startswith('boost_'):
             boost_id = package.id.replace('boost_', '')
             self._set_unless_exists(package.urls, 'issues',
                                     'http://www.boost.org/development/bugs.html')
+
+            listing = next((l for l in self.listing if l['url'] == boost_id), None)
+            if listing is not None:
+                self._set_unless_exists(package, 'name', 'Boost.' + listing['name'].replace(' ', ''))
+                self._set_unless_exists(package, 'short_description', listing['description'])
+            else:
+                self._set_unless_exists(package, 'name',
+                                        'Boost.' + ''.join([i.title() for i in boost_id.split('_')]))
 
             def http_get_json(url):
                 res = self.http.get(url)
@@ -44,7 +79,8 @@ class BoostTransformer(BaseHTTPTransformer):
 
             metaurl = 'https://raw.githubusercontent.com/boostorg/' + boost_id + '/develop/meta/libraries.json'
             metares = self.cache.get(metaurl, timedelta(days=1), 'boost_docs',
-                                     lambda: http_get_json(metaurl))
+                                     lambda: http_get_json(metaurl),
+                                     locked_getter=False)
             if metares['code'] == 200:
                 package.urls.github = 'boostorg/' + boost_id
 
@@ -72,7 +108,8 @@ class BoostTransformer(BaseHTTPTransformer):
                 boost_url = package.urls.boost if 'boost' in package.urls else boost_id
                 docurl = 'http://www.boost.org/doc/libs/release/libs/' + boost_url
                 docres = self.cache.get(docurl, timedelta(days=1), 'boost_docs',
-                                        lambda: http_get_text(docurl))
+                                        lambda: http_get_text(docurl),
+                                        locked_getter=False)
                 if docres['code'] == 200:
                     self._set_unless_exists(package.urls, 'docs', docurl)
 

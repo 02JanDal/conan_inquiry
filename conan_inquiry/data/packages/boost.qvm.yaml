@@ -1,3 +1,8 @@
 recipies:
 - repo: {bintray: 'bincrafters/public-conan/boost_qvm:bincrafters'}
 urls: {}
+name: Boost.QVM
+categories:
+  - topic.library.math
+  - standard.cpp
+  - status.5stable

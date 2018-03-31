@@ -1,6 +1,7 @@
 # [Conan Inquiry](https://02jandal.github.io/conan_inquiry)
 
-An alternative to the [official package search](conan.io/search) for conan packages. You can find it [here](https://02jandal.github.io/conan_inquiry).
+A way to search for conan packages across the web, and view additional information about them.
+You can find it [here](https://02jandal.github.io/conan_inquiry).
 
 ## Features
 
@@ -100,4 +101,5 @@ This project is licensed under the MIT License - see the
 ## Acknowledgments
 
 * Everyone who has contributed to the [conan project](https://github.com/conan-io/conan)
+* Bincrafters, who have created many of the package recipes
 * @PurpleBooth for the [README template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)

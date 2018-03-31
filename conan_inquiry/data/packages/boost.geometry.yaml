@@ -1,3 +1,8 @@
 recipies:
 - repo: {bintray: 'bincrafters/public-conan/boost_geometry:bincrafters'}
 urls: {}
+categories:
+  - topic.library.math
+  - topic.library.geo
+  - standard.cpp
+  - status.5stable

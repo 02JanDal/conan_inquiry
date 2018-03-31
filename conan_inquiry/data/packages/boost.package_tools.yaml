@@ -1,3 +1,4 @@
 recipies:
 - repo: {bintray: 'bincrafters/public-conan/boost_package_tools:bincrafters'}
 urls: {}
+exclude: true

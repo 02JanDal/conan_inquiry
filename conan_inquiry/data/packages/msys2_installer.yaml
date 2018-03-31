@@ -4,3 +4,4 @@ urls: {}
 categories:
   - topic.tool.compiler
   - status.5stable
+name: MSYS2

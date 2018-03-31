@@ -1,3 +1,8 @@
 recipies:
 - repo: {bintray: 'bincrafters/public-conan/boost_graph_parallel:bincrafters'}
 urls: {}
+categories:
+  - topic.library.utility.container
+  - topic.library.async
+  - standard.cpp
+  - status.5stable

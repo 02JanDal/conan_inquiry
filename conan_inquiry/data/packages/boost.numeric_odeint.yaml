@@ -3,3 +3,7 @@ recipies:
 urls:
   boost: numeric/odeint
   github: boostorg/odeint
+categories:
+  - topic.library.math
+  - standard.cpp
+  - status.5stable

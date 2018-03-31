@@ -1,3 +1,7 @@
 recipies:
 - repo: {bintray: 'bincrafters/public-conan/boost_throw_exception:bincrafters'}
 urls: {}
+categories:
+  - topic.library.utility.errors
+  - standard.cpp
+  - status.5stable

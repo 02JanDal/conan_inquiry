@@ -7,3 +7,4 @@ categories:
   - topic.library.network.messages
   - topic.library.network.pubsub
   - topic.library.network.zeromq
+name: CpperoMQ

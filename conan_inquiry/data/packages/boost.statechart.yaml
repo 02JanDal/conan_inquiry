@@ -1,3 +1,7 @@
 recipies:
 - repo: {bintray: 'bincrafters/public-conan/boost_statechart:bincrafters'}
 urls: {}
+categories:
+  - topic.library.statemachine
+  - standard.cpp
+  - status.5stable

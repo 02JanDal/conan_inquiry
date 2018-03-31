@@ -12,22 +12,35 @@ from conan_inquiry.util.github import get_github_client
 
 
 class BaseTransformer:
+    """
+    Base class for all transformers.
+
+    A transformer takes a package and changes it in some way, adding information that is either implied from existing
+    fields or retrieving it from outside sources.
+    """
+
     __metaclass__ = abc.ABCMeta
 
     def __init__(self):
         self.logger = logging.getLogger(self.__class__.__name__)
 
     @classmethod
-    def _set_unless_exists(cls, obj, key, value):
+    def _set_unless_exists(cls, obj: DotMap, key: str, value):
+        """
+        Internal method that should be used for setting most properties on a package. Works similar to setdefault().
+        """
+
         if key not in obj or obj[key] is None or obj[key] == '':
             obj[key] = value
 
     @abc.abstractmethod
     def transform(self, package: DotMap) -> DotMap:
+        """The main method, needs to be reimplemented by all subclasses"""
         return package
 
     @property
-    def cache(self):
+    def cache(self) -> Cache:
+        """Gives convenient access to the cache"""
         return Cache.current_cache
 
 

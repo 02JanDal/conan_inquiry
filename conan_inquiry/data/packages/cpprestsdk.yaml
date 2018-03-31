@@ -5,3 +5,4 @@ recipies:
       bintray: bincrafters/public-conan/cpprestsdk:bincrafters
 urls:
   github: Microsoft/cpprestsdk
+name: CppRestSDK

@@ -1,3 +1,7 @@
 recipies:
 - repo: {bintray: 'bincrafters/public-conan/boost_units:bincrafters'}
 urls: {}
+categories:
+  - topic.library.math
+  - standard.cpp
+  - status.5stable
