@@ -1,0 +1,10 @@
+recipies:
+- repo: {bintray: 'theirix/conan-repo/amqpcpp:theirix'}
+urls:
+  github: CopernicaMarketingSoftware/AMQP-CPP
+categories:
+  - topic.library.network.mq
+  - topic.library.network.messages
+  - topic.library.network.pubsub
+  - standard.cpp.11
+  - status.5stable

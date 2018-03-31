@@ -2,6 +2,6 @@ recipies:
 - repo: {bintray: 'bincrafters/public-conan/boost_fiber:bincrafters'}
 urls: {}
 categories:
-  - topic.library.async
+  - topic.library.async.threading
   - standard.cpp.11
   - status.5stable

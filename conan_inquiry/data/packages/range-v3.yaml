@@ -1,0 +1,10 @@
+recipies:
+- repo: {bintray: 'range-v3/range-v3/range-v3:ericniebler'}
+urls: {}
+categories:
+  - topic.library.utility.container
+  - topic.library.utility.algorithm
+  - standard.cpp.11
+  - standard.cpp.14
+  - standard.cpp.17
+  - status.4beta

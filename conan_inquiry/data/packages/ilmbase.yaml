@@ -1,0 +1,7 @@
+recipies:
+- repo: {bintray: 'mikayex/conan-packages/IlmBase:Mikayex'}
+urls: {}
+categories:
+  - topic.library.math
+  - topic.library.async.threading
+  - topic.library.utility.errors

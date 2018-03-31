@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'theirix/conan-repo/jsoncpp:theirix'}
+urls: {}
+categories:
+  - topic.library.fileformat.generic.json
+  - topic.library.serialization.lowlevel
+  - standard.cpp.11
+  - status.5stable

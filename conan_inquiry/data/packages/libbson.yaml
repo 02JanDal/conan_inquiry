@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'theirix/conan-repo/libbson:theirix'}
+urls: {}
+categories:
+  - topic.library.serialization.lowlevel
+  - topic.library.fileformat.generic.binary
+  - status.5stable
+  - standard.c

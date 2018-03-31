@@ -6,5 +6,5 @@ categories:
   - status.7inactive
   - topic.library.network.messages
   - topic.library.network.pubsub
-  - topic.library.network.zeromq
+  - topic.library.network.mq
 name: CpperoMQ

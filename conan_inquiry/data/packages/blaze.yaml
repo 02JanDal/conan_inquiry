@@ -1,0 +1,7 @@
+recipies:
+- repo: {bintray: 'eagle42/Blaze/blaze:conan'}
+urls: {}
+categories:
+  - topic.library.math
+  - standard.cpp
+  - status.5stable

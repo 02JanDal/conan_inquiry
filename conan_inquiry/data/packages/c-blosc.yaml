@@ -1,5 +1,6 @@
 recipies:
-- repo: {bintray: 'lasote/conan-repo/c-blosc:francescalted'}
+  - repo: {bintray: 'lasote/conan-repo/c-blosc:francescalted'}
+  - repo: {bintray: 'blosc/Conan/c-blosc:francescalted'}
 urls:
   github: Blosc/c-blosc
   website: http://blosc.org/

@@ -1,0 +1,7 @@
+recipies:
+- repo: {bintray: 'dobiasd/public-conan/frugally-deep:dobiasd'}
+urls: {}
+categories:
+  - topic.library.ai
+  - standard.cpp
+  - status.5stable

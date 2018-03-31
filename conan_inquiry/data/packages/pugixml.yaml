@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/pugixml:bincrafters'}
+urls: {}
+categories:
+  - topic.library.fileformat.generic.xml
+  - topic.library.serialization.lowlevel
+  - standard.cpp
+  - status.5stable

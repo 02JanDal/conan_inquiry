@@ -2,6 +2,6 @@ recipies:
 - repo: {bintray: 'bincrafters/public-conan/boost_iostreams:bincrafters'}
 urls: {}
 categories:
-  - topic.library.io
+  - topic.library.io.filesystem
   - standard.cpp
   - status.5stable

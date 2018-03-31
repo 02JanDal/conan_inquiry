@@ -3,6 +3,8 @@ recipies:
       bintray: uilianries/conan/Catch:uilianries
   - repo:
       bintray: bincrafters/public-conan/Catch:bincrafters
+  - repo:
+      bintray: gasuketsu/conans/Catch:gasuketsu
 urls:
   github: catchorg/Catch2
   docs: https://github.com/catchorg/Catch2/blob/Catch1.x/docs/Readme.md

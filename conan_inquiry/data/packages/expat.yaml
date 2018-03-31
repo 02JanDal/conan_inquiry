@@ -1,5 +1,7 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/expat:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/expat:bincrafters'}
+  - repo: {bintray: 'pix4d/conan/Expat:pix4d'}
+  - repo: {bintray: 'pix4d/conan/conan-expat'}
 urls:
   website: https://libexpat.github.io/
   github: libexpat/libexpat

@@ -1,5 +1,6 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/variant:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/variant:bincrafters'}
+  - repo: {bintray: 'agauniyal/rang/variant:rang'}
 urls: {}
 categories:
   - standard.cpp.11

@@ -2,6 +2,6 @@ recipies:
 - repo: {bintray: 'bincrafters/public-conan/pthreads4w:bincrafters'}
 urls: {}
 categories:
-  - topic.library.async
+  - topic.library.async.threading
   - standard.c
   - status.6mature

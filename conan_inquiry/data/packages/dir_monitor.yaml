@@ -4,6 +4,6 @@ urls:
   github: berkus/dir_monitor
   website: https://github.com/berkus/dir_monitor
 categories:
-  - topic.library.io
+  - topic.library.io.filesystem
   - standard.cpp.11
   - status.5stable

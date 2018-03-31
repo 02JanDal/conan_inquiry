@@ -1,0 +1,7 @@
+recipies:
+- repo: {bintray: 'trompeloeil/trompeloeil/trompeloeil:rollbear'}
+urls: {}
+categories:
+  - topic.library.development.testing.mocking
+  - standard.cpp.14
+  - status.5stable

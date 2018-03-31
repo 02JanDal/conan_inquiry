@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'gasuketsu/conans/FakeIt:gasuketsu'}
+urls: {}
+categories:
+  - topic.library.development.testing.mocking
+  - standard.cpp.11
+  - standard.cpp.03
+  - status.5stable

@@ -4,6 +4,7 @@ urls: {}
 categories:
   - topic.library.graphics.highlevel
   - topic.library.games
+  - topic.library.io.input
   - standard.cpp.98
   - status.5stable
 name: ImGui

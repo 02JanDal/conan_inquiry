@@ -31,4 +31,4 @@ categories:
   - status.5stable
   - topic.library.network.messages
   - topic.library.network.pubsub
-  - topic.library.network.zeromq
+  - topic.library.network.mq

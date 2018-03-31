@@ -1,5 +1,8 @@
 recipies:
-- repo: {bintray: 'uilianries/conan/cpp-sort:morwenn'}
+  - repo:
+      bintray: uilianries/conan/cpp-sort:morwenn
+  - repo:
+      bintray: morwenn/cpp-sort/cpp-sort:morwenn
 urls:
   github: Morwenn/cpp-sort
 categories:

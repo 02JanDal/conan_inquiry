@@ -1,0 +1,10 @@
+recipies:
+- repo: {bintray: 'gasuketsu/conans/zmqpp:gasuketsu'}
+urls:
+  github: zeromq/zmqpp
+categories:
+  - topic.library.network.mq
+  - topic.library.network.messages
+  - topic.library.network.pubsub
+  - standard.cpp
+  - status.5stable

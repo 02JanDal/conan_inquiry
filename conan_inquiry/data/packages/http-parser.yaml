@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'theirix/conan-repo/http-parser:theirix'}
+urls:
+  github: nodejs/http-parser
+categories:
+  - topic.library.network.http
+  - standard.c
+  - status.5stable

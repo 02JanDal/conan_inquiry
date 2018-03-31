@@ -12,7 +12,7 @@ from conan_inquiry.util.general import load_packages, packages_directory
 
 
 BintrayRepoDescriptor = namedtuple('BintrayRepoDescriptor', ['repoowner', 'reponame'])
-BintrayPackageDescriptor = namedtuple('BintrayPackageDescriptor', ['repoowner', 'reponame', 'name'])
+BintrayPackageDescriptor = namedtuple('BintrayPackageDescriptor', ['repoowner', 'reponame', 'name', 'linked'])
 
 
 class GithubFinder:
@@ -59,15 +59,27 @@ class BintrayFinder:
             for recipie in pkg['recipies']:
                 parts = recipie['repo']['bintray'].split('/')
                 repos.add(BintrayRepoDescriptor(parts[0], parts[1]))
+        repos.add(BintrayRepoDescriptor('conan', 'conan-center'))
         return repos
 
     def _find_packages(self, repos: Set[BintrayRepoDescriptor]) -> [BintrayPackageDescriptor]:
         """
         Returns all packages in the known repositories
         """
-        return [BintrayPackageDescriptor(repo.repoowner, repo.reponame, p['name'])
+        pkgs = [BintrayPackageDescriptor(repo.repoowner, repo.reponame, p['name'], p['linked'])
                 for repo in repos
                 for p in self.client.get_all('/repos/' + repo.repoowner + '/' + repo.reponame + '/packages')]
+
+        # replace linked packages by their sources
+        for index, pkg in enumerate(pkgs):
+            if pkg.linked:
+                bt_package = self.client.get('/packages/' + pkg.repoowner + '/' + pkg.reponame + '/' + pkg.name)
+                pkgs[index] = BintrayPackageDescriptor(bt_package['owner'],
+                                                       bt_package['repo'],
+                                                       pkg.name,
+                                                       False)
+
+        return list(set(pkgs))
 
     @classmethod
     def _default_package_filename(cls, pkg: BintrayPackageDescriptor):
@@ -85,7 +97,7 @@ class BintrayFinder:
         """Only return packages that have missing repository descriptors"""
         return [p
                 for p in packages
-                if '/'.join(p) not in self.existing_repos and not p.name.startswith('Boost')]
+                if '/'.join(p[:3]) not in self.existing_repos and not p.name.startswith('Boost') and p.reponame != 'conan-center']
 
     def run(self):
         found = self._find_packages(self._gather_repos())
@@ -94,9 +106,9 @@ class BintrayFinder:
 
     def print(self):
         for pkg in self.missing_packages:
-            print('Missing package:', '/'.join(pkg))
+            print('Missing package:', '/'.join(pkg[:3]))
         for pkg in self.missing_repos:
-            print('Missing repository:', '/'.join(pkg))
+            print('Missing repository:', '/'.join(pkg[:3]))
 
     def generate_stubs(self):
         for name in self.missing_packages:

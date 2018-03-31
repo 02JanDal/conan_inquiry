@@ -1,6 +1,7 @@
 recipies:
-- repo: {bintray: 'conan-community/conan/libzmq:memsharded'}
-- repo: {bintray: 'bincrafters/public-conan/zmq:bincrafters'}
+  - repo: {bintray: 'conan-community/conan/libzmq:memsharded'}
+  - repo: {bintray: 'bincrafters/public-conan/zmq:bincrafters'}
+  - repo: {bintray: 'gasuketsu/conans/libzmq:gasuketsu'}
 urls:
   github: zeromq/libzmq
   docs: http://zguide.zeromq.org/page:all
@@ -40,7 +41,7 @@ code_example: |
       return 0;
   }
 categories:
-  - topic.library.network.zeromq
+  - topic.library.network.mq
   - topic.library.network.messages
   - topic.library.network.pubsub
   - standard.cpp.03

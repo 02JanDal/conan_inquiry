@@ -4,7 +4,7 @@ urls: {}
 categories:
   - standard.c
   - topic.library.qt
-  - topic.library.network.zeromq
+  - topic.library.network.mq
   - topic.library.network.pubsub
   - topic.library.network.messages
   - status.5stable

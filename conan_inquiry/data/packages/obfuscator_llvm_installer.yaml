@@ -1,0 +1,14 @@
+recipies:
+- repo: {bintray: 'theirix/conan-repo/obfuscator_llvm_installer:theirix'}
+urls:
+  github: obfuscator-llvm/obfuscator
+  docs: https://github.com/obfuscator-llvm/obfuscator/wiki
+name: Obfuscator-LLVM
+categories:
+  - topic.tool
+authors:
+  - name: Pascal Junod
+  - name: Julien Rinaldini
+  - name: John Wehrli
+  - name: Julie Michielin
+short_description: Fork of the LLVM compilation suite able to provide increased software security through code obfuscation and tamper-proofing

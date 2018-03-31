@@ -2,6 +2,6 @@ recipies:
 - repo: {bintray: 'bincrafters/public-conan/boost_atomic:bincrafters'}
 urls: {}
 categories:
-  - topic.library.async
+  - topic.library.async.threading
   - standard.cpp
   - status.5stable

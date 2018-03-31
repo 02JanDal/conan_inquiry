@@ -1,0 +1,7 @@
+recipies:
+- repo: {bintray: 'dobiasd/public-conan/functionalplus:dobiasd'}
+urls: {}
+categories:
+  - topic.library.utility.functional
+  - standard.cpp
+  - status.5stable

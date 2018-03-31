@@ -42,7 +42,8 @@ class Bintray:
     def get(self, path, maxage=timedelta(days=7)):
         """Issue a GET request to the Bintray API and return the parsed reponse"""
         res = Cache.current_cache.get(path, maxage, 'bintray',
-                                      lambda: self._get(path))
+                                      lambda: self._get(path),
+                                      locked_getter=False)
         if res[0] == 404 or ('message' in res[1] and 'was not found' in res[1]['message']):
             raise FileNotFoundError()
         return res[1]

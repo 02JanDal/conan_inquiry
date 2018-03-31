@@ -170,7 +170,8 @@ $(function() {
                 'sqlite': 'SQLite',
                 'zip': 'ZIP',
                 'regexp': 'Regular Expressions',
-                'rpc': 'RPC'
+                'rpc': 'RPC',
+                'cli_parsing': 'CLI Parsing'
             };
 
             var parts = category.split('.');

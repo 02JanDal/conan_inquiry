@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'theirix/conan-repo/ndpi:theirix'}
+urls:
+  github: ntop/nDPI
+categories:
+  - topic.library.network.packet_capture
+  - status.5stable
+  - standard.c

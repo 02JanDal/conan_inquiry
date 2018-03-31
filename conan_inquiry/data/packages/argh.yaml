@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'adishavit/conan/argh:adishavit'}
+urls:
+  github: adishavit/argh
+categories:
+  - standard.cpp.11
+  - topic.library.terminal.cli_parsing
+  - status.5stable

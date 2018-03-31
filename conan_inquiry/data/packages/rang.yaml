@@ -1,0 +1,7 @@
+recipies:
+- repo: {bintray: 'agauniyal/rang/rang:rang'}
+urls: {}
+categories:
+  - topic.library.terminal
+  - standard.cpp.11
+  - status.5stable

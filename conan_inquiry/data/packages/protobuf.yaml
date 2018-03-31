@@ -3,6 +3,8 @@ recipies:
       bintray: osechet/Conan/Protobuf:memsharded
   - repo:
       bintray: bincrafters/public-conan/protobuf:bincrafters
+  - repo:
+      bintray: gasuketsu/conans/Protobuf:gasuketsu
 urls:
   github: google/protobuf
 name: Protobuf

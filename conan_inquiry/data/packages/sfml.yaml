@@ -1,0 +1,19 @@
+recipies:
+- repo: {bintray: 'mikayex/conan-packages/sfml:Mikayex'}
+urls:
+  github: SFML/SFML
+  docs: https://www.sfml-dev.org/learn.php
+categories:
+  - topic.library.multimedia.audio
+  - topic.library.games
+  - topic.library.fileformat.audio
+  - topic.library.graphics.lowlevel
+  - topic.library.network.http
+  - topic.library.network.lowlevel
+  - topic.library.io.input
+  - topic.library.datetime
+  - topic.library.async.threading
+  - topic.library.io.filesystem
+  - topic.library.math
+  - standard.cpp
+  - status.5stable
