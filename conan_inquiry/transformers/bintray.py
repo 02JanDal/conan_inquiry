@@ -19,6 +19,14 @@ class BintrayTransformer(BaseHTTPTransformer):
     def transform(self, package):
         for recipie in package.recipies:
             if 'repo' in recipie and 'bintray' in recipie.repo:
+                bt_package = self.bt.get('/packages/' + recipie.repo.bintray)
+
+                if 'linked_to_repos' in bt_package and bt_package['linked_to_repos'] and 'conan-center' in bt_package['linked_to_repos']:
+                    # if the package has been linked to conan-center that repository "replaces" the current one
+                    recipie.repo.bintray = 'conan/conan-center/' + recipie.repo.bintray.split('/')[-1]
+                    # we don't actually have to download the package information from conan-center because it will be
+                    # identical to what we got in the "source" repository
+
                 parts = recipie.repo.bintray.split('/')
                 self._set_unless_exists(recipie, 'remote',
                                         'https://api.bintray.com/conan/' + '/'.join(parts[:2]))
@@ -26,7 +34,6 @@ class BintrayTransformer(BaseHTTPTransformer):
                 if ':' in parts[2]:
                     self._set_unless_exists(recipie, 'user', parts[2].split(':')[1])
 
-                bt_package = self.bt.get('/packages/' + recipie.repo.bintray)
                 versions = [DotMap(name=v.split(':')[0],
                                    channel=v.split(':')[1],
                                    repo=recipie.repo.bintray,
@@ -50,6 +57,8 @@ class BintrayTransformer(BaseHTTPTransformer):
                         path = site.split('/')[-2:]
                         if not path[1].startswith('conan') and not path[1].endswith('conan') and path[1]:
                             self._set_unless_exists(package.urls, 'github', '/'.join(path))
+                        else:
+                            self._set_unless_exists(recipie.urls, 'github', '/'.join(path))
                     else:
                         self._set_unless_exists(package.urls, 'website', site)
 

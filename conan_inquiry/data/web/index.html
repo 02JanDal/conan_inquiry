@@ -109,6 +109,9 @@
         <a href="<%= App.router.generate('package', {id: id}) %>" class="list-group-item list-group-item-action flex-column align-items-start package_result" id="package_<%= id %>">
             <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1">
+                    <% if (_.find(recipies, function(rec) { return rec.repo.bintray.includes('conan-center'); })) { %>
+                        <i class="fa fa-star text-muted"></i>
+                    <% } %>
                     <span class="attribute_name"><%= name %></span>
                     <% if (author) { %>
                         <small>by <span class="attribute_author"><%= author %></span></small>
@@ -219,7 +222,7 @@
                 <select class="form-control mt-3 version-selector" data-package="<%= name %>">
                     <% _.each(versions, function(version, index) { %>
                         <option value="<%= index %>" <% if (index === 0) { %>selected<% } %>>
-                            <%= version.name %> (<%= version.user %>/<%= version.channel %>)
+                            <%= version.name %> (<%= version.user %>/<%= version.channel %> in <%= version.remote.replace('https://api.bintray.com/conan/', '') %>)
                         </option>
                     <% }) %>
                 </select>
