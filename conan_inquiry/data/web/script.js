@@ -205,9 +205,9 @@ $(function() {
                 return 'Status: ' + this.categoryLink(parts[1]);
             } else if (category.startsWith('environment.')) {
                 if (onlyLeaf) {
-                    return parts[1];
+                    return this.categoryLink(parts[1], noLink);
                 }
-                return 'Environment: ' + parts[1];
+                return 'Environment: ' + this.categoryLink(parts[1]);
             } else if (category.startsWith('topic.')) {
                 if (parts.length > 2) {
                     var ret = parts[1].name + ': ';
@@ -220,7 +220,7 @@ $(function() {
                     return parts[1].name;
                 }
             }
-            return category;
+            return category.toTitleCase();
         },
         categoryFilter: function(categories) {
             return _.filter(categories, function(cat) {

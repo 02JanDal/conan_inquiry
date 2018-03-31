@@ -7,6 +7,6 @@ urls:
 name: GLEW
 categories:
   - standard.c
-  - status.5mature
+  - status.6mature
   - topic.library.games
   - topic.library.graphics.3d.opengl
