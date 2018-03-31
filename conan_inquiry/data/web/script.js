@@ -240,6 +240,32 @@ $(function() {
                 });
             }
             return pkgs;
+        },
+        readableStandards: function(categories) {
+            var standards = _.chain(this.categoryFilter(categories))
+                .filter(function(cat) { return cat.startsWith('standard.'); })
+                .map(function(cat) { return cat.replace('standard.', '').replace('cpp', 'c++').toTitleCase(); })
+                .sortBy(function(cat) { // order by year
+                    var parts = cat.split('.');
+                    var result = 0;
+                    if (parts[0] === 'C') {
+                        result = 10000;
+                    } else if (parts[0] === 'C++') {
+                        result = 20000;
+                    }
+
+                    if (parts.length >= 2) {
+                        var shortYear = parseInt(cat.split('.')[1]);
+                        result += shortYear;
+                        result += shortYear > 70 ? 1900 : 2000;
+                    }
+
+                    return result;
+                })
+                .map(function(cat) { return cat.replace('.', ''); })
+                .value().join('/');
+
+            return standards;
         }
     };
 
