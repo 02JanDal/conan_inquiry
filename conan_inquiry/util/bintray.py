@@ -53,7 +53,6 @@ class Bintray:
         result = list()
         while True:
             code, json, headers = self._get(path + '?start_pos=' + str(current_start))
-            print(code, current_start)
             if 'X-RangeLimit-Total' not in headers:
                 return json
 

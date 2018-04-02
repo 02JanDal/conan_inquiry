@@ -15,16 +15,21 @@ function getSunburstCategoryData(prefix) {
             value: App.category.counts[category]
         };
     } else {
+        var general = {
+            name: '',
+            id: category,
+            value: App.category.counts[category]
+        };
         return {
             name: name,
             id: category,
             hue: hues.pop(),//randomColor({seed: category}),
-            children: _.map(children, function(cat) { return getSunburstCategoryData(cat + '.'); })
+            children: _.map(children, function(cat) { return getSunburstCategoryData(cat + '.'); }).concat([general])
         };
     }
 }
 
-function setupSunburst(selector, data) {
+function setupSunburst(selector, button, data) {
     var $element = $(selector);
     var element = $element[0];
     var chart = new Sunburst();
@@ -61,6 +66,20 @@ function setupSunburst(selector, data) {
     $(window).resize(function(evt) {
         chart.width(element.offsetWidth).height(element.offsetHeight);
     });
+
+    var $button = $(button);
+    function updateFunc() {
+        if (chart.focusOnNode()) {
+            $button.show();
+            var category = chart.focusOnNode().data.id;
+            $button.find('span').html(App.category.readable(category, false, false));
+        } else {
+            $button.hide();
+        }
+
+        setTimeout(updateFunc, 250);
+    }
+    updateFunc();
 }
 
 App.statistics = {};
@@ -72,10 +91,12 @@ App.statistics.onEnter = function() {
     }
     this.initialized = true;
 
-    console.debug('setting up graphs');
-
-    setupSunburst(document.getElementById('chartA'), getSunburstCategoryData('topic.'));
-    setupSunburst(document.getElementById('chartB'), getSunburstCategoryData('standard.'));
+    setupSunburst(document.getElementById('chartA'),
+        document.getElementById('chartAButton'),
+        getSunburstCategoryData('topic.'));
+    setupSunburst(document.getElementById('chartB'),
+        document.getElementById('chartBButton'),
+        getSunburstCategoryData('standard.'));
 
     var onClickVisit = {
         library: {
