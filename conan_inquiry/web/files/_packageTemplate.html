@@ -1,0 +1,127 @@
+<h3><%= name %></h3>
+<p><%= description %></p>
+<% if (typeof(example_code) !== 'undefined') { %>
+    <pre><code class="lang-cpp"><%= example_code %></code></pre>
+<% } %>
+<p class="keywords">
+    <% _.each(keywords, function(keyword) { %>
+        <span class="badge badge-secondary"><%= keyword %></span>
+    <% }); %>
+</p>
+<div class="card-deck">
+    <% if (_.has(urls, 'github')) { %>
+        <div class="card">
+            <div class="card-header">
+                <i class="fa fa-github" aria-hidden="true"></i> GitHub
+            </div>
+            <table class="table table-sm">
+                <tr><th>Watchers</th><td><%= stats.github_watchers %></td></tr>
+                <tr><th>Stars</th><td><%= stats.github_stars %></td></tr>
+                <tr><th>Forks</th><td><%= stats.github_forks %></td></tr>
+                <tr><th>Issues</th><td><%= stats.github_issues %></td></tr>
+                <tr><th>PRs</th><td><%= stats.github_prs %></td></tr>
+                <tr><th>Commits</th><td><%= stats.github_commits %></td></tr>
+                <tr><th>Last Commit</th><td><span class="timeago" datetime="<%= stats.github_latest_commit %>"></span></td></tr>
+            </table>
+            <div class="card-footer text-center">
+                <a href="https://github.com/<%= urls.github %>">Visit this project on GitHub</a>
+            </div>
+        </div>
+    <% } %>
+    <div class="card">
+        <div class="card-header">
+            <i class="fa fa-link" aria-hidden="true"></i> Links
+        </div>
+        <div class="list-group list-group-flush">
+            <% var link_data = [['docs', 'Documentation'], ['website', 'Website'], ['issues', 'Issues'], ['git', 'Git'], ['wiki', 'Wiki'], ['code', 'Code Browser']]; %>
+            <% link_data = _.filter(link_data, function(link) { return _.has(urls, link[0]); }); %>
+            <% _.each(link_data, function(link) { %>
+                <a href="<%= urls[link[0]] %>" class="list-group-item list-group-item-action"><%= link[1] %></a>
+            <% }); %>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <i class="fa fa-info" aria-hidden="true"></i> Information
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Author<% if (authors.length > 1) { %>s<% } %></h5>
+            <p class="authors">
+                <% _.each(authors, function(author, index) { %>
+                    <% var url = 'javascript:'; %>
+                    <% if (author.github) { url = 'https://github.com/' + author.github; }
+                       else if (author.website) { url = author.website; }
+                       else if (author.email) { url = 'mailto:' + author.email; } %>
+                    <a href="<%= url %>" class="card-link"><%= author.name %></a><% if (index < authors.length-1) { %>, <% } %>
+                <% }); %>
+            </p>
+            <h5 class="card-title">License<% if (licenses.length > 1) { %>s<% } %></h5>
+            <p class="licenses">
+                <% _.each(licenses, function(license) { %>
+                    <a href="<%= license.url %>" class="card-link">
+                        <% if (license.longname ) { %><abbr title="<%= license.longname %>"><% } %><%= license.name %><% if (license.longname ) { %></abbr><% } %>
+                    </a>
+                <% }); %>
+            </p>
+            <h5 class="card-title">Categories</h5>
+            <ul class="categories">
+                <% _.each(App.category.filter(categories), function(category) { %>
+                    <li>
+                        <%= App.category.readable(category) %>
+                    </li>
+                <% }) %>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="card-header">
+        <span class="fa fa-download"></span> Installation
+    </div>
+    <div class="card-body">
+        <h5>1. Add Remote:</h5>
+        <code>conan remote add &lt;REMOTE&gt; <span data-field="remote"></span></code>
+        <h5>2. Install:</h5>
+        <code>conan install <span data-field="package"></span>/<span data-field="name"></span>@<span data-field="user"></span>/<span data-field="channel"></span> -r &ltREMOTE&gt;</code>
+        <select class="form-control mt-3 version-selector" data-package="<%= name %>">
+            <% _.each(versions, function(version, index) { %>
+                <option value="<%= index %>" <% if (index === 0) { %>selected<% } %>>
+                    <%= version.name %> (<%= version.user %>/<%= version.channel %> in <%= version.remote.replace('https://api.bintray.com/conan/', '') %>)
+                </option>
+            <% }) %>
+        </select>
+    </div>
+</div>
+<% /* array of arrays containing: files key, name, icon, language */ %>
+<% var file_data = [['readme', 'README', 'info-circle', ''], ['conanfile', 'conanfile.py', 'code', 'python']]; %>
+<% file_data = _.filter(file_data, function(list) { return _.has(files, list[0]); }); %>
+<% if (file_data.length > 0) { %>
+    <div class="card">
+        <div class="card-header">
+            <nav class="nav nav-tabs card-header-tabs" role="tablist">
+                <% var is_first = true; %>
+                <% _.each(file_data, function(file) { %>
+                    <a class="nav-item nav-link <% if (is_first) { %>active<% } %>" data-toggle="tab" href="#tab_file_<%= file[0] %>">
+                        <i class="fa fa-<%= file[2] %>" aria-hidden="true"></i> <%= file[1] %>
+                    </a>
+                    <% is_first = false; %>
+                <% }); %>
+            </nav>
+        </div>
+        <div class="tab-content">
+            <% var is_first = true; %>
+            <% _.each(file_data, function(file) { %>
+                <% var is_readme = file[0] === 'readme'; %>
+                <div class="tab-pane fade <% if (is_first) { %>show active<% } %>" id="tab_file_<%= file[0] %>" role="tabpanel">
+                    <div class="card-body">
+                            <% if (!is_readme) { %><pre id="file_<%= file[0] %>" class="lang-<%= file[3] %>"><code><% } %><%= files[file[0]].content %><% if (!is_readme) { %></code></pre><% } %>
+                    </div>
+                    <div class="card-footer">
+                            <a class="text-muted" href="<%= files[file[0]].url %>">Original file</a>
+                    </div>
+                </div>
+                <% is_first = false; %>
+            <% }) %>
+        </div>
+    </div>
+<% } %>

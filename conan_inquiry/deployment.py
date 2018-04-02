@@ -6,6 +6,8 @@ import subprocess
 import shutil
 import hashlib
 
+from conan_inquiry.web.file_retrieval import WebFiles
+
 
 def deploy():
     with TemporaryDirectory() as dir:
@@ -24,20 +26,12 @@ def deploy():
             '--single-branch',
             cwd=dir)
 
-        webpath = os.path.join(os.path.dirname(__file__), 'data/web')
-        for file in ['packages.json', 'packages.js', webpath + '/index.html', webpath + '/script.js']:
-            shutil.copy(file, os.path.join(dir, 'conan_inquiry'))
-            git('add', os.path.join(dir, 'conan_inquiry', os.path.basename(file)))
+        files = WebFiles()
 
-        index_html_name = os.path.join(dir, 'conan_inquiry', 'index.html')
-        with open(index_html_name, 'rt') as file:
-            index_html_data = file.read()
-        index_html_data = index_html_data.replace('CACHE_BUSTER',
-                                                  hashlib.md5(datetime.now().isoformat().encode('utf-8')).hexdigest())
-        print(index_html_data)
-        with open(index_html_name, 'wt') as file:
-            file.write(index_html_data)
-        git('add', index_html_name)
+        for file in files.names():
+            with open(os.path.join(dir, 'conan_inquiry', file), 'wt') as f:
+                f.write(files.get_file(file, debug=False))
+            git('add', os.path.join(dir, 'conan_inquiry', file))
 
         git('commit', '--amend', '-m', '"Automatic deployment"')
         git('push', '-f', 'origin', 'gh-pages')

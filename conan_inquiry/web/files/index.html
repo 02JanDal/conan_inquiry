@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Conan Inquiry</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Search and browse amongst dozens of conan.io packages, get more information and installation instructions to top it off"/>
+    <link rel="canonical" href="https://02jandal.github.com/conan_inquiry"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css" integrity="sha256-jBpMJWNNWEGSSqsYSKzJ3Lw9VnIYMFPItx/yE5tl18M=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" integrity="sha256-3YM6A3pH4QFCl9WbSU8oXF5N6W/2ylvW0o2g+Z6TmLQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha256-NuCn4IvuZXdBaFKJOAcsU2Q3ZpwbdFisd5dux4jkQ5w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="d-flex flex-column">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Conan Inquiry</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="librariesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-cubes"></i> Libraries
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="librariesDropdown" data-menu-prefix="topic.library.">
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="toolsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-cubes"></i> Tools
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="toolsDropdown" data-menu-prefix="topic.tool.">
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="standardsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-language"></i> By Standard
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="standardsDropdown" data-menu-prefix="standard.">
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="remoteDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-server"></i> By Remote
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="remoteDropdown" data-menu-remote>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!stats">
+                        <i class="fa fa-pie-chart"></i> Statistics
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <a href="https://github.com/02JanDal/conan_inquiry" class="ribbon d-none d-md-block">
+        <img src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub">
+    </a>
+
+    <div class="container">
+        <section data-state="search" id="searchView">
+            <section id="information">
+                <h1>Welcome to Conan Inquiry!</h1>
+                <p>
+                    This page allows you to search amongst <span class="badge badge-light" id="numPackages"></span> packages
+                    across <span class="badge badge-light" id="numRemotes"></span> conan remotes. You get information about
+                    the packaged libraries popularity and quick instructions for adding it to your project.
+                </p>
+                <p>
+                    The data for this site is generated based on static data available on
+                    <a href="https://github.com/02JanDal/conan_inquiry">GitHub</a>. The scripts used for generation are also
+                    available there. If you want to add a package, report (or even fix!) an error or extend this webpage
+                    then that repo is the place to be!
+                </p>
+                <p>
+                    Start searching using the bar below:
+                </p>
+            </section>
+
+            <input class="form-control mb-5" type="search" id="searchInput" placeholder="Search"/>
+
+            <section class="list-group" id="results">
+                <a class="list-group-item disabled package_result rounded">
+                    No packages found!
+                </a>
+            </section>
+        </section>
+
+        <section data-state="package" id="packageView"></section>
+
+        <section data-state="category" id="categoryView"></section>
+
+        <section data-state="remote" id="remoteView"></section>
+
+        <section data-state="statistics" id="statisticsView">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Topics</h1>
+                    <div class="embed-responsive embed-responsive-1by1">
+                        <div class="embed-responsive-item" id="chartA"></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h1>Standards</h1>
+                    <div class="embed-responsive embed-responsive-1by1">
+                        <div class="embed-responsive-item" id="chartB"></div>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <h1>Packages per remote</h1>
+            <div class="embed-responsive embed-responsive-21by9">
+                <div class="embed-responsive-item" id="chartC"></div>
+            </div>
+            <hr/>
+            <h1>Versions per remote</h1>
+            <div class="embed-responsive embed-responsive-21by9">
+                <div class="embed-responsive-item" id="chartD"></div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="navbar navbar-light bg-light mt-auto">
+        <div class="navbar-text text-center">Copyright &copy; 2017 <a href="https://github.com/02JanDal">@02JanDal</a></div>
+    </footer>
+
+    <script type="text/html-template" id="packageItemTemplate"><import href="_packageItemTemplate.html"></import></script>
+    <script type="text/html-template" id="packageTemplate"><import href="_packageTemplate.html"></import></script>
+    <script type="text/html-template" id="categoryTemplate"><import href="_categoryTemplate.html"></import></script>
+    <script type="text/html-template" id="remoteTemplate"><import href="_remoteTemplate.html"></import></script>
+    <script type="text/html-template" id="menuItemTemplate"><import href="_menuItemTemplate.html"></import></script>
+
+    <script defer src="https://cdn.rawgit.com/krasimir/navigo/4f731552/lib/navigo.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js" integrity="sha256-CB/G+xw3ep7+dlklAxcIvF20YMfFtF+7xbtauQSMi78=" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.js" integrity="sha256-1ZZ6Lg3Hw6WTFbtJZyum54xC4i/nqHLSd+qrfA85nQU=" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha256-5+02zu5UULQkO7w1GIr6vftCgMfFdZcAHeDtFnKZsBs=" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js" integrity="sha256-obZACiHd7gkOk9iIL/pimWMTJ4W/pBsKu+oZnSeBIek=" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/3.0.2/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.2/randomColor.min.js" integrity="sha256-wMQrtOX6Wcd+W3fOZ8JG6NGYqoZfAKZ6yH+DHd+yGwg=" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js" integrity="sha256-CfcERD4Ov4+lKbWbYqXD6aFM9M51gN4GUEtDhkWABMo=" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/chartkick/2.3.0/chartkick.min.js" integrity="sha256-pKi+C/L3JqiD10GzkevwyZ+pUZuKi5BxbPZiCg/Val4=" crossorigin="anonymous"></script>
+    <script defer src="https://unpkg.com/sunburst-chart@1.0.5/dist/sunburst-chart.min.js"></script>
+    <script defer src="packages.js?cache_buster=CACHE_BUSTER"></script>
+    <script defer src="script.js?cache_buster=CACHE_BUSTER"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<h1 class="border-bottom"><%= App.category.readable(category) %></h1>
+
+<nav class="nav justify-content-around border-bottom pb-1 mb-3">
+    <% _.each(subcats, function(subcat) { %>
+    <a class="nav-link" href="<%= App.router.generate('category', {name: subcat}) %>">
+        <%= App.category.readable(subcat, true, true) %>
+    </a>
+    <% }) %>
+</nav>
+
+<div class="list-group mb-2">
+    <% _.each(App.category.forCategory(category, false), function(package) { %>
+    <%= App.templates.pkgResult(_.extend({noTags: true}, package)) %>
+    <% }) %>
+</div>
+
+<% _.each(subcats, function(subcat) { %>
+    <h2 class="border-bottom mt-2"><a id="<%= category %>"><%= App.category.readable(subcat, true) %></a></h2>
+    <div class="list-group mb-2">
+        <% _.each(App.category.forCategory(subcat, true), function(package) { %>
+            <%= App.templates.pkgResult(_.extend({noTags: true}, package)) %>
+        <% }) %>
+    </div>
+<% }) %>

@@ -1,0 +1,7 @@
+<h1 class="border-bottom">Remote: <%= remote %></h1>
+
+<div class="list-group mb-2">
+    <% _.each(App.remote.forRemote(remote), function(package) { %>
+        <%= App.templates.pkgResult(_.extend({noTags: true}, package)) %>
+    <% }) %>
+</div>

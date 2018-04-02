@@ -25,14 +25,16 @@ This repository consist of three things:
 
 When updating the list of packages the usual workflow is as follows:
 
-1. At at least one package for each fully new repository
-2. Run `conan_inquiry.py find` to find new packages
-3. Run `conan_inquiry.py generate` (see below for more information) to gather additional data and generate an aggregated package file
-4. Run `conan_inquiry.py validate` to find any missing fields (start from the top of the output)
-    1. Fix _all_ (otherwise you'll waste ratelimit resource) issues it reports
+1. Add at least one package for each fully new repository
+2. Run `mkdir build && cd build`
+3. Run `conan_inquiry.py find` to find new packages
+4. Run `conan_inquiry.py generate` (see below for more information) to gather additional data and generate an aggregated package file
+5. Run `conan_inquiry.py validate` to find any missing fields (start from the top of the output)
+    1. Fix _all_ (otherwise you'll waste ratelimit resource) severe issues it reports
     2. Repeat (generate -> validate -> fix) until there are no more issues
-5. Copy `packages.js` to `conan_inquiry/data/web` and open `index.html` from the same file in a browser
-6. Run `conan_inquiry.py deploy` to upload everything to a gh-pages branch
+
+6. Run `conan_inquiry.py server` and open `localhost:8000` in a browser
+7. Run `conan_inquiry.py deploy` to upload everything to a gh-pages branch
 
 ### Prerequisites
 
