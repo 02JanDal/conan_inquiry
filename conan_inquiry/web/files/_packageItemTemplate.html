@@ -3,7 +3,7 @@
     <h5 class="mb-1">
         <% if (officiallity === 'conan-center' || officiallity == 'author') { %>
             <i class="fa fa-star text-muted"></i>
-        <% } else { %>
+        <% } else if (officiallity === 'major-3rdparty') { %>
             <i class="fa fa-star-o text-muted"></i>
         <% } %>
         <span class="attribute_name"><%= name %></span>
