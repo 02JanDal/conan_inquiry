@@ -3,6 +3,12 @@ recipies:
       bintray: conan-community/conan/strawberryperl:conan
   - repo:
       bintray: lasote/conan-repo/strawberryperl:conan
+  - repo:
+      bintray: inexorgame/inexor-conan/strawberryperl:conan
+  - repo:
+      bintray: odant/conan/strawberryperl:conan
+  - repo:
+      bintray: vtpl1/conan-ffmpeg/strawberryperl:conan
 urls:
   docs: http://strawberryperl.com/support.html
   issues: https://rt.cpan.org/Public/Dist/Display.html?Name=Perl-Dist-Strawberry

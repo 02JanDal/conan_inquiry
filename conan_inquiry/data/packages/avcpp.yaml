@@ -1,0 +1,11 @@
+recipies:
+  - repo: {bintray: 'squawkcpp/conan-cpp/avcpp:conan-cpp'}
+    officiality: author
+urls:
+  github: spielhuus/avcpp
+categories:
+  - topic.library.multimedia.codecs
+  - topic.library.fileformat.audio
+  - topic.library.fileformat.video
+  - status.4beta
+  - standard.cpp

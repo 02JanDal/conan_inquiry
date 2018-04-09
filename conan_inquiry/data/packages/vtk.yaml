@@ -1,0 +1,9 @@
+recipies:
+  - repo: {bintray: 'ogs/conan/VTK:bilke'}
+urls:
+  gitlab: https://gitlab.kitware.com/vtk/vtk
+categories:
+  - topic.library.graphics.3d
+  - topic.library.graphics.image_processing
+  - standard.cpp
+  - status.5stable

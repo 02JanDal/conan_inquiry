@@ -1,0 +1,7 @@
+recipies:
+- repo: {bintray: 'rwth-vr/conan/cpplint:RWTH-VR'}
+urls:
+  github: cpplint/cpplint
+categories:
+  - topic.tool.analyzer
+  - status.5stable

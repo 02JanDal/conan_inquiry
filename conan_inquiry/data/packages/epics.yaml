@@ -1,0 +1,6 @@
+recipies:
+- repo: {bintray: 'ess-dmsc/conan/epics:ess-dmsc'}
+urls:
+  website: https://epics.anl.gov/
+  code: https://epics.anl.gov/cgi-bin/epics/cvsweb/
+  issues: https://bugs.launchpad.net/epics-base

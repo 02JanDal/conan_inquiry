@@ -1,0 +1,11 @@
+recipies:
+  - repo: {bintray: 'vuo/conan/freeimage:vuo'}
+  - repo: {bintray: 'rwth-vr/conan/freeimage:RWTH-VR'}
+urls:
+  website: http://freeimage.sourceforge.net/
+  sourceforge: freeimage
+categories:
+  - topic.library.fileformat.image
+  - standard.c
+  - status.5stable
+description: 'FreeImage is a library project for developers who would like to support popular graphics image formats (PNG, JPEG, TIFF, BMP and others). Some highlights are: extremely simple in use, not limited to the local PC (unique FreeImageIO) and Plugin driven!'

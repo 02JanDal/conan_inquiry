@@ -1,5 +1,7 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/libjpeg-turbo:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/libjpeg-turbo:bincrafters'}
+  - repo: {bintray: 'inexorgame/inexor-conan/libjpeg-turbo:bincrafters'}
+  - repo: {bintray: 'inexorgame/inexor-conan/libjpeg-turbo:lasote'}
 urls:
   github: libjpeg-turbo/libjpeg-turbo
 categories:

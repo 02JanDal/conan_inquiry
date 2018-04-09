@@ -1,9 +1,12 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/gmp:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/gmp:bincrafters'}
+  - repo: {bintray: 'degoodmanwilson/opensource/gmp:DEGoodmanWilson'}
+  - repo: {bintray: 'bitprim/bitprim/gmp:bitprim'}
 urls:
   website: https://gmplib.org/
 categories:
   - topic.library.math
+  - topic.library.scientific
   - status.6mature
   - standard.c
   - standard.cpp

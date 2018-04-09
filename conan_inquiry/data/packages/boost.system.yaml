@@ -1,5 +1,6 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/boost_system:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/boost_system:bincrafters'}
+  - repo: {bintray: 'solvingj/public-conan/boost_system:bincrafters'}
 urls: {}
 categories:
   - topic.library.utility

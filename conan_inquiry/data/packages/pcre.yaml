@@ -1,5 +1,7 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/pcre:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/pcre:bincrafters'}
+  - repo: {bintray: 'odant/conan/pcre:odant'}
+  - repo: {bintray: 'ess-dmsc/conan/pcre:ess-dmsc'}
 urls: {}
 categories:
   - topic.library.string.regexp

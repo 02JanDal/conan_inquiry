@@ -8,11 +8,19 @@ from conan_inquiry.transformers.base import BaseTransformer
 
 class GitLabTransformer(BaseTransformer):
     def transform(self, package):
-        if 'gitlab_host' in package.urls and 'gitlab' in package.urls:
-            env_name = 'GITLAB_' + package.urls.gitlab_host.split('/')[-1].replace('.', '_').upper() + '_TOKEN'
+        if 'gitlab' in package.urls:
+            clean = package.urls.gitlab.replace('https://', '').replace('http://', '').split('/')
+            if len(clean) == 2:
+                host = 'gitlab.com'
+                project = '/'.join(clean)
+            else:
+                host = clean[0]
+                project = '/'.join(clean[1:3])
+            env_name = 'GITLAB_' + host.replace('.', '_').replace('-', '_').upper() + '_TOKEN'
             token = os.getenv(env_name)
             if token is None or '' == token:
-                raise Exception('You need to set ' + env_name + ' using environment variables')
+                print('You need to set ' + env_name + ' using environment variables')
+                return package
 
             def get_gitlab_project(host, project):
                 gitlab = Gitlab('https://' + host, token, api_version=4)
@@ -32,10 +40,10 @@ class GitLabTransformer(BaseTransformer):
                     name=repo.name
                 )
 
-            proj = self.cache.get(package.urls.gitlab_host + '#' + package.urls.gitlab,
+            proj = self.cache.get(host + '#' + project,
                                   timedelta(days=7), 'gitlab',
-                                  lambda: get_gitlab_project(package.urls.gitlab_host,
-                                                             package.urls.gitlab))
+                                  lambda: get_gitlab_project(host,
+                                                             project))
 
             self._set_unless_exists(package.urls, 'git', proj['git'])
             self._set_unless_exists(package.urls, 'code', proj['code'])

@@ -1,0 +1,9 @@
+recipies:
+  - repo: {bintray: 'degoodmanwilson/opensource/libgpg-error:DEGoodmanWilson'}
+urls:
+  github: gpg/libgpg-error
+categories:
+  - topic.library.network.crypto
+  - topic.library.utility.errors
+  - standard.c
+  - status.5stable

@@ -1,0 +1,9 @@
+recipies:
+  - repo: {bintray: 'squawkcpp/conan-cpp/hiredis:conan-cpp'}
+urls:
+  github: redis/hiredis
+categories:
+  - topic.library.database.redis
+  - topic.library.database.lowlevel
+  - standard.c
+  - status.5stable

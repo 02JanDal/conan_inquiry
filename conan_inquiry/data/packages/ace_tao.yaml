@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'jgsogo/conan-packages/ACE+TAO:jgsogo'}
+urls:
+  github: DOCGroup/ACE_TAO
+categories:
+  - topic.library.network.messages
+  - topic.library.serialization.highlevel
+  - standard.cpp
+  - status.5stable

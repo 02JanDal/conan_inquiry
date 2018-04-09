@@ -1,6 +1,12 @@
 recipies:
   - repo:
       bintray: dimi309/conan-packages/glm:g-truc
+  - repo:
+      bintray: bincrafters/public-conan/glm:bincrafters
+  - repo:
+      bintray: inexorgame/inexor-conan/glm:g-truc
+  - repo:
+      bintray: rwth-vr/conan/glm:RWTH-VR
 urls:
   website: https://glm.g-truc.net
   github: g-truc/glm

@@ -1,0 +1,9 @@
+recipies:
+  - repo: {bintray: 'cynarakrewe/CynaraConan/TM4C-driverlib:spiessensm'}
+urls:
+  website: http://www.ti.com/tool/SW-TM4C
+description: TivaWare driver library from Texas Instruments. Only arm-none-eabi-gcc toolchain is supported.
+categories:
+  - topic.library.io.driver
+  - standard.c
+  - status.5stable

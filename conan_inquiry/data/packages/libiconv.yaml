@@ -1,5 +1,7 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/libiconv:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/libiconv:bincrafters'}
+  - repo: {bintray: 'bitprim/bitprim/libiconv:bitprim'}
+  - repo: {bintray: 'rwth-vr/conan/libiconv:RWTH-VR'}
 urls:
   website: https://www.gnu.org/software/libiconv/
   docs: https://www.gnu.org/savannah-checkouts/gnu/libiconv/documentation/libiconv-1.15/

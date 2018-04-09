@@ -1,0 +1,4 @@
+recipies:
+  - repo: {bintray: 'danimtb/public-conan/poco-timer:danimtb'}
+urls: {}
+exclude: true

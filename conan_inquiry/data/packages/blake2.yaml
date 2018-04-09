@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'enhex/enhex/BLAKE2:enhex'}
+urls:
+  github: BLAKE2/BLAKE2
+categories:
+  - topic.library.network.crypto
+  - standard.c
+  - status.5stable

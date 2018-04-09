@@ -1,0 +1,9 @@
+recipies:
+  - repo: {bintray: 'degoodmanwilson/opensource/cpp-jwt:DEGoodmanWilson'}
+urls:
+  github: arun11299/cpp-jwt
+categories:
+  - topic.library.network.crypto
+  - topic.library.fileformat.generic.json
+  - standard.cpp.14
+  - status.5stable

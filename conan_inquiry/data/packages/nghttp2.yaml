@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'odant/conan/nghttp2:odant'}
+urls:
+  github: nghttp2/nghttp2
+categories:
+  - topic.library.network.http
+  - status.5stable
+  - standard.c
+  - standard.cpp

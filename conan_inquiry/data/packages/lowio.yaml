@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'objectx/conan/lowio:objectx'}
+urls:
+  github: objectx/lowio
+categories:
+  - topic.library.io
+  - standard.cpp
+  - status.7inactive

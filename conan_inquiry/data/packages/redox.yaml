@@ -1,0 +1,9 @@
+recipies:
+  - repo: {bintray: 'squawkcpp/conan-cpp/redox:conan-cpp'}
+urls:
+  github: hmartiro/redox
+categories:
+  - topic.library.database.lowlevel
+  - topic.library.database.redis
+  - standard.cpp.11
+  - status.4beta

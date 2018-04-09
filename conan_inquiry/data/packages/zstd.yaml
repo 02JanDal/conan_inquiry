@@ -1,6 +1,7 @@
 recipies:
 - repo: {bintray: 'bincrafters/public-conan/zstd:bincrafters'}
-urls: {}
+urls:
+  github: facebook/zstd
 categories:
   - topic.library.fileformat.compression
   - standard.c

@@ -1,0 +1,6 @@
+recipies:
+  - repo: {bintray: 'vuo/conan/vuoutils:vuo'}
+urls:
+  github: vuo/conan
+categories:
+  - topic.tool

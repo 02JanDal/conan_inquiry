@@ -1,0 +1,9 @@
+recipies:
+  - repo: {bintray: 'impsnldavid/public-conan/libltc:impsnldavid'}
+urls:
+  github: x42/libltc
+  docs: https://x42.github.io/libltc/
+categories:
+  - topic.library.multimedia.processing
+  - standard.c
+  - status.5stable

@@ -1,5 +1,7 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/ffmpeg:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/ffmpeg:bincrafters'}
+  - repo: {bintray: 'vuo/conan/ffmpeg:vuo'}
+  - repo: {bintray: 'vtpl1/conan-ffmpeg/ffmpeg:vtpl1'}
 urls: {}
 categories:
   - topic.library.multimedia.codecs

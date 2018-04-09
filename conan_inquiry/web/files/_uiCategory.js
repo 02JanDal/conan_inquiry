@@ -46,7 +46,12 @@ App.category.readable = function(category, onlyLeaf, noLink) {
         'datetime': 'Date/Time',
         'bindings_interoperability': 'Bindings/Interoperability',
         'signals_slots': 'Signals & Slots',
-        'mq': 'Message Queue'
+        'mq': 'Message Queue',
+        'drm': 'DRM',
+        'system_framework': 'System/Framework',
+        'csv': 'CSV',
+        'vr_ar': 'VR/AR',
+        'postgresql': 'PostgreSQL'
     };
 
     var parts = category.split('.');
@@ -107,6 +112,7 @@ App.category.filter = function(categories) {
 App.category.all = _.chain(packages_data).map(_.property('categories')).flatten().value();
 App.category.allUnique = _.chain(App.category.all).uniq().sort().value();
 App.category.counts = _.countBy(App.category.all, _.identity);
+App.category.pkgCounts = _.chain(packages_data).map(_.property('categories')).map(App.category.filter).flatten().countBy(_.identity).value();
 App.category.forCategory = function(subcat, includeSubs) {
     var pkgs = _.filter(packages_data, function(pkg) { return pkg.categories.includes(subcat); });
     if (!includeSubs) {

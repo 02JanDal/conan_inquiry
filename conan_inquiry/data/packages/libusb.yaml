@@ -3,6 +3,8 @@ recipies:
       bintray: uilianries/conan/libusb:uilianries
   - repo:
       bintray: bincrafters/public-conan/libusb:bincrafters
+  - repo:
+      bintray: vuo/conan/libusb:vuo
 urls:
   github: libusb/libusb
 categories:

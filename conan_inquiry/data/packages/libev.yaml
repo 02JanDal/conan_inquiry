@@ -1,0 +1,11 @@
+recipies:
+  - repo: {bintray: 'squawkcpp/conan-cpp/libev:conan-cpp'}
+urls:
+  code: http://cvs.schmorp.de/libev/
+description: A full-featured and high-performance event loop that is loosely modelled after libevent, but without its limitations and bugs. It is used in GNU Virtual Private Ethernet, rxvt-unicode, auditd, the Deliantra MORPG Server and Client, and many other programs.
+categories:
+  - topic.library.async
+  - topic.library.io
+  - topic.library.network
+  - standard.c
+  - status.5stable

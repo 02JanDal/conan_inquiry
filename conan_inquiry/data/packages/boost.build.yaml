@@ -1,7 +1,9 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/boost_build:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/boost_build:bincrafters'}
+  - repo: {bintray: 'solvingj/public-conan/boost_build:bincrafters'}
 urls:
   docs: http://www.boost.org/build/doc/html/index.html
+  github: boostorg/build
 categories:
   - topic.tool.build_tools
   - status.5stable

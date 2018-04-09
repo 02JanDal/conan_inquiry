@@ -1,0 +1,10 @@
+recipies:
+- repo: {bintray: 'kenfred/conan-corner/breakpad:kenfred'}
+urls:
+  github: google/breakpad
+  code: https://chromium.googlesource.com/breakpad/breakpad
+short_description: Breakpad is a set of client and server components which implement a crash-reporting system
+categories:
+  - topic.library.development.debugging
+  - standard.cpp
+  - status.5stable

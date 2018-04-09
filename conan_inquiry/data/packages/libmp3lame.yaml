@@ -1,5 +1,6 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/libmp3lame:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/libmp3lame:bincrafters'}
+  - repo: {bintray: 'squawkcpp/conan-cpp/lame:conan-cpp'}
 urls:
   website: http://lame.sourceforge.net/
   code: https://sourceforge.net/p/lame/svn/HEAD/tree/

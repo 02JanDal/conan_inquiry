@@ -1,0 +1,5 @@
+recipies:
+- repo: {bintray: 'ess-dmsc/conan/streaming-data-types:ess-dmsc'}
+urls:
+  github: ess-dmsc/streaming-data-types
+exclude: true

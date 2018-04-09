@@ -1,0 +1,7 @@
+recipies:
+  - repo: {bintray: 'jabaa/Conan/ncurses:jabaa'}
+urls:
+  website: https://invisible-island.net/ncurses/
+description: ncurses (new curses) is a programming library providing an application programming interface (API) that allows the programmer to write text-based user interfaces in a terminal-independent manner. It is a toolkit for developing "GUI-like" application software that runs under a terminal emulator. It also optimizes screen changes, in order to reduce the latency experienced when using remote shells.
+categories:
+  - topic.library.terminal

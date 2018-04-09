@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'acdemiralp/makina/fi:acdemiralp'}
+urls:
+  github: acdemiralp/fi
+categories:
+  - topic.library.fileformat.image
+  - standard.cpp.11
+  - status.5stable

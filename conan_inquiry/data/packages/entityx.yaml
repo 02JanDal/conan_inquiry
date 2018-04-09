@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'foxostro/PinkTopaz/EntityX:foxostro'}
+urls:
+  github: alecthomas/entityx
+categories:
+  - topic.library.system_framework.ecs
+  - topic.library.games
+  - standard.cpp.11
+  - status.5stable

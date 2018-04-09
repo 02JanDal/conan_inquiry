@@ -1,5 +1,6 @@
 recipies:
-- repo: {bintray: 'theirix/conan-repo/jsoncpp:theirix'}
+  - repo: {bintray: 'theirix/conan-repo/jsoncpp:theirix'}
+  - repo: {bintray: 'kenfred/conan-corner/jsoncpp:kenfred'}
 urls: {}
 categories:
   - topic.library.fileformat.generic.json

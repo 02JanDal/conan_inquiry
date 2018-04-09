@@ -1,0 +1,6 @@
+recipies:
+- repo: {bintray: 'acdemiralp/makina/bm:acdemiralp'}
+urls:
+  github: acdemiralp/bm
+categories:
+  - topic.library.development.benchmarking

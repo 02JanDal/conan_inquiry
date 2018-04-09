@@ -1,0 +1,6 @@
+recipies:
+  - repo: {bintray: 'sourcedelica/public-conan/odbc:sourcedelica'}
+  - repo: {bintray: 'sourcedelica/conan/odbc:sourcedelica'}
+urls:
+  website: http://www.unixodbc.org/
+short_description: unixODBC is an open source project that implements the ODBC API

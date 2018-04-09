@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'objectx/conan/nonius:objectx'}
+urls:
+  github: libnonius/nonius
+categories:
+  - topic.library.development.benchmarking
+  - standard.cpp
+  - status.5stable

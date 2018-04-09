@@ -1,5 +1,7 @@
 recipies:
-- repo: {bintray: 'conan-community/conan/cereal:conan'}
+  - repo: {bintray: 'conan-community/conan/cereal:conan'}
+  - repo: {bintray: 'enhex/enhex/cereal:enhex'}
+  - repo: {bintray: 'foxostro/PinkTopaz/cereal:foxostro'}
 urls:
   docs: https://uscilab.github.io/cereal/
   website: https://uscilab.github.io/cereal/

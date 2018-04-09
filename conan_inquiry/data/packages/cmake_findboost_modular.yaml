@@ -1,5 +1,7 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/cmake_findboost_modular:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/cmake_findboost_modular:bincrafters'}
+  - repo: {bintray: 'inexorgame/inexor-conan/cmake-findboost:inexorgame'}
+  - repo: {bintray: 'inexorgame/inexor-conan/cmake-findboost:bincrafters'}
 urls:
   github: bincrafters/conan-cmake_findboost_modular
   website: https://github.com/bincrafters/conan-cmake_findboost_modular

@@ -1,0 +1,10 @@
+recipies:
+  - repo: {bintray: 'squawkcpp/conan-cpp/LibAvCpp:conan-cpp'}
+urls:
+  github: fe-dagostino/libavcpp
+categories:
+  - topic.library.multimedia.codecs
+  - topic.library.fileformat.audio
+  - topic.library.fileformat.video
+  - standard.cpp
+  - status.7inactive

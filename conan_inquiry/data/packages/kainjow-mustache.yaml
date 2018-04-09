@@ -1,0 +1,9 @@
+recipies:
+  - repo: {bintray: 'inexorgame/inexor-conan/kainjow-mustache:inexorgame'}
+  - repo: {bintray: 'inexorgame/inexor-conan/Kainjow_Mustache:inexorgame'}
+urls:
+  github: kainjow/Mustache
+categories:
+  - standard.cpp.11
+  - topic.library.string.formatting
+  - status.5stable

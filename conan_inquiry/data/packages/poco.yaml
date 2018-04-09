@@ -3,6 +3,12 @@ recipies:
       bintray: pocoproject/conan/Poco:pocoproject
   - repo:
       bintray: uilianries/conan/Poco:pocoproject
+  - repo:
+      bintray: odant/conan/poco:odant
+  - repo:
+      bintray: boujee/conan/Poco:boujee
+  - repo:
+      bintray: vtpl1/conan-ffmpeg/Poco:pocoproject
 urls:
   docs: https://pocoproject.org/documentation/index.html
   github: pocoproject/poco

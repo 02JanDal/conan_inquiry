@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'degoodmanwilson/opensource/libmime:DEGoodmanWilson'}
+urls:
+  github: DEGoodmanWilson/libmime
+categories:
+  - topic.library.fileformat
+  - standard.cpp
+  - status.3alpha

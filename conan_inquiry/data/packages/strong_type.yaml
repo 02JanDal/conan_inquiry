@@ -1,0 +1,8 @@
+recipies:
+  - repo: {bintray: 'enhex/enhex/strong_type:enhex'}
+urls:
+  github: Enhex/strong_type
+categories:
+  - topic.library.utility
+  - standard.cpp.14
+  - status.4beta

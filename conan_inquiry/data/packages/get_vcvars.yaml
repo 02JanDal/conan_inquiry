@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'odant/conan/get_vcvars:odant'}
+urls:
+  github: odant/conan-get_vcvars
+short_description: Python module for find Visual Studio environment
+categories:
+  - topic.tool
+  - status.3alpha

@@ -2,6 +2,8 @@ recipies:
   - repo: {bintray: 'conan-community/conan/libzmq:memsharded'}
   - repo: {bintray: 'bincrafters/public-conan/zmq:bincrafters'}
   - repo: {bintray: 'gasuketsu/conans/libzmq:gasuketsu'}
+  - repo: {bintray: 'bitprim/bitprim/libzmq:bitprim'}
+  - repo: {bintray: 'vuo/conan/zeromq:vuo'}
 urls:
   github: zeromq/libzmq
   docs: http://zguide.zeromq.org/page:all

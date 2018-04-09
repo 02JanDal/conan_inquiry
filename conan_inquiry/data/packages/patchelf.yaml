@@ -1,0 +1,6 @@
+recipies:
+- repo: {bintray: 'vuo/conan/patchelf:vuo'}
+urls:
+  github: NixOS/patchelf
+categories:
+  - topic.tool.build_tools

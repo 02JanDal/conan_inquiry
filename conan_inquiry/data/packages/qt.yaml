@@ -1,6 +1,16 @@
 recipies:
   - repo:
       bintray: osechet/Conan/Qt:osechet
+  - repo:
+      bintray: vuo/conan/qt:vuo
+  - repo:
+      bintray: kenfred/conan-corner/Qt:kenfred
+  - repo:
+      bintray: ogs/conan/Qt:bilke
+  - repo:
+      bintray: ogs/conan/Qt:osechet
+  - repo:
+      bintray: ogs/conan/libtiff:bilke
 urls:
   website: https://qt.io/
   docs: https://doc.qt.io/

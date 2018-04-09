@@ -1,0 +1,5 @@
+recipies:
+  - repo: {bintray: 'danimtb/public-conan/ZenGitHub:jonico'}
+urls:
+  github: jonico/libzengithub
+exclude: true

@@ -1,0 +1,10 @@
+recipies:
+- repo: {bintray: 'jgsogo/conan-packages/postgresql:jgsogo'}
+urls:
+  website: https://www.postgresql.org/
+  code: https://git.postgresql.org/gitweb/?p=postgresql.git
+  github: postgres/postgres
+categories:
+  - topic.library.database.postgresql
+  - standard.c
+  - status.5stable

@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'ess-dmsc/conan/logical-geometry:ess-dmsc'}
+urls:
+  github: ess-dmsc/logical-geometry
+categories:
+  - topic.library.math
+  - standard.cpp
+  - status.3alpha

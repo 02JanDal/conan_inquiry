@@ -1,0 +1,16 @@
+recipies:
+- repo: {bintray: 'jgsogo/conan-packages/apache-apr-util:jgsogo'}
+urls:
+  github: apache/apr-util
+categories:
+  - topic.library.database.lowlevel
+  - topic.library.database.mysql
+  - topic.library.database.oracle
+  - topic.library.database.postgresql
+  - topic.library.database.sqlite
+  - topic.library.network.lowlevel
+  - topic.library.datetime
+  - topic.library.async.threading
+  - topic.library.fileformat.generic.xml
+  - standard.c
+  - status.7inactive

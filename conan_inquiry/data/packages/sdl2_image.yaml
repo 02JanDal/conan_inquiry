@@ -1,0 +1,16 @@
+recipies:
+  - repo: {bintray: 'inexorgame/inexor-conan/SDL2_image:lasote'}
+  - repo: {bintray: 'inexorgame/inexor-conan/SDL2_image:inexorgame'}
+urls:
+  website: https://www.libsdl.org/projects/SDL_image/
+  docs: https://www.libsdl.org/projects/SDL_image/docs/SDL_image_frame.html
+  code: https://hg.libsdl.org/SDL_image/
+categories:
+  - topic.library.fileformat.image.gif
+  - topic.library.fileformat.image.jpeg
+  - topic.library.fileformat.image.png
+  - topic.library.fileformat.image.tiff
+  - topic.library.graphics.lowlevel
+  - standard.c
+  - status.6mature
+description: 'SDL_image is an image file loading library. It loads images as SDL surfaces and textures, and supports the following formats: BMP, GIF, JPEG, LBM, PCX, PNG, PNM, SVG, TGA, TIFF, WEBP, XCF, XPM, XV.'

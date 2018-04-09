@@ -1,5 +1,6 @@
 recipies:
-- repo: {bintray: 'agauniyal/rang/rang:rang'}
+  - repo: {bintray: 'agauniyal/rang/rang:rang'}
+  - repo: {bintray: 'enhex/enhex/rang:enhex'}
 urls: {}
 categories:
   - topic.library.terminal

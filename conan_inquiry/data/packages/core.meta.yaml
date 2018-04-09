@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'slyrisorg/SlyrisOrg/Core.Meta:SlyrisOrg'}
+urls:
+  github: SlyrisOrg/core-v2
+categories:
+  - topic.library.utility.metaprogramming
+  - status.3alpha
+  - standard.cpp

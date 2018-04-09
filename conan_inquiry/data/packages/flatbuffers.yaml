@@ -3,6 +3,8 @@ recipies:
       bintray: uilianries/conan/flatbuffers:uilianries
   - repo:
       bintray: bincrafters/public-conan/flatbuffers:uilianries
+  - repo:
+      bintray: ess-dmsc/conan/FlatBuffers:ess-dmsc
 urls:
   github: google/flatbuffers
 categories:

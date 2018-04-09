@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'tuncb/pangea/pugg:tuncb'}
+urls:
+  github: tuncb/pugg
+categories:
+  - topic.library.loader
+  - standard.cpp
+  - status.5stable
+description: A Simple C++ Framework to load classes from dll files in an OO way.

@@ -1,0 +1,13 @@
+recipies:
+- repo: {bintray: 'jgsogo/conan-packages/apache-apr:jgsogo'}
+urls:
+  github: apache/apr
+categories:
+  - topic.library.async.threading
+  - topic.library.io.filesystem
+  - topic.library.utility.memory
+  - topic.library.network.lowlevel
+  - topic.library.io.processes
+  - topic.library.utility.container
+  - standard.c
+  - status.5stable

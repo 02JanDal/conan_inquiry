@@ -1,0 +1,8 @@
+recipies:
+  - repo: {bintray: 'vuo/conan/zxing:vuo'}
+urls:
+  github: glassechidna/zxing-cpp
+categories:
+  - topic.library.graphics.barcode
+  - standard.cpp
+  - status.4beta

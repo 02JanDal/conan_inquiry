@@ -7,8 +7,7 @@ urls:
   issues: https://gitlab.kitware.com/cmake/cmake/issues
   wiki: https://cmake.org/Wiki/CMake
   github: kitware/CMake
-  gitlab_host: gitlab.kitware.com
-  gitlab: cmake/cmake
+  gitlab: https://gitlab.kitware.com/cmake/cmake
 authors:
   - name: Kitware
     email: kitware@kitware.com

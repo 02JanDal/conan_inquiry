@@ -1,0 +1,10 @@
+recipies:
+- repo: {bintray: 'acdemiralp/makina/di:acdemiralp'}
+urls:
+  github: acdemiralp/di
+categories:
+  - topic.library.graphics
+  - topic.library.io.input
+  - topic.library.games
+  - standard.cpp
+  - status.5stable

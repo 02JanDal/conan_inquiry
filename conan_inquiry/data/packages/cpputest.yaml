@@ -1,0 +1,10 @@
+recipies:
+- repo: {bintray: 'cynarakrewe/CynaraConan/CppUTest:spiessensm'}
+urls:
+  github: cpputest/cpputest
+categories:
+  - topic.library.development.testing
+  - topic.library.development.mocking
+  - standard.c
+  - standard.cpp
+  - status.5stable

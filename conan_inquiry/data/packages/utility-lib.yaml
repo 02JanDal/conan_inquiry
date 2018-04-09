@@ -1,0 +1,4 @@
+recipies:
+  - repo: {bintray: 'solvingj/public-conan/utility-lib:solvingj'}
+urls: {}
+exclude: true

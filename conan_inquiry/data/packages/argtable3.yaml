@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'franc0is/conan/argtable3:franc0is'}
+urls:
+  github: argtable/argtable3
+categories:
+  - topic.library.terminal.cli_parsing
+  - standard.c.ansi
+  - status.5stable

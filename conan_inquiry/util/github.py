@@ -50,14 +50,17 @@ def get_github_client(version):
     """
 
     if version == 3:
+        token = os.getenv('GITHUB_TOKEN')
         client_id = os.getenv('GITHUB_CLIENT_ID')
         client_secret = os.getenv('GITHUB_CLIENT_SECRET')
+        if token is None or token == '':
+            raise Exception('You need to set GITHUB_TOKEN using environment variables')
         if client_id is None or client_id == '':
             raise Exception('You need to set GITHUB_CLIENT_ID using environment variables')
         if client_secret is None or client_secret == '':
             raise Exception('You need to set GITHUB_CLIENT_SECRET using environment variables')
 
-        gh = Github(client_id=client_id, client_secret=client_secret)
+        gh = Github(login_or_token=token, client_id=client_id, client_secret=client_secret, per_page=100)
         #gh._Github__requester = CachingRequester(gh._Github__requester)
         return gh
     elif version == 4:

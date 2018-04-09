@@ -1,0 +1,7 @@
+recipies:
+- repo: {bintray: 'odant/conan/find_sdk_winxp:odant'}
+urls:
+  github: odant/conan-find_sdk_winxp
+categories:
+  - topic.tool
+short_description: Python module for find Microsoft SDK

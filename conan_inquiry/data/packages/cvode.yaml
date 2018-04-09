@@ -1,0 +1,10 @@
+recipies:
+- repo: {bintray: 'ogs/conan/CVODE:bilke'}
+urls:
+  website: https://computation.llnl.gov/projects/sundials/cvode
+short_description: CVODE is a solver for stiff and nonstiff ordinary differential equation (ODE) systems (initial value problem) given in explicit form y’ = f(t,y)
+categories:
+  - topic.library.math
+  - topic.library.scientific
+  - standard.c
+  - status.5stable

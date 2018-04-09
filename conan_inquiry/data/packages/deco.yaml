@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'enhex/enhex/Deco:enhex'}
+urls:
+  github: Enhex/Deco
+categories:
+  - standard.cpp.17
+  - topic.library.fileformat.generic
+  - status.3alpha

@@ -1,5 +1,8 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/spdlog:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/spdlog:bincrafters'}
+  - repo: {bintray: 'inexorgame/inexor-conan/spdlog:bincrafters'}
+  - repo: {bintray: 'inexorgame/inexor-conan/spdlog:memsharded'}
+  - repo: {bintray: 'rwth-vr/conan/spdlog:RWTH-VR'}
 urls: {}
 categories:
   - topic.library.logging

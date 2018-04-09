@@ -1,5 +1,8 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/libxml2:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/libxml2:bincrafters'}
+  - repo: {bintray: 'vuo/conan/libxml2:vuo'}
+  - repo: {bintray: 'qtproject/conan/libxml2:annulen'}
+  - repo: {bintray: 'qtproject/conan/libxml2:vitallium'}
 urls:
   github: GNOME/libxml2
   docs: http://xmlsoft.org/html/index.html

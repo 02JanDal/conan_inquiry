@@ -1,5 +1,6 @@
 import os
 import re
+from threading import Lock
 
 import yaml
 from docutils.core import publish_parts as rst_publish_parts
@@ -35,3 +36,14 @@ def render_readme(path, raw_str, absolute_url, github_renderer=None):
         rendered
     )
     return rendered
+
+
+class AtomicCounter:
+    def __init__(self, start=0):
+        self.value = start
+        self._lock = Lock()
+
+    def increment(self, by=1):
+        with self._lock:
+            self.value += by
+            return self.value

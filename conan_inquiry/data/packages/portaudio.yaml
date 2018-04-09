@@ -1,5 +1,7 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/portaudio:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/portaudio:bincrafters'}
+  - repo: {bintray: 'jgsogo/conan-packages/portaudio:jgsogo'}
+  - repo: {bintray: 'kenfred/conan-corner/portaudio:kenfred'}
 urls: {}
 categories:
   - topic.library.multimedia.audio

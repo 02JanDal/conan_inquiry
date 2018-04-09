@@ -1,0 +1,5 @@
+recipies:
+- repo: {bintray: 'cynarakrewe/CynaraConan/FlowTM4C:spiessensm'}
+urls:
+  github: CynaraKrewe/FlowTM4C
+exclude: true

@@ -1,0 +1,9 @@
+recipies:
+  - repo: {bintray: 'acdemiralp/makina/splinter:acdemiralp'}
+urls:
+  github: bgrimstad/splinter
+categories:
+  - topic.library.math
+  - topic.library.scientific
+  - standard.cpp.11
+  - status.5stable

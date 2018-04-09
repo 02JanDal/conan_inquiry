@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'odant/conan/pion:odant'}
+urls:
+  github: splunk/pion
+categories:
+  - standard.cpp
+  - status.7inactive
+  - topic.library.network.http

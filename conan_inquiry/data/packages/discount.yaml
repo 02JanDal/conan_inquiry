@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'vuo/conan/discount:vuo'}
+urls:
+  github: Orc/discount
+categories:
+  - topic.library.fileformat.document.markdown
+  - standard.c
+  - status.5stable

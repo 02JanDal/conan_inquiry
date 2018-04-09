@@ -1,5 +1,6 @@
 recipies:
-- repo: {bintray: 'dobiasd/public-conan/functionalplus:dobiasd'}
+  - repo: {bintray: 'dobiasd/public-conan/functionalplus:dobiasd'}
+  - repo: {bintray: 'danimtb/public-conan/functionalplus:danimtb'}
 urls: {}
 categories:
   - topic.library.utility.functional

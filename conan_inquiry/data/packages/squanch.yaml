@@ -1,0 +1,9 @@
+recipies:
+  - repo: {bintray: 'tuncb/pangea/squanch:tuncb'}
+urls:
+  github: tuncb/squanch
+categories:
+  - topic.library.math
+  - topic.library.scientific
+  - standard.cpp
+  - status.3alpha

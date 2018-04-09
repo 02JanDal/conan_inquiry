@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'degoodmanwilson/opensource/cpr:DEGoodmanWilson'}
+urls:
+  github: whoshuu/cpr
+categories:
+  - topic.library.network.http
+  - standard.cpp.11
+  - status.5stable

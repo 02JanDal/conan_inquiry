@@ -3,5 +3,6 @@ recipies:
 urls: {}
 categories:
   - topic.library.math
+  - topic.library.scientific
   - standard.cpp
   - status.5stable

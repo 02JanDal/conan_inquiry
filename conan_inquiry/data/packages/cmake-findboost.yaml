@@ -1,0 +1,5 @@
+recipies:
+  - repo: {bintray: 'inexorgame/inexor-conan/cmake-findboost:inexorgame'}
+  - repo: {bintray: 'inexorgame/inexor-conan/cmake-findboost:bincrafters'}
+urls: {}
+see: cmake_findboost_modular

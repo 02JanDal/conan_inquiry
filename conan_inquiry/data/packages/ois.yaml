@@ -1,0 +1,10 @@
+recipies:
+- repo: {bintray: 'sunxfancy/common/OIS:sunxfancy'}
+urls:
+  github: wgois/OIS
+categories:
+  - topic.library.io.input
+  - standard.cpp
+  - status.3alpha
+description: Cross Platform Object Oriented Input Lib System. Meant to be very robust and compatiable with many systems and operating systems.
+short_description: Cross Platform Object Oriented Input Lib System

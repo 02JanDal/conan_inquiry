@@ -1,0 +1,6 @@
+recipies:
+- repo: {bintray: 'vuo/conan/ld64:vuo'}
+urls: {}
+description: Combines several object files and libraries, resolves references, and produces an ouput file
+categories:
+  - topic.tool.compiler

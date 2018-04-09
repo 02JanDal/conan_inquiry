@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'vuo/conan/rtmidi:vuo'}
+urls:
+  github: thestk/rtmidi
+categories:
+  - topic.library.multimedia.audio
+  - standard.cpp
+  - status.5stable

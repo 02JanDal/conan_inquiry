@@ -1,0 +1,11 @@
+recipies:
+  - repo: {bintray: 'tuncb/pangea/intel-mkl:tuncb'}
+urls:
+  website: https://software.intel.com/en-us/mkl
+  docs: https://software.intel.com/en-us/mkl/documentation
+description: Intel Math Kernel Library is a library of optimized math routines for science, engineering, and financial applications. Core math functions include BLAS, LAPACK, ScaLAPACK, sparse solvers, fast Fourier transforms, and vector math.
+categories:
+  - topic.library.math
+  - topic.library.scientific
+  - standard.c
+  - status.5stable

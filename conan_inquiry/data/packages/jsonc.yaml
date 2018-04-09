@@ -1,0 +1,11 @@
+recipies:
+- repo: {bintray: 'vuo/conan/jsonc:vuo'}
+urls:
+  github: json-c/json-c
+  docs: https://json-c.github.io/json-c/
+short_description: A JSON implementation in C
+categories:
+  - topic.library.fileformat.generic.json
+  - topic.library.serialization.lowlevel
+  - standard.c
+  - status.5stable

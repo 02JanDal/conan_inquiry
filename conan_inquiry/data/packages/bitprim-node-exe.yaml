@@ -1,0 +1,8 @@
+recipies:
+  - repo: {bintray: 'bitprim/bitprim/bitprim-node-exe:bitprim'}
+  - repo: {bintray: 'bitprim/bitprim/bitprim-node-exe'}
+urls:
+  github: bitprim/bitprim-node-exe
+categories:
+  - topic.library.cryptocurrency
+  - status.5stable

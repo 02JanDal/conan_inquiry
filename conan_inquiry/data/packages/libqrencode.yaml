@@ -1,5 +1,6 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/libqrencode:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/libqrencode:bincrafters'}
+  - repo: {bintray: 'bitprim/bitprim/libqrencode:bitprim'}
 urls:
   github: fukuchi/libqrencode
 categories:

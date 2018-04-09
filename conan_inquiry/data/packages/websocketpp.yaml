@@ -1,5 +1,7 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/websocketpp:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/websocketpp:bincrafters'}
+  - repo: {bintray: 'odant/conan/websocketpp:odant'}
+  - repo: {bintray: 'solvingj/public-conan/websocketpp:solvingj'}
 urls: {}
 categories:
   - topic.library.network.websockets

@@ -1,6 +1,10 @@
 recipies:
   - repo:
       bintray: jacmoe/Conan/Assimp:jacmoe
+  - repo:
+      bintray: rwth-vr/conan/assimp:RWTH-VR
+  - repo:
+      bintray: vuo/conan/oai:vuo
 urls:
   github: assimp/assimp
   website: http://assimp.sourceforge.net/

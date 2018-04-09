@@ -1,0 +1,10 @@
+recipies:
+- repo: {bintray: 'squawkcpp/conan-cpp/lightningcpp:conan-cpp'}
+urls:
+  github: lightningcpp/lightningcpp
+description: lightning is a http server/client library written in modern c++ (C++14). The name lightning is from the television series Tom&Jerry where lightning is the orange cat beside of Tomcat.
+categories:
+  - topic.library.network.http.server
+  - topic.library.network.http.client
+  - standard.cpp.14
+  - status.4beta

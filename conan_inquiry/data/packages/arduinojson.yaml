@@ -1,5 +1,6 @@
 recipies:
-- repo: {bintray: 'conan-community/conan/arduinojson:conan'}
+  - repo: {bintray: 'conan-community/conan/arduinojson:conan'}
+  - repo: {bintray: 'danimtb/public-conan/arduinojson:danimtb'}
 urls:
   github: bblanchon/ArduinoJson
   docs: https://arduinojson.org/doc/

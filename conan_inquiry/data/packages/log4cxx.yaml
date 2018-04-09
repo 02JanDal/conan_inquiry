@@ -1,6 +1,8 @@
 recipies:
   - repo:
       bintray: vthiery/conan-packages/log4cxx:vthiery
+  - repo:
+      bintray: jgsogo/conan-packages/apache-log4cxx:jgsogo
 urls:
   code: https://git-wip-us.apache.org/repos/asf?p=logging-log4cxx.git
   git: http://git-wip-us.apache.org/repos/asf/logging-log4cxx.git

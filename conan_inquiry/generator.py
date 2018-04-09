@@ -19,7 +19,7 @@ from conan_inquiry.transformers.gitlab import GitLabTransformer
 from conan_inquiry.transformers.simple import (LicenseDetectorTransformer, AuthorCombinerTransformer,
                                                ShortDescriptionTransformer, KeywordDuplicateEliminator, ReadmeFetcher,
                                                RemoveTemporariesTransformer, AddEmptyTransformer, CategoriesTransformer)
-from conan_inquiry.util.bintray import BintrayRateLimitExceeded
+from conan_inquiry.util.bintray import BintrayRateLimitExceeded, Bintray
 from conan_inquiry.util.cache import Cache
 from conan_inquiry.util.github import get_github_client
 
@@ -54,8 +54,10 @@ def transform_package(file):
     try:
         return transformers.transform(DotMap(data)).toDict()
     except BintrayRateLimitExceeded or RateLimitExceededException:
+        tqdm.write('Rate limit reached for {}'.format(data['id']))
         raise
     except Exception as e:
+        tqdm.write('Exception for {}'.format(data['id']))
         return data['id'], e
 
 
@@ -64,14 +66,14 @@ class Generator:
         self.packages_dir = packages_dir
         ShortDescriptionTransformer.prepare()
 
-    def transform_packages(self):
+    def transform_packages(self, development=False):
         """"""
 
         github = get_github_client(3)
         # Used to calculate the resources used
         rate_before = github.get_rate_limit().rate
         try:
-            with Cache(os.getenv('CACHE_FILE')):
+            with Cache(os.getenv('CACHE_FILE'), notimeout=development):
                 # Collect package files
                 packages = [os.path.join(self.packages_dir, f)
                             for f in os.listdir(self.packages_dir)
@@ -92,8 +94,11 @@ class Generator:
                         print('Error in {}: {}\n{}'.format(
                             error[0], str(exc),
                             ''.join(traceback.format_exception(type(exc), exc, exc.__traceback__))))
-                    if len(errors) > 0:
+                    if len(errors) > 0 and not development:
+                        print('Errors in {} packages have prevented writing of packages.js'.format(len(errors)))
                         sys.exit(1)
+                    elif len(errors) > 0 and development:
+                        print('Errors in {} packages prevented them from being generated'.format(len(errors)))
 
                     # Write new package files
                     data = json.dumps([r for r in results if r is not None], indent=2)
@@ -103,8 +108,13 @@ class Generator:
                         file.write('var packages_data = \n')
                         file.write(data)
                         file.write(';')
+
+                    print('All generation steps succeeded and package data written')
         finally:
             rate = github.get_rate_limit().rate
             print('Github rate limiting:\n\tRemaining: {}/{}\n\tUsed this call: {}\n\tResets: {}'.format(
                 rate.remaining, rate.limit, rate_before.remaining - rate.remaining,
                 (rate.reset + datetime.timedelta(hours=1)) - datetime.datetime.now()))
+
+            bt = Bintray()
+            print('Bintray rate limiting:\n\tUsed this call: {}'.format(bt.rate_used))

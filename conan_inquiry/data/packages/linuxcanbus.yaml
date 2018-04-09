@@ -1,0 +1,4 @@
+recipies:
+- repo: {bintray: mbedded-ninja/LinuxCanBus/LinuxCanBus}
+urls: {}
+short_description: A C++ user-space CAN bus driver for Linux (using socketCAN)

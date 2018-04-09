@@ -1,0 +1,10 @@
+recipies:
+  - repo: {bintray: 'bitprim/bitprim/bitprim-rpc:bitprim'}
+  - repo: {bintray: 'bitprim/bitprim/bitprim-rpc'}
+urls:
+  github: bitprim/bitprim-node
+categories:
+  - topic.library.network.messages.rpc
+  - topic.library.cryptocurrency
+  - standard.cpp.11
+  - status.5stable

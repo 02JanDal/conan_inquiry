@@ -1,5 +1,12 @@
 recipies:
-- repo: {bintray: 'conan-community/conan/TBB:conan'}
-urls: {}
+  - repo: {bintray: 'conan-community/conan/TBB:conan'}
+  - repo: {bintray: 'odant/conan/tbb:odant'}
+  - repo: {bintray: 'tuncb/pangea/intel-tbb:tuncb'}
+urls:
+  website: https://www.threadingbuildingblocks.org/
+description: Intel® Threading Building Blocks (Intel® TBB) lets you easily write parallel C++ programs that take full advantage of multicore performance, that are portable and composable, and that have future-proof scalability.
+short_description: Threading Building Blocks lets you easily write parallel C++ programs that take full advantage of multicore performance
 categories:
   - topic.library.async.threading
+  - status.5stable
+  - standard.cpp

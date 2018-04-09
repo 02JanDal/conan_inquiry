@@ -1,6 +1,7 @@
 recipies:
 - repo: {bintray: 'bincrafters/public-conan/boost_parameter:bincrafters'}
-urls: {}
+urls:
+  docs: https://www.boost.org/doc/libs/release/libs/parameter/doc/html/index.html
 categories:
   - topic.library.utility
   - standard.cpp

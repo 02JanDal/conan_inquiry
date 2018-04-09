@@ -1,0 +1,20 @@
+recipies:
+  - repo: {bintray: 'degoodmanwilson/opensource/PEGTL:DEGoodmanWilson'}
+urls:
+  github: taocpp/PEGTL
+categories:
+  - standard.cpp.11
+  - status.5stable
+  - topic.library.string.parsing
+  - topic.library.development.parser_generator
+code_example: |
+  // PEG rule for integers consisting of a non-empty
+  // sequence of digits with an optional sign:
+
+  // integer ::= ( '+' / '-' )? digit+
+
+  // The same parsing rule implemented with the PEGTL:
+
+  using namespace tao::pegtl;
+
+  struct integer : seq< opt< one< '+', '-' > >, plus< digit > > {};

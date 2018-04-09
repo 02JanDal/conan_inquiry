@@ -1,6 +1,22 @@
 recipies:
   - repo:
       bintray: conan-community/conan/bzip2:conan
+  - repo:
+      bintray: inexorgame/inexor-conan/bzip2:conan
+  - repo:
+      bintray: inexorgame/inexor-conan/bzip2:lasote
+  - repo:
+      bintray: bitprim/bitprim/bzip2:bitprim
+  - repo:
+      bintray: foxostro/PinkTopaz/bzip2:conan
+  - repo:
+      bintray: kwallner/stable/bzip2:kwallner
+  - repo:
+      bintray: kwallner/testing/bzip2:kwallner
+  - repo:
+      bintray: rwth-vr/conan/bzip2:RWTH-VR
+  - repo:
+      bintray: vtpl1/conan-ffmpeg/bzip2:lasote
 urls:
   docs: http://www.bzip.org/docs.html
   issues: http://www.bzip.org/1.0.3/html/bugs.html

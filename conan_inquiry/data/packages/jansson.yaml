@@ -1,5 +1,6 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/jansson:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/jansson:bincrafters'}
+  - repo: {bintray: 'franc0is/conan/jansson:franc0is'}
 urls:
   github: akheron/jansson
   docs: https://jansson.readthedocs.io/en/latest/

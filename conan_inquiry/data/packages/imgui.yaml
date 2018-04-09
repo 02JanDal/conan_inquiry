@@ -1,5 +1,7 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/imgui:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/imgui:bincrafters'}
+  - repo: {bintray: 'acdemiralp/makina/imgui:acdemiralp'}
+  - repo: {bintray: 'rhard/conan/imgui:rhard'}
 urls: {}
 categories:
   - topic.library.graphics.highlevel

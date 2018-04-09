@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'mdf/2out/2out:dronmdf'}
+urls:
+  github: DronMDF/2out
+categories:
+  - topic.library.development.testing
+  - standard.cpp.14
+  - status.5stable

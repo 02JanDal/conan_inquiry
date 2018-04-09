@@ -1,0 +1,13 @@
+recipies:
+  - repo: {bintray: 'tuncb/pangea/rapidxml:tuncb'}
+urls:
+  website: http://rapidxml.sourceforge.net/
+  docs: http://rapidxml.sourceforge.net/manual.html
+  issues: https://sourceforge.net/p/rapidxml/_list/tickets
+description: Rparsing speed approaching that of strlen function executed on the same data.apidXml is an attempt to create the fastest XML parser possible, while retaining useability, portability and reasonable W3C compatibility. It is an in-situ parser written in modern C++, with parsing speed approaching that of strlen function executed on the same data.
+categories:
+  - topic.library.fileformat.generic.xml
+  - topic.library.serialization.lowlevel
+  - standard.cpp
+  - status.6mature
+name: RapidXML

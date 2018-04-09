@@ -1,0 +1,13 @@
+recipies:
+- repo: {bintray: 'vuo/conan/glib:vuo'}
+urls:
+  gitlab: https://gitlab.gnome.org/GNOME/glib
+  website: https://wiki.gnome.org/Projects/GLib
+description: GLib provides the core application building blocks for libraries and applications written in C. It provides the core object system used in GNOME, the main loop implementation, and a large set of utility functions for strings and common data structures.
+categories:
+  - topic.library.utility.container
+  - topic.library.utility.memory
+  - topic.library.async.threading
+  - topic.library.system_framework
+  - standard.c
+  - status.6mature

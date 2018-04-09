@@ -1,0 +1,4 @@
+recipies:
+- repo: {bintray: 'inexorgame/inexor-conan/findboost:bincrafters'}
+urls: {}
+exclude: true

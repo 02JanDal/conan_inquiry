@@ -1,5 +1,7 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/libcurl:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/libcurl:bincrafters'}
+  - repo: {bintray: 'vtpl1/conan-ffmpeg/libcurl:lasote'}
+  - repo: {bintray: 'vuo/conan/curl:vuo'}
 urls:
   github: curl/curl
 categories:

@@ -8,6 +8,18 @@ recipies:
       bintray: lasote/conan-repo/gtest:conan
   - repo:
       bintray: bincrafters/public-conan/gtest:bincrafters
+  - repo:
+      bintray: inexorgame/inexor-conan/gtest:lasote
+  - repo:
+      bintray: ess-dmsc/conan/gtest:ess-dmsc
+  - repo:
+      bintray: jgsogo/conan-packages/gtest:jgsogo
+  - repo:
+      bintray: sunxfancy/common/gtest:sunxfancy
+  - repo:
+      bintray: vtpl1/conan-ffmpeg/gtest:lasote
+  - repo:
+      bintray: odant/conan/googletest:odant
 urls:
   docs: https://github.com/google/googletest/blob/master/googletest/docs/Primer.md
 description: |

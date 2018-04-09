@@ -1,0 +1,9 @@
+recipies:
+  - repo: {bintray: 'inexorgame/inexor-conan/InexorGlueGen:inexorgame'}
+urls:
+  github: inexorgame/InexorGlueGen
+short_description: Inexor's reflection tool
+categories:
+  - topic.library.utility.reflection
+  - standard.cpp
+  - status.3alpha

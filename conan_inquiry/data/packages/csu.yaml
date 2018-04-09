@@ -1,0 +1,7 @@
+recipies:
+  - repo: {bintray: 'vuo/conan/csu:vuo'}
+urls:
+  code: https://opensource.apple.com/source/Csu/
+description: Combines several object files and libraries, resolves references, and produces an ouput file
+categories:
+  - topic.tool.build_tools

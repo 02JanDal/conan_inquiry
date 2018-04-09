@@ -1,0 +1,7 @@
+recipies:
+- repo: {bintray: 'kenfred/conan-corner/AsioSDK:kenfred'}
+urls:
+  website: https://www.steinberg.net/en/company/developers.html
+short_description: Audio Streaming Input Output Development Kit
+categories:
+  - topic.library.multimedia.audio

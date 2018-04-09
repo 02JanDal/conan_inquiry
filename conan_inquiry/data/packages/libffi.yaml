@@ -1,0 +1,8 @@
+recipies:
+  - repo: {bintray: 'vuo/conan/libffi:vuo'}
+urls:
+  github: libffi/libffi
+categories:
+  - topic.library.bindings_interoperability
+  - standard.c
+  - status.5stable

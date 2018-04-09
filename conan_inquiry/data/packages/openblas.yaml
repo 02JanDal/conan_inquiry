@@ -1,9 +1,12 @@
 recipies:
-- repo: {bintray: 'conan-community/conan/openblas:conan'}
+  - repo: {bintray: 'conan-community/conan/openblas:conan'}
+  - repo: {bintray: 'danimtb/public-conan/OpenBLAS:danimtb'}
+  - repo: {bintray: 'danimtb/public-conan/openblas:danimtb'}
 urls:
   github: xianyi/OpenBLAS
 categories:
   - topic.library.math
+  - topic.library.scientific
   - standard.c
   - status.5stable
 name: OpenBLAS

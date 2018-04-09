@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'degoodmanwilson/opensource/gnutls:DEGoodmanWilson'}
+urls:
+  gitlab: https://gitlab.com/gnutls/gnutls
+description: 'GnuTLS is a secure communications library implementing the SSL, TLS and DTLS protocols and technologies around them. It provides a simple C language API to access the secure communications protocols.'
+categories:
+  - topic.library.network.crypto
+  - standard.c
+  - status.5stable

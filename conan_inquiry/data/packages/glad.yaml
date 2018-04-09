@@ -1,5 +1,6 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/glad:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/glad:bincrafters'}
+  - repo: {bintray: 'p-groarke/conan-public/glad:p-groarke'}
 urls:
   github: Dav1dde/glad
 categories:

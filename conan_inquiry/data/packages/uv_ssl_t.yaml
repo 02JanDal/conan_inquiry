@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'alekseevx/pft/uv_ssl_t:alekseevx'}
+urls:
+  github: indutny/uv_ssl_t
+categories:
+  - topic.library.network.crypto
+  - standard.c
+  - status.2prealpha

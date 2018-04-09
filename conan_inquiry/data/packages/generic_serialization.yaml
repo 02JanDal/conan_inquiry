@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'enhex/enhex/generic_serialization:enhex'}
+urls:
+  github: Enhex/generic_serialization
+categories:
+  - topic.library.serialization
+  - topic.library.fileformat.generic.binary
+  - standard.cpp
+  - status.3alpha

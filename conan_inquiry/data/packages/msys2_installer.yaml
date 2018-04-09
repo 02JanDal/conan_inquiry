@@ -1,5 +1,6 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/msys2_installer:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/msys2_installer:bincrafters'}
+  - repo: {bintray: 'bitprim/bitprim/msys2_installer:bitprim'}
 urls: {}
 categories:
   - topic.tool.compiler

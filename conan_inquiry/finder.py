@@ -22,6 +22,10 @@ class GithubFinder:
     def _find_files(self, file):
         return [r for r in self.github.search_code(file) if file in r.path]
 
+    def print(self):
+        res = self.github.search_code('conanfile.py in:path path:/')
+        pass
+
     def generate_stubs(self, directory):
         for file in self._find_files('conanfile.py'):
             repo = file.repository
@@ -60,6 +64,70 @@ class BintrayFinder:
                 parts = recipie['repo']['bintray'].split('/')
                 repos.add(BintrayRepoDescriptor(parts[0], parts[1]))
         repos.add(BintrayRepoDescriptor('conan', 'conan-center'))
+
+        # Github repos that need to be created or located on bintray:
+        # https://github.com/syslandscape/syslandscape
+        # https://github.com/cajun-code/sfml.conan
+        # https://github.com/erikvalkering/smartref
+        # https://github.com/malwoden/conan-librsync
+        # https://github.com/LighthouseJ/mtn
+        # https://github.com/raulbocanegra/utils
+        # https://github.com/Aquaveo/xmscore
+        # https://github.com/franc0is/conan-jansson
+        # https://github.com/srand/stdext-uuid
+        # https://github.com/db4/conan-jwasm
+        # https://github.com/ulricheck/conan-librealsense
+        # https://github.com/iblis-ms/conan_gmock
+        # https://github.com/zacklj89/conan-CppMicroServices
+        # https://github.com/nickbruun/conan-hayai
+        # https://github.com/JavierJF/TabletMode
+        # https://github.com/google/fruit
+        # https://github.com/StiventoUser/conan-sqlpp11-connector-postgresql
+        # https://github.com/wumuzi520/conan-snappy
+        # https://github.com/DigitalInBlue/Celero-Conan
+        # https://github.com/Trick-17/FMath
+        # https://github.com/kwint/conan-gnuplot-iostream
+        # https://github.com/luisnuxx/formiga
+        # https://github.com/gustavokretzer88/conan-OATH-Toolkit
+        # https://github.com/lightningcpp/lightningcpp
+        # https://github.com/jasonbot/conan-jansson
+        # https://github.com/bfierz/vcl
+        # https://github.com/SverreEplov/conan-wt
+        # https://github.com/jampio/jkpak
+        # https://github.com/StableTec/vulkan
+        # https://github.com/tmadden/alia
+        # https://github.com/JavierJF/CloseApp
+        # https://github.com/e3dskunkworks/conan-celero
+        # https://github.com/kheaactua/conan-ffi
+        # https://github.com/matlo607/conan-swig
+        # https://github.com/Exiv2/exiv2
+        # https://github.com/Ubitrack/component_vision_aruco
+        # https://github.com/iblis-ms/conan_gbenchmark
+        # https://github.com/p47r1ck7541/conan-llvm-60
+        # https://github.com/StableCoder/conan-mariadb-connector
+
+        # https://github.com/yackey/AvtecGmock # owner exists
+        # https://github.com/yackey/AEF-CI # owner exists
+        # https://github.com/spielhuus/avcpp # owner exists
+        # https://github.com/nwoetzel/conan-omniorb # owner exists
+
+        for a in ['inexorgame/inexor-conan', 'odant/conan', 'vuo/conan', 'squawkcpp/conan-cpp',
+                  'degoodmanwilson/opensource', 'objectx/conan', 'franc0is/conan',
+
+                  'boujee/conan', 'mdf/2out', 'impsnldavid/public-conan', 'sunxfancy/common',
+                  'jacmoe/Conan', 'madebr/openrw', 'ogs/conan', 'danimtb/public-conan', 'kwallner/stable',
+                  'kwallner/testing', 'dobiasd/public-conan', 'solvingj/public-conan', 'slyrisorg/SlyrisOrg',
+                  'cliutils/CLI11', 'tuncb/pangea', 'mikayex/conan-packages', 'kenfred/conan-corner',
+                  'p-groarke/conan-public', 'jabaa/Conan', 'blosc/Conan', 'sourcedelica/public-conan',
+                  'sourcedelica/conan', 'rockdreamer/throwing_ptr', 'qtproject/conan', 'rhard/conan',
+                  'tao-cpp/tao-cpp', 'bitprim/bitprim', 'yadoms/yadoms', 'enhex/enhex', 'jilabinc/conan',
+                  'bisect/bisect', 'artalus/conan-public', 'alekseevx/pft', 'mbedded-ninja/LinuxCanBus',
+                  'cynarakrewe/CynaraConan', 'jsee23/public', 'foxostro/PinkTopaz', 'jgsogo/conan-packages',
+                  'vtpl1/conan-expat', 'vtpl1/conan-ffmpeg', 'ess-dmsc/conan', 'acdemiralp/makina',
+                  'rwth-vr/conan', 'onyx/conan']:
+            splitted = a.split('/')
+            repos.add(BintrayRepoDescriptor(splitted[0], splitted[1]))
+
         return repos
 
     def _find_packages(self, repos: Set[BintrayRepoDescriptor]) -> [BintrayPackageDescriptor]:
@@ -85,6 +153,7 @@ class BintrayFinder:
     def _default_package_filename(cls, pkg: BintrayPackageDescriptor):
         clean_name = pkg.name.split(':')[0].lower().replace('conan-', '')
         clean_name = re.sub(r'^boost_', 'boost.', clean_name)
+        clean_name = clean_name.replace('+', '_')
         return os.path.join(packages_directory(), clean_name + '.yaml')
 
     def _filter_missing_package(self, packages: [BintrayPackageDescriptor]) -> [BintrayPackageDescriptor]:

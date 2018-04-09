@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'acdemiralp/makina/memory:acdemiralp'}
+urls:
+  github: foonathan/memory
+categories:
+  - topic.library.utility.memory
+  - standard.cpp
+  - status.5stable

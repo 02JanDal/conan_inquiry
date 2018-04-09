@@ -5,6 +5,18 @@ recipies:
       bintray: lasote/conan-repo/OpenSSL:conan
   - repo:
       bintray: uilianries/conan/OpenSSL:conan
+  - repo:
+      bintray: inexorgame/inexor-conan/OpenSSL:conan
+  - repo:
+      bintray: inexorgame/inexor-conan/OpenSSL:lasote
+  - repo:
+      bintray: odant/conan/openssl:odant
+  - repo:
+      bintray: vuo/conan/openssl:vuo
+  - repo:
+      bintray: kenfred/conan-corner/OpenSSL:conan
+  - repo:
+      bintray: vtpl1/conan-ffmpeg/OpenSSL:conan
 urls:
   docs: https://www.openssl.org/docs/
   github: openssl/openssl

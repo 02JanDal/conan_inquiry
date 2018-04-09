@@ -1,6 +1,14 @@
 recipies:
   - repo:
       bintray: conan-community/conan/boost:conan
+  - repo:
+      bintray: odant/conan/boost:odant
+  - repo:
+      bintray: bitprim/bitprim/boost:bitprim
+  - repo:
+      bintray: rwth-vr/conan/boost:RWTH-VR
+  - repo:
+      bintray: yadoms/yadoms/boost:demo
 urls:
   website: http://www.boost.org/
   docs: http://www.boost.org/doc/libs/1_65_1/

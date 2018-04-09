@@ -1,0 +1,10 @@
+recipies:
+- repo: {bintray: 'vuo/conan/liblqr:vuo'}
+urls:
+  github: carlobaldassi/liblqr
+categories:
+  - topic.library.graphics.image_processing
+  - status.5stable
+  - standard.c
+short_description: Provides a C/C++ API for performing non-uniform resizing of images by the seam-carving technique
+description: The LiquidRescale (lqr) library provides a C/C++ API for performing non-uniform resizing of images by the seam-carving technique.

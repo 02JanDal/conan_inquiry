@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'squawkcpp/conan-cpp/cxxopts:conan-cpp'}
+urls:
+  github: jarro2783/cxxopts
+categories:
+  - topic.library.terminal.cli_parsing
+  - standard.cpp
+  - status.5stable

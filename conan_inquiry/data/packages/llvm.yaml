@@ -1,0 +1,10 @@
+recipies:
+- repo: {bintray: 'vuo/conan/llvm:vuo'}
+urls:
+  github: llvm-mirror/llvm
+  issues: https://bugs.llvm.org/
+  website: https://llvm.org/
+short_description: A collection of modular and reusable compiler and toolchain technologies
+categories:
+  - topic.tool.compiler
+  - status.5stable

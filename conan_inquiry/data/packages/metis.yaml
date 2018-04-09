@@ -1,0 +1,11 @@
+recipies:
+  - repo: {bintray: 'tuncb/pangea/metis:tuncb'}
+urls:
+  website: http://glaros.dtc.umn.edu/gkhome/metis/metis/overview
+  issues: http://glaros.dtc.umn.edu/flyspray/index.php?tasks=all&project=2
+description: METIS is a set of serial programs for partitioning graphs, partitioning finite element meshes, and producing fill reducing orderings for sparse matrices. The algorithms implemented in METIS are based on the multilevel recursive-bisection, multilevel k-way, and multi-constraint partitioning schemes developed in our lab.
+categories:
+  - topic.library.math
+  - topic.library.scientific
+  - standard.c
+  - status.5stable

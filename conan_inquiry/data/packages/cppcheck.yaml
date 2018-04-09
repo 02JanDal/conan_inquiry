@@ -1,0 +1,7 @@
+recipies:
+- repo: {bintray: 'rwth-vr/conan/cppcheck:RWTH-VR'}
+urls:
+  github: danmar/cppcheck
+categories:
+  - topic.tool.analyzer
+  - status.5stable

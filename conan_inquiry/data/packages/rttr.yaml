@@ -1,0 +1,9 @@
+recipies:
+  - repo: {bintray: 'acdemiralp/makina/rttr:acdemiralp'}
+urls:
+  github: rttrorg/rttr
+categories:
+  - topic.library.serialization.highlevel
+  - topic.library.utility.reflection
+  - standard.cpp.11
+  - status.5stable

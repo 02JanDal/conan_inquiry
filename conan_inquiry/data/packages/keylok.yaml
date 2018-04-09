@@ -1,0 +1,7 @@
+recipies:
+  - repo: {bintray: 'kenfred/conan-corner/Keylok:kenfred'}
+urls:
+  website: https://www.keylok.com/
+short_description: KEYLOK Software Piracy Prevention System
+categories:
+  - topic.library.drm

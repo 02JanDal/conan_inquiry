@@ -1,0 +1,10 @@
+recipies:
+- repo: {bintray: 'tao-cpp/tao-cpp/algorithm:fpelliccioni'}
+urls:
+  github: tao-cpp/algorithm
+  docs: https://tao-cpp.github.io/algorithm/
+categories:
+  - topic.library.utility.algorithm
+  - standard.cpp.11
+  - standard.cpp.14
+  - status.4beta

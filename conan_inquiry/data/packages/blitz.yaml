@@ -1,0 +1,10 @@
+recipies:
+- repo: {bintray: 'tuncb/pangea/blitz:tuncb'}
+urls:
+  github: blitzpp/blitz
+categories:
+  - topic.library.math
+  - topic.library.utility.container
+  - topic.library.scientific
+  - standard.cpp
+  - status.5stable

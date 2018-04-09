@@ -1,0 +1,3 @@
+recipies:
+- repo: {bintray: 'objectx/conan/rapidcheck:objectx'}
+urls: {}

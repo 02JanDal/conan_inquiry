@@ -1,0 +1,9 @@
+recipies:
+  - repo: {bintray: 'acdemiralp/makina/vkhlf:acdemiralp'}
+urls:
+  github: nvpro-pipeline/VkHLF
+categories:
+  - topic.library.graphics.3d.vulkan
+  - topic.library.graphics.lowlevel
+  - standard.cpp
+  - status.2prealpha

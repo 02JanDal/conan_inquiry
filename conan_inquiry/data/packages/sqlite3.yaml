@@ -1,5 +1,6 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/sqlite3:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/sqlite3:bincrafters'}
+  - repo: {bintray: 'jgsogo/conan-packages/sqlite3:jgsogo'}
 urls: {}
 categories:
   - topic.library.database.sqlite

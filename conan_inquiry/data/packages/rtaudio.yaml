@@ -1,0 +1,10 @@
+recipies:
+  - repo: {bintray: 'vuo/conan/rtaudio:vuo'}
+urls:
+  github: thestk/rtaudio
+categories:
+  - topic.library.multimedia.audio
+  - topic.library.multimedia.codecs
+  - topic.library.fileformat.audio
+  - standard.cpp
+  - status.5stable

@@ -1,0 +1,11 @@
+recipies:
+- repo: {bintray: 'kenfred/conan-corner/Qwt:kenfred'}
+urls:
+  website: http://qwt.sourceforge.net/
+  docs: http://qwt.sourceforge.net/
+  code: https://sourceforge.net/p/qwt/code/HEAD/tree/
+name: Qwt
+short_description: Qt Widgets for Technical Applications
+categories:
+  - topic.library.qt
+  - topic.library.scientific

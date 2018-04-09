@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'onyx/conan/anax:bincrafters'}
+urls:
+  github: miguelmartin75/anax
+categories:
+  - topic.library.games
+  - topic.library.system_framework.ecs
+  - standard.cpp.11
+  - status.5stable

@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'acdemiralp/makina/fg:acdemiralp'}
+urls:
+  github: acdemiralp/fg
+categories:
+  - topic.library.games
+  - topic.library.graphics.3d
+  - standard.cpp.17
+  - status.5stable

@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'acdemiralp/makina/ec:acdemiralp'}
+urls:
+  github: acdemiralp/ec
+categories:
+  - topic.library.games
+  - topic.library.system_framework.ecs
+  - standard.cpp
+  - status.5stable

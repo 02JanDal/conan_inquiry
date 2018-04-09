@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'cynarakrewe/CynaraConan/TM4C-usblib:spiessensm'}
+urls:
+  website: http://www.ti.com/tool/SW-TM4C
+description: TivaWare usb library from Texas Instruments. Nothing is changed from the original release by Texas Instruments. Only arm-none-eabi-gcc toolchain is supported.
+categories:
+  - topic.library.io.driver
+  - standard.c
+  - status.5stable

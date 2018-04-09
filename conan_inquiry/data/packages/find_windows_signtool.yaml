@@ -1,0 +1,8 @@
+recipies:
+  - repo: {bintray: 'odant/conan/find_windows_signtool:odant'}
+  - repo: {bintray: 'odant/conan/windows_signtool:odant'}
+urls:
+  github: odant/conan-find_windows_signtool
+categories:
+  - topic.tool
+short_description: Python module for find path Microsoft signtool

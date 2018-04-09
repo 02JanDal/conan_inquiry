@@ -1,7 +1,8 @@
 recipies:
-- repo: {bintray: 'trompeloeil/trompeloeil/trompeloeil:rollbear'}
+  - repo: {bintray: 'trompeloeil/trompeloeil/trompeloeil:rollbear'}
+  - repo: {bintray: 'rwth-vr/conan/trompeloeil:RWTH-VR'}
 urls: {}
 categories:
-  - topic.library.development.testing.mocking
+  - topic.library.development.mocking
   - standard.cpp.14
   - status.5stable

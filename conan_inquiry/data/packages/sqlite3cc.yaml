@@ -1,0 +1,10 @@
+recipies:
+  - repo: {bintray: 'jgsogo/conan-packages/sqlite3cc:jgsogo'}
+urls:
+  website: http://ed.am/dev/sqlite3cc
+  code: http://bzr.ed.am/sqlite3cc/changes
+  issues: http://dev.ed.am/sqlite3cc
+description: The sqlite3cc library is a C++ wrapper around the excellent SQLite 3 library. The SQLite Library has a C-style interface, and sqlite3cc is intended to make the use of SQLite more comfortable in a C++ programming environment.
+categories:
+  - topic.library.database.lowlevel
+  - topic.library.database.sqlite

@@ -1,5 +1,10 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/sdl2:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/sdl2:bincrafters'}
+  - repo: {bintray: 'inexorgame/inexor-conan/SDL2:lasote'}
+  - repo: {bintray: 'artalus/conan-public/SDL2:Artalus'}
+  - repo: {bintray: 'foxostro/PinkTopaz/SDL2:lasote'}
+  - repo: {bintray: 'rwth-vr/conan/SDL2:RWTH-VR'}
+  - repo: {bintray: 'rwth-vr/conan/sdl2:RWTH-VR'}
 urls:
   code: https://hg.libsdl.org/SDL
   website: https://www.libsdl.org/

@@ -1,0 +1,8 @@
+recipies:
+  - repo: {bintray: 'conan-community/conan/snowboy:conan'}
+urls:
+  website: https://snowboy.kitt.ai/
+  docs: http://docs.kitt.ai/snowboy/
+  github: kitt-ai/snowboy
+categories:
+  - topic.library.ai

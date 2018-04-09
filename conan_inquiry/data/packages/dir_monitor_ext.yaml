@@ -1,0 +1,9 @@
+recipies:
+  - repo: {bintray: 'solvingj/public-conan/dir_monitor_ext:solvingj'}
+  - repo: {bintray: 'solvingj/public-conan/Dir_monitor_ext:solvingj'}
+urls:
+  github: solvingj/dir_monitor_ext
+categories:
+  - topic.library.io.filesystem
+  - standard.cpp
+  - status.1planning

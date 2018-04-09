@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'squawkcpp/conan-cpp/Easyexif:conan-cpp'}
+urls:
+  github: mayanklahiri/easyexif
+categories:
+  - topic.library.fileformat.image.jpeg
+  - standard.cpp
+  - status.5stable

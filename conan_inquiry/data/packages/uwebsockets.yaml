@@ -1,0 +1,8 @@
+recipies:
+  - repo: {bintray: 'jsee23/public/uWebSockets:jsee23'}
+urls:
+  github: uNetworking/uWebSockets
+categories:
+  - topic.library.network.websockets
+  - standard.cpp.11
+  - status.5stable

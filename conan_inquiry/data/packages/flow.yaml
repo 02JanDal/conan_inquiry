@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'cynarakrewe/CynaraConan/Flow:spiessensm'}
+urls:
+  github: CynaraKrewe/Flow
+categories:
+  - environment.embedded
+  - standard.cpp
+  - topic.library.io

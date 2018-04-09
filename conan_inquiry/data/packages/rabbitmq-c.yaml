@@ -1,0 +1,10 @@
+recipies:
+- repo: {bintray: 'bisect/bisect/rabbitmq-c:bisect'}
+urls:
+  github: alanxz/rabbitmq-c
+categories:
+  - topic.library.network.mq
+  - topic.library.network.messages
+  - topic.library.network.pubsub
+  - standard.c
+  - status.5stable

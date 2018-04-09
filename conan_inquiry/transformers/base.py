@@ -6,6 +6,7 @@ from inspect import isclass
 import requests
 from cachecontrol import CacheControl
 from dotmap import DotMap
+from tqdm import tqdm
 
 from conan_inquiry.util.cache import Cache
 from conan_inquiry.util.github import get_github_client

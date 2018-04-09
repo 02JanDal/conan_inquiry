@@ -1,5 +1,8 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/asio:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/asio:bincrafters'}
+  - repo: {bintray: 'squawkcpp/conan-cpp/asio:conan-cpp'}
+  - repo: {bintray: 'squawkcpp/conan-cpp/ffmpeg:conan-cpp'}
+  - repo: {bintray: 'enhex/enhex/asio:enhex'}
 urls:
   github: chriskohlhoff/asio
   docs: https://think-async.com/Asio/Documentation

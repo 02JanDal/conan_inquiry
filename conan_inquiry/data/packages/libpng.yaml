@@ -5,6 +5,14 @@ recipies:
       bintray: lasote/conan-repo/libpng:conan
   - repo:
       bintray: bincrafters/public-conan/libpng:bincrafters
+  - repo:
+      bintray: inexorgame/inexor-conan/libpng:bincrafters
+  - repo:
+      bintray: inexorgame/inexor-conan/libpng:lasote
+  - repo:
+      bintray: squawkcpp/conan-cpp/libpng:conan-cpp
+  - repo:
+      bintray: bitprim/bitprim/libpng:bitprim
 urls:
   website: http://www.libpng.org/pub/png/libpng.html
   docs: http://www.libpng.org/pub/png/libpng-manual.txt

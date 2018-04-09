@@ -5,6 +5,14 @@ recipies:
       bintray: bincrafters/public-conan/protobuf:bincrafters
   - repo:
       bintray: gasuketsu/conans/Protobuf:gasuketsu
+  - repo:
+      bintray: inexorgame/inexor-conan/Protobuf:inexorgame
+  - repo:
+      bintray: jgsogo/conan-packages/protobuf:jgsogo
+  - repo:
+      bintray: kenfred/conan-corner/Protobuf:kenfred
+  - repo:
+      bintray: sourcedelica/conan/Protobuf:sourcedelica
 urls:
   github: google/protobuf
 name: Protobuf

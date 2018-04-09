@@ -1,0 +1,9 @@
+recipies:
+  - repo: {bintray: 'acdemiralp/makina/gl:acdemiralp'}
+  - repo: {bintray: 'rwth-vr/conan/gl:RWTH-VR'}
+urls:
+  github: acdemiralp/gl
+categories:
+  - topic.library.graphics.3d.opengl
+  - standard.cpp.11
+  - status.5stable

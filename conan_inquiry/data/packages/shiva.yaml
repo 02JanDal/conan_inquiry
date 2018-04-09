@@ -1,0 +1,9 @@
+recipies:
+  - repo: {bintray: 'tuncb/pangea/shiva:tuncb'}
+urls:
+  github: tuncb/shiva
+description: A c++ wrapper around mpi
+categories:
+  - topic.library.async
+  - standard.cpp
+  - status.2prealpha

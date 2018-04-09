@@ -1,4 +1,5 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/boost_generator:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/boost_generator:bincrafters'}
+  - repo: {bintray: 'solvingj/public-conan/boost_generator:bincrafters'}
 urls: {}
 exclude: true

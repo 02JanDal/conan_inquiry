@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'slyrisorg/SlyrisOrg/Core.PP:SlyrisOrg'}
+urls:
+  github: SlyrisOrg/core-v2
+categories:
+  - topic.library.utility.preprocessor
+  - status.3alpha
+  - standard.cpp

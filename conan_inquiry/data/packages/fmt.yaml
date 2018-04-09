@@ -1,10 +1,13 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/fmt:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/fmt:bincrafters'}
+  - repo: {bintray: 'inexorgame/inexor-conan/fmt:bincrafters'}
+  - repo: {bintray: 'inexorgame/inexor-conan/fmt:memsharded'}
+  - repo: {bintray: 'ess-dmsc/conan/fmt:ess-dmsc'}
 urls:
   github: fmtlib/fmt
   docs: http://fmtlib.net/latest/
 categories:
-  - topic.library
+  - topic.library.string.formatting
   - standard.cpp.98
   - standard.cpp.11
   - status.5stable

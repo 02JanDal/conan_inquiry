@@ -1,0 +1,10 @@
+recipies:
+  - repo: {bintray: 'rwth-vr/conan/phx:RWTH-VR'}
+urls:
+  gitlab: https://devhub.vr.rwth-aachen.de/VR-Group/Project_Phoenix
+name: Project Phoenix
+description: 'Project Phoenix is a modern, adaptable, and easy-to-use API offering essential functionality for prototyping, developing, and deploying cutting-edge VR applications.'
+categories:
+  - standard.cpp
+  - topic.library.vr_ar
+  - status.5stable

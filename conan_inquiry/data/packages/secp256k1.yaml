@@ -1,0 +1,4 @@
+recipies:
+- repo: {bintray: 'bitprim/bitprim/secp256k1:bitprim'}
+urls:
+  github: bitcoin-core/secp256k1

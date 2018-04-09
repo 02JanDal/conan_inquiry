@@ -1,0 +1,8 @@
+recipies:
+  - repo: {bintray: 'degoodmanwilson/opensource/inja:DEGoodmanWilson'}
+urls:
+  github: pantor/inja
+categories:
+  - topic.library.string.templates
+  - standard.cpp.11
+  - status.5stable

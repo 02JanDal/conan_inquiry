@@ -1,5 +1,6 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/cryptopp:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/cryptopp:bincrafters'}
+  - repo: {bintray: 'odant/conan/cryptopp:odant'}
 urls:
   github: weidai11/cryptopp
 categories:

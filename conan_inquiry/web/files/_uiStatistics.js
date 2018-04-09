@@ -12,13 +12,13 @@ function getSunburstCategoryData(prefix) {
         return {
             name: name,
             id: category,
-            value: App.category.counts[category]
+            value: App.category.pkgCounts[category]
         };
     } else {
         var general = {
             name: '',
             id: category,
-            value: App.category.counts[category]
+            value: App.category.pkgCounts[category]
         };
         return {
             name: name,

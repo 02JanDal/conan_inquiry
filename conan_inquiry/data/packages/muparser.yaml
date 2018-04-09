@@ -1,0 +1,10 @@
+recipies:
+- repo: {bintray: 'vuo/conan/muparser:vuo'}
+urls:
+  github: beltoforion/muparser
+categories:
+  - standard.cpp.11
+  - topic.library.math
+  - status.5stable
+short_description: muParser is an extensible high performance math expression parser library written in C++
+description: Many applications require the parsing of mathematical expressions. The main objective of this library is to provide a fast and easy way of doing this. muParser is an extensible high performance math expression parser library written in C++. It works by transforming a mathematical expression into bytecode and precalculating constant parts of the expression.

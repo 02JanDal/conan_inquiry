@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'inexorgame/inexor-conan/ENet:inexorgame'}
+urls:
+  github: lsalzman/enet
+categories:
+  - topic.library.network.lowlevel
+  - standard.c
+  - status.7inactive

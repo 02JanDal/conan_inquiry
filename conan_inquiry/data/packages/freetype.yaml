@@ -1,5 +1,6 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/freetype:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/freetype:bincrafters'}
+  - repo: {bintray: 'squawkcpp/conan-cpp/Freetype:conan-cpp'}
 urls:
   docs: https://www.freetype.org/freetype2/docs/documentation.html
   code: https://git.savannah.gnu.org/cgit/freetype/freetype2.git/

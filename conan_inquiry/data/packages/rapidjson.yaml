@@ -1,5 +1,7 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/rapidjson:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/rapidjson:bincrafters'}
+  - repo: {bintray: 'inexorgame/inexor-conan/RapidJSON:inexorgame'}
+  - repo: {bintray: 'ess-dmsc/conan/RapidJSON:ess-dmsc'}
 urls:
   github: Tencent/rapidjson
 categories:

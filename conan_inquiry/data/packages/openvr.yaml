@@ -1,0 +1,11 @@
+recipies:
+- repo: {bintray: 'rwth-vr/conan/openvr:RWTH-VR'}
+urls:
+  github: ValveSoftware/openvr
+categories:
+  - topic.library.io.input
+  - topic.library.graphics.3d
+  - topic.library.games
+  - topic.library.vr_ar
+  - standard.cpp
+  - status.5stable

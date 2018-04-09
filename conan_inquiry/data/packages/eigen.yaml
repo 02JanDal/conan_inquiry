@@ -1,5 +1,9 @@
 recipies:
-- repo: {bintray: 'conan-community/conan/eigen:conan'}
+  - repo: {bintray: 'conan-community/conan/eigen:conan'}
+  - repo: {bintray: 'danimtb/public-conan/eigen:danimtb'}
+  - repo: {bintray: 'kenfred/conan-corner/eigen:jslee02'}
+  - repo: {bintray: 'tuncb/pangea/eigen:tuncb'}
+  - repo: {bintray: 'ogs/conan/Eigen3:bilke'}
 urls:
   website: http://eigen.tuxfamily.org/
   bitbucket: eigen/eigen

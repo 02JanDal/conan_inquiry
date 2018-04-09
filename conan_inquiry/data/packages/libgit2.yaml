@@ -1,0 +1,4 @@
+recipies:
+- repo: {bintray: 'impsnldavid/public-conan/libgit2:impsnldavid'}
+urls:
+  github: libgit2/libgit2

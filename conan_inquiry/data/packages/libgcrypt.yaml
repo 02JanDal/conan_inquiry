@@ -1,0 +1,8 @@
+recipies:
+  - repo: {bintray: 'degoodmanwilson/opensource/libgcrypt:DEGoodmanWilson'}
+urls:
+  github: gpg/libgcrypt
+categories:
+  - topic.library.network.crypto
+  - standard.c
+  - status.5stable

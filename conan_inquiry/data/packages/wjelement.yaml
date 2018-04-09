@@ -1,0 +1,9 @@
+recipies:
+  - repo: {bintray: 'vuo/conan/wjelement:vuo'}
+urls:
+  github: netmail-open/wjelement
+categories:
+  - topic.library.fileformat.generic.json
+  - topic.library.serialization.lowlevel
+  - standard.c
+  - status.5stable

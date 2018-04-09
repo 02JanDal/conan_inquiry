@@ -1,0 +1,10 @@
+recipies:
+- repo: {bintray: 'acdemiralp/makina/bgfx:acdemiralp'}
+urls:
+  github: bkaradzic/bgfx
+  docs: https://bkaradzic.github.io/bgfx/bgfx.html
+categories:
+  - topic.library.games
+  - topic.library.graphics.3d
+  - standard.cpp
+  - status.4beta

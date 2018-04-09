@@ -1,0 +1,11 @@
+recipies:
+  - repo: {bintray: 'qtproject/conan/libxslt:annulen'}
+  - repo: {bintray: 'qtproject/conan/libxslt:vitallium'}
+urls:
+  github: GNOME/libxslt
+short_description: XSLT itself is a an XML language to define transformation for XML
+description: Libxslt is the XSLT C library developed for the GNOME project. XSLT itself is a an XML language to define transformation for XML. Libxslt is based on libxml2 the XML C library developed for the GNOME project. It also implements most of the EXSLT set of processor-portable extensions functions and some of Saxon's evaluate and expressions extensions.
+categories:
+  - topic.library.fileformat.generic.xml
+  - standard.c
+  - status.5stable

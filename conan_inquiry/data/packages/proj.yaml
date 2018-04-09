@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'ogs/conan/proj:bilke'}
+urls:
+  github: OSGeo/proj.4
+categories:
+  - standard.c
+  - status.5stable
+  - topic.library.geo

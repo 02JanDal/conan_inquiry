@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'squawkcpp/conan-cpp/opencv:conan-cpp'}
+urls:
+  github: opencv/opencv
+categories:
+  - topic.library.ai
+  - topic.library.graphics.image_processing
+  - standard.c
+  - status.6mature

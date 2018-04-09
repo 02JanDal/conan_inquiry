@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'squawkcpp/conan-cpp/magic:conan-cpp'}
+urls:
+  website: http://www.darwinsys.com/file/
+short_description: File type detection from the file(1) utility
+categories:
+  - topic.library.fileformat
+  - topic.library.io.filesystem
+  - standard.c

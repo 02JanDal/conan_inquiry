@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'vuo/conan/gamma:vuo'}
+urls:
+  github: LancePutnam/Gamma
+  website: http://w2.mat.ucsb.edu/gamma/
+  docs: http://w2.mat.ucsb.edu/gamma/doxygen/html/index.html
+categories:
+  - topic.library.scientific
+  - standard.cpp

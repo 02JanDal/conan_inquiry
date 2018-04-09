@@ -1,5 +1,8 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/icu:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/icu:bincrafters'}
+  - repo: {bintray: 'bitprim/bitprim/icu:bitprim'}
+  - repo: {bintray: 'qtproject/conan/icu:annulen'}
+  - repo: {bintray: 'qtproject/conan/icu:vitallium'}
 urls: {}
 categories:
   - topic.library.datetime

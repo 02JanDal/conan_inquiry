@@ -1,0 +1,10 @@
+recipies:
+  - repo: {bintray: 'tuncb/pangea/timetable:tuncb'}
+urls:
+  github: tuncb/timetable
+description: A data structure for iterative discrete time, mainly for FEM analysis
+categories:
+  - topic.library.datetime
+  - topic.library.scientific
+  - standard.cpp.11
+  - status.2prealpha

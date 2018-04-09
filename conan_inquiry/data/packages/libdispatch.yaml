@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'vuo/conan/libdispatch:vuo'}
+urls:
+  github: apple/swift-corelibs-libdispatch
+categories:
+  - topic.library.async
+  - standard.c
+  - status.5stable

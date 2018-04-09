@@ -1,0 +1,3 @@
+recipies:
+- repo: {bintray: 'ess-dmsc/conan/librdkafka:ess-dmsc'}
+urls: {}

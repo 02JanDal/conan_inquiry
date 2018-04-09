@@ -1,5 +1,6 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/libtins:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/libtins:bincrafters'}
+  - repo: {bintray: 'solvingj/public-conan/libtins'}
 urls:
   github: mfontanini/libtins
   docs: https://libtins.github.io/tutorial/

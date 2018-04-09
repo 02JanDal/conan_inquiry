@@ -8,10 +8,10 @@ schema = dict(
     items=dict(
         type='object',
         properties=dict(
-            id=dict(type='string'),
-            name=dict(type='string'),
-            description=dict(type='string'),
-            short_description=dict(type='string'),
+            id=dict(type='string', minLength=1),
+            name=dict(type='string', minLength=1),
+            description=dict(type='string', minLength=5),
+            short_description=dict(type='string', minLength=5),
             urls=dict(
                 type='object',
                 properties={k: dict(type='string', format='uri')

@@ -1,0 +1,9 @@
+recipies:
+  - repo: {bintray: 'tuncb/pangea/stringconversion:tuncb'}
+urls:
+  github: tuncb/stringconversion
+description: A library for string conversion
+categories:
+  - topic.library.string
+  - standard.cpp
+  - status.2prealpha

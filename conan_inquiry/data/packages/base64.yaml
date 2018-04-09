@@ -1,0 +1,9 @@
+recipies:
+- repo: {bintray: 'degoodmanwilson/opensource/base64:DEGoodmanWilson'}
+urls:
+  github: DEGoodmanWilson/base64
+short_description: Base64 encode and decode routines by René Nyffenegger
+categories:
+  - topic.library.utility.algorithm
+  - standard.cpp
+  - status.5stable

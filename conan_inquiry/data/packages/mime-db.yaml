@@ -1,0 +1,7 @@
+recipies:
+- repo: {bintray: 'degoodmanwilson/opensource/mime-db:DEGoodmanWilson'}
+urls:
+  github: jshttp/mime-db
+categories:
+  - topic.library.fileformat
+  - status.5stable

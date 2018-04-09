@@ -1,0 +1,15 @@
+recipies:
+- repo: {bintray: 'ess-dmsc/conan/graylog-logger:ess-dmsc'}
+urls:
+  github: ess-dmsc/graylog-logger
+code_example: |
+  Log::AddLogHandler(new GraylogInterface("somehost.com", 12201));
+  Log::Msg(Severity::Error, "This message will be sent to a Graylog server.");
+
+  Log::Msg(Severity::Debug, "This debug message will not be shown.");
+  Log::SetMinimumSeverity(Severity::Debug);
+  Log::Msg(Severity::Debug, "This debug message will be shown.");
+categories:
+  - topic.library.logging
+  - standard.cpp
+  - status.5stable

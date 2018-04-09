@@ -1,0 +1,7 @@
+recipies:
+  - repo: {bintray: 'odant/conan/vswhere_installer:odant'}
+urls:
+  github: Microsoft/vswhere
+categories:
+  - topic.tool
+  - status.5stable

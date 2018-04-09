@@ -1,0 +1,4 @@
+recipies:
+  - repo: {bintray: 'odant/conan/ma_asio_samples:odant'}
+urls: {}
+exclude: true

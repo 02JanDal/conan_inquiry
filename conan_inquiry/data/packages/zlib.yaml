@@ -9,6 +9,28 @@ recipies:
       bintray: lasote/conan-repo/zlib:conan
   - repo:
       bintray: uilianries/conan/zlib:conan
+  - repo:
+      bintray: inexorgame/inexor-conan/zlib:conan
+  - repo:
+      bintray: inexorgame/inexor-conan/zlib:lasote
+  - repo:
+      bintray: odant/conan/zlib:odant
+  - repo:
+      bintray: vuo/conan/zlib:vuo
+  - repo:
+      bintray: bitprim/bitprim/zlib:bitprim
+  - repo:
+      bintray: kenfred/conan-corner/zlib:lasote
+  - repo:
+      bintray: kwallner/stable/zlib:kwallner
+  - repo:
+      bintray: kwallner/testing/zlib:kwallner
+  - repo:
+      bintray: qtproject/conan/zlib:annulen
+  - repo:
+      bintray: rwth-vr/conan/zlib:RWTH-VR
+  - repo:
+      bintray: vtpl1/conan-ffmpeg/zlib:conan
 urls:
   docs: http://zlib.net/manual.html
   github: madler/zlib

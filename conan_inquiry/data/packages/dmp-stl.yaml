@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'franc0is/conan/dmp-stl:franc0is'}
+urls:
+  github: leutloff/diff-match-patch-cpp-stl
+categories:
+  - standard.cpp
+  - status.4beta
+  - topic.library.string

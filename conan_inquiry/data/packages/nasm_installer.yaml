@@ -5,6 +5,14 @@ recipies:
       bintray: lasote/conan-repo/nasm:conan
   - repo:
       bintray: bincrafters/public-conan/nasm_installer:bincrafters
+  - repo:
+      bintray: inexorgame/inexor-conan/nasm:conan
+  - repo:
+      bintray: inexorgame/inexor-conan/nasm:lasote
+  - repo:
+      bintray: odant/conan/nasm:conan
+  - repo:
+      bintray: vtpl1/conan-ffmpeg/nasm:conan
 urls:
   docs: http://www.nasm.us/docs.php
   code: http://repo.or.cz/w/nasm.git

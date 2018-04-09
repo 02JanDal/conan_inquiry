@@ -1,0 +1,11 @@
+recipies:
+  - repo: {bintray: 'tuncb/pangea/msmpi:tuncb'}
+urls:
+  website: https://msdn.microsoft.com/en-us/library/bb524831(v=vs.85).aspx
+  docs: https://msdn.microsoft.com/en-us/library/dn473458(v=vs.85).aspx
+description: Microsoft MPI (MS-MPI) is a Microsoft implementation of the Message Passing Interface standard for developing and running parallel applications on the Windows platform.
+categories:
+  - topic.library.async
+  - standard.c
+  - status.5stable
+name: Microsoft MPI

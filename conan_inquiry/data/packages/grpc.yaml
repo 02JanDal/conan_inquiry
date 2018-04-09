@@ -4,6 +4,10 @@ recipies:
   - repo:
       bintray: osechet/Conan/conan-grpc
     user: osechet
+  - repo:
+      bintray: inexorgame/inexor-conan/gRPC:inexorgame
+  - repo:
+      bintray: kenfred/conan-corner/grpc:kenfred
 urls:
   website: https://grpc.io/
   docs: https://grpc.io/docs/

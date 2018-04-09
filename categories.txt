@@ -17,12 +17,15 @@
   - topic.library.graphics.lowlevel
   - topic.library.graphics.3d.opengl
   - topic.library.graphics.image_processing
-  - topic.library.input
   - topic.library.games
+  - topic.library.scientific
+  - topic.library.cryptocurrency
   - topic.library.development.parser_generator
   - topic.library.development.testing
   - topic.library.development.debugging
+  - topic.library.development.benchmarking
   - topic.library.network.messages
+  - topic.library.network.messages.rpc
   - topic.library.network.pubsub
   - topic.library.network.pubsub.mqtt
   - topic.library.network.crypto
@@ -31,15 +34,19 @@
   - topic.library.network.websockets
   - topic.library.network.packet_capture
   - topic.library.network.lowlevel
-  - topic.library.network.http
+  - topic.library.network.http.{server,client}
   - topic.library.network.mail
   - topic.library.network.sip
+  - topic.library.browser
+  - topic.library.system_framework
   - topic.library.io
   - topic.library.io.input
   - topic.library.io.processes
   - topic.library.io.filesystem
+  - topic.library.io.driver
   - topic.library.async
   - topic.library.async.signal_slots
+  - topic.library.async.threading # threads, locks, atomics, etc.
   - topic.library.datetime
   - topic.library.terminal.cli_parsing
   - topic.library.qt
@@ -47,15 +54,21 @@
   - topic.library.geo
   - topic.library.logging
   - topic.library.i18n
+  - topic.library.scripting
   - topic.library.string.regexp
   - topic.library.string.parsing
+  - topic.library.string.formatting
   - topic.library.multimedia.codecs
   - topic.library.multimedia.audio
+  - topic.library.multimedia.processing
   - topic.library.database.lowlevel
   - topic.library.database.orm
-  - topic.library.database.{sqlite,mysql,odbc}
+  - topic.library.database.{sqlite,mysql,odbc,redis}
   - topic.library.statemachine
   - topic.library.ai
+  - topic.library.drm
+  - topic.library.loader
+  - topic.library.bindings_interoperability
   - topic.library.utility.container
   - topic.library.utility.metaprogramming
   - topic.library.utility.functional
@@ -63,10 +76,13 @@
   - topic.library.utility.algorithm
   - topic.library.utility.preprocessor
   - topic.library.utility.memory
+  - topic.library.utility.reflection
   - topic.tool.build_tools
   - topic.tool.preprocessor
   - topic.tool.compiler
   - topic.tool.language
+  - topic.tool.analyzer
+  - topic.tool.documentation
 
   - environment.embedded
   - environment.desktop

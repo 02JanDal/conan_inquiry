@@ -1,0 +1,8 @@
+recipies:
+  - repo: {bintray: 'squawkcpp/conan-cpp/re2:conan-cpp'}
+urls:
+  github: google/re2
+categories:
+  - topic.library.string.regexp
+  - standard.cpp
+  - status.5stable

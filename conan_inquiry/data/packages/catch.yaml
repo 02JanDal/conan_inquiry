@@ -5,6 +5,10 @@ recipies:
       bintray: bincrafters/public-conan/Catch:bincrafters
   - repo:
       bintray: gasuketsu/conans/Catch:gasuketsu
+  - repo:
+      bintray: foxostro/PinkTopaz/Catch:uilianries
+  - repo:
+      bintray: rwth-vr/conan/catch:RWTH-VR
 urls:
   github: catchorg/Catch2
   docs: https://github.com/catchorg/Catch2/blob/Catch1.x/docs/Readme.md

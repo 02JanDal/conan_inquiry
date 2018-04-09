@@ -1,0 +1,8 @@
+recipies:
+  - repo: {bintray: 'rockdreamer/throwing_ptr/throwing_ptr:rockdreamer'}
+urls:
+  github: rockdreamer/throwing_ptr
+categories:
+  - topic.library.utility.container
+  - standard.cpp.11
+  - status.4beta

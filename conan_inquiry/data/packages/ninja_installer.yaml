@@ -1,5 +1,6 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/ninja_installer:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/ninja_installer:bincrafters'}
+  - repo: {bintray: 'rwth-vr/conan/ninja_installer:RWTH-VR'}
 urls:
   github: ninja-build/ninja
   docs: https://ninja-build.org/manual.html

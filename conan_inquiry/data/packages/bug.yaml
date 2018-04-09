@@ -1,0 +1,4 @@
+recipies:
+- repo: {bintray: 'danimtb/public-conan/bug:danimtb'}
+urls: {}
+exclude: true

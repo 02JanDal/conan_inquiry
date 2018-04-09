@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'tuncb/pangea/quadrature:tuncb'}
+urls:
+  github: tuncb/Quadrature
+categories:
+  - topic.library.math
+  - standard.cpp
+  - status.3alpha

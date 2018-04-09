@@ -1,0 +1,11 @@
+recipies:
+- repo: {bintray: 'vuo/conan/gettext:vuo'}
+urls:
+  website: https://www.gnu.org/software/gettext/
+  code: https://git.savannah.gnu.org/cgit/gettext.git
+  git: https://git.savannah.gnu.org/git/gettext.git
+description: i18n and l10n library
+categories:
+  - topic.library.i18n
+  - standard.c
+  - status.6mature

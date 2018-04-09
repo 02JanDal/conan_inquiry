@@ -1,11 +1,12 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/caf:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/caf:bincrafters'}
+  - repo: {bintray: 'sourcedelica/public-conan/caf:sourcedelica'}
 urls:
   website: https://actor-framework.org/
   github: actor-framework/actor-framework
   docs: https://actor-framework.readthedocs.io/en/latest/
 categories:
-  - topic.library
+  - topic.library.system_framework
   - status.5stable
   - standard.cpp.11
 name: CAF
