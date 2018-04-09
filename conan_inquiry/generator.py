@@ -18,7 +18,8 @@ from conan_inquiry.transformers.github import GithubTransformer
 from conan_inquiry.transformers.gitlab import GitLabTransformer
 from conan_inquiry.transformers.simple import (LicenseDetectorTransformer, AuthorCombinerTransformer,
                                                ShortDescriptionTransformer, KeywordDuplicateEliminator, ReadmeFetcher,
-                                               RemoveTemporariesTransformer, AddEmptyTransformer, CategoriesTransformer)
+                                               RemoveTemporariesTransformer, AddEmptyTransformer, CategoriesTransformer,
+                                               OfficiallityTransformer)
 from conan_inquiry.util.bintray import BintrayRateLimitExceeded, Bintray
 from conan_inquiry.util.cache import Cache
 from conan_inquiry.util.github import get_github_client
@@ -48,6 +49,7 @@ def transform_package(file):
         KeywordDuplicateEliminator,
         ReadmeFetcher,
         CategoriesTransformer,
+        OfficiallityTransformer,
         RemoveTemporariesTransformer,
         AddEmptyTransformer
     ])

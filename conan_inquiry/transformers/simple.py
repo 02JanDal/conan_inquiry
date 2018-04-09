@@ -156,6 +156,45 @@ class CategoriesTransformer(BaseTransformer):
         return package
 
 
+class OfficiallityTransformer(BaseTransformer):
+    def _transform_recipe(self, package, rec):
+        if 'repo' not in rec or 'bintray' not in rec.repo:
+            return rec
+
+        bt_repo = rec.repo.bintray
+        bt_repo_owner = bt_repo.split('/')[0]
+        bt_repo_name = bt_repo.split('/')[1]
+
+        if bt_repo_owner == 'conan' and bt_repo_name == 'conan-center':
+            self._set_unless_exists(rec, 'officiallity', 'conan-center')
+            return rec
+        elif bt_repo_owner == 'bincrafters' and bt_repo_name == 'public-conan':
+            self._set_unless_exists(rec, 'officiallity', 'major-3rdparty')
+            return rec
+
+        if 'github' in package.urls:
+            github_owner = package.urls.github.split('/')[0]
+            if github_owner == bt_repo_owner:
+                self._set_unless_exists(rec, 'officiallity', 'author')
+                return rec
+
+        self._set_unless_exists(rec, 'officiallity', 'none')
+        return rec
+
+    def transform(self, package: DotMap) -> DotMap:
+        package.recipies = [self._transform_recipe(package, rec) for rec in package.recipies]
+
+        officiallities = [rec.officiallity for rec in package.recipies]
+        for officiallity in ['conan-center', 'author', 'major-3rdparty', 'none']:
+            if officiallity in officiallities:
+                package.officiallity = officiallity
+                break
+        else:
+            package.officiallity = 'none'
+
+        return package
+
+
 class RemoveTemporariesTransformer(BaseTransformer):
     """
     Remove keys starting with _, recursively

@@ -12,6 +12,7 @@ schema = dict(
             name=dict(type='string', minLength=1),
             description=dict(type='string', minLength=5),
             short_description=dict(type='string', minLength=5),
+            officiallity=dict(type='string', enum=['conan-center', 'author', 'major-3rdparty', 'none']),
             urls=dict(
                 type='object',
                 properties={k: dict(type='string', format='uri')
@@ -38,6 +39,7 @@ schema = dict(
                 items=dict(
                     type='object',
                     properties=dict(
+                        officiallity=dict(type='string', enum=['conan-center', 'author', 'major-3rdparty', 'none']),
                         package=dict(type='string'),
                         remote=dict(type='string', format='uri'),
                         user=dict(type='string'),

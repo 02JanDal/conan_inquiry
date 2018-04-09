@@ -1,8 +1,10 @@
 <a href="<%= App.router.generate('package', {id: id}) %>" class="list-group-item list-group-item-action flex-column align-items-start package_result" id="package_<%= id %>">
 <div class="d-flex w-100 justify-content-between">
     <h5 class="mb-1">
-        <% if (_.find(recipies, function(rec) { return rec.repo.bintray.includes('conan-center'); })) { %>
+        <% if (officiallity === 'conan-center' || officiallity == 'author') { %>
             <i class="fa fa-star text-muted"></i>
+        <% } else { %>
+            <i class="fa fa-star-o text-muted"></i>
         <% } %>
         <span class="attribute_name"><%= name %></span>
         <% if (author) { %>
