@@ -7,7 +7,8 @@ App.templates = {
     pkg: _.template($('#packageTemplate').html()),
     category: _.template($('#categoryTemplate').html()),
     remote: _.template($('#remoteTemplate').html()),
-    menuItem: _.template($('#menuItemTemplate').html())
+    menuItem: _.template($('#menuItemTemplate').html()),
+    findingManyRemotes: _.template($('#findingManyRemotes').html())
 };
 App.setState = function(state) {
     console.debug('New state:', state);

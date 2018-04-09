@@ -84,6 +84,7 @@ function setupSunburst(selector, button, data) {
 
 App.statistics = {};
 App.statistics.$ = $('#statisticsView');
+App.statistics.$findings = App.statistics.$.find('#findings');
 App.initialized = false;
 App.statistics.onEnter = function() {
     if (this.initialized) {
@@ -121,7 +122,17 @@ App.statistics.onEnter = function() {
     counts = _.chain(counts).map(function(count, repo) { return [repo, count]; }).sortBy(function(arr) { return arr[1]; }).value();
 
     new Chartkick.BarChart('chartC', App.remote.sortedCounts.reverse(), onClickVisit);
-    new Chartkick.BarChart('chartD', counts.reverse(), onClickVisit)
+    new Chartkick.BarChart('chartD', counts.reverse(), onClickVisit);
+
+    this.$findings.html('');
+
+    var notInCenter = _.chain(packages_data).filter(function(pkg) { return pkg.officiallity !== 'conan-center'; })
+        .filter(function(pkg) { return pkg.recipies.length > 3; })
+        .sortBy(function(pkg) { return pkg.recipies.length; }).value().reverse();
+
+    if (notInCenter.length > 0) {
+        this.$findings.append(App.templates.findingManyRemotes({packages: notInCenter}));
+    }
 };
 App.statistics.onEntered = function() {
     $(window).trigger('resize');

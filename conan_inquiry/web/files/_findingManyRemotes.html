@@ -1,0 +1,9 @@
+<h3>Packages available in many remotes but not in conan-center</h3>
+<ol>
+    <% _.each(packages, function(pkg) { %>
+        <li>
+            <a href="<%= App.router.generate('package', {'id': pkg.id}) %>"><%= pkg.name %></a>
+            has <%= pkg.recipies.length %> remotes
+        </li>
+    <% }) %>
+</ol>

@@ -123,15 +123,22 @@
                 </div>
             </div>
             <hr/>
+
             <h1>Packages per remote</h1>
             <div class="embed-responsive embed-responsive-21by9">
                 <div class="embed-responsive-item" id="chartC"></div>
             </div>
             <hr/>
+
             <h1>Versions per remote</h1>
             <div class="embed-responsive embed-responsive-21by9">
                 <div class="embed-responsive-item" id="chartD"></div>
             </div>
+            <hr/>
+
+            <h1>Findings</h1>
+            <small class="text-muted">All of these are automatically generated, so take them with a grain of salt</small>
+            <div id="findings"></div>
         </section>
     </div>
 
@@ -144,6 +151,7 @@
     <script type="text/html-template" id="categoryTemplate"><import href="_categoryTemplate.html"></import></script>
     <script type="text/html-template" id="remoteTemplate"><import href="_remoteTemplate.html"></import></script>
     <script type="text/html-template" id="menuItemTemplate"><import href="_menuItemTemplate.html"></import></script>
+    <script type="text/html-template" id="findingManyRemotes"><import href="_findingManyRemotes.html"></import></script>
 
     <script defer src="https://cdn.rawgit.com/krasimir/navigo/4f731552/lib/navigo.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js" integrity="sha256-CB/G+xw3ep7+dlklAxcIvF20YMfFtF+7xbtauQSMi78=" crossorigin="anonymous"></script>
