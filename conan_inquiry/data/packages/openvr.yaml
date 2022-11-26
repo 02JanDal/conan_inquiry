@@ -1,5 +1,6 @@
 recipies:
-- repo: {bintray: 'rwth-vr/conan/openvr:RWTH-VR'}
+  - repo: {bintray: 'rwth-vr/conan/openvr:RWTH-VR'}
+  - repo: {bintray: 'acdemiralp/makina/openvr:acdemiralp'}
 urls:
   github: ValveSoftware/openvr
 categories:

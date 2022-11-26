@@ -1,0 +1,8 @@
+recipies:
+  - repo: {bintray: 'bitprim/bitprim/bitprim-infrastructure:bitprim'}
+urls:
+  github: bitprim/bitprim-infrastructure
+categories:
+  - topic.library.cryptocurrency
+  - standard.cpp.11
+short_description: Bitprim infrastructure functionality

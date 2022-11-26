@@ -1,0 +1,9 @@
+recipies:
+  - repo: {bintray: 'rwth-vr/conan/contra:RWTH-VR'}
+urls:
+  gitlab: https://devhub.vr.rwth-aachen.de/VR-Group/contra
+categories:
+  - topic.library.scientitic
+  - topic.library.serialization
+  - topic.library.io
+  - standard.cpp

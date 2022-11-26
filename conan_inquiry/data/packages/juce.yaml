@@ -1,0 +1,3 @@
+recipies:
+- repo: {bintray: 'impsnldavid/public-conan/juce:impsnldavid'}
+urls: {}

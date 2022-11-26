@@ -1,0 +1,9 @@
+recipies:
+  - repo: {bintray: 'ess-dmsc/conan/concurrentqueue:ess-dmsc'}
+urls:
+  github: cameron314/concurrentqueue
+categories:
+  - topic.library.utility.container
+  - topic.library.utility.async.threading
+  - standard.cpp.11
+  - status.4beta

@@ -1,0 +1,8 @@
+recipies:
+  - repo: {bintray: 'acdemiralp/makina/RakNet:acdemiralp'}
+urls:
+  github: facebookarchive/RakNet
+categories:
+  - topic.library.network
+  - standard.cpp
+  - status.7inactive

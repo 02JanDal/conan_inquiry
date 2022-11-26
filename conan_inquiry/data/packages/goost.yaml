@@ -1,0 +1,6 @@
+recipies:
+  - repo: {bintray: 'mdf/2out/goost:dronmdf'}
+urls:
+  github: DronMDF/goost
+categories:
+  - standard.cpp

@@ -1,5 +1,6 @@
 recipies:
 - repo: {bintray: 'ess-dmsc/conan/hdf5:ess-dmsc'}
+- repo: {bintray: 'acdemiralp/makina/hdf5:acdemiralp'}
 urls:
   website: https://www.hdfgroup.org/
 description: HDF5 is a data model, library, and file format for storing and managing data. It supports an unlimited variety of datatypes, and is designed for flexible and efficient I/O and for high volume and complex data. HDF5 is portable and is extensible, allowing applications to evolve in their use of HDF5. The HDF5 Technology suite includes tools and applications for managing, manipulating, viewing, and analyzing data in the HDF5 format.

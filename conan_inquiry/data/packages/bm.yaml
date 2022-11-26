@@ -1,5 +1,6 @@
 recipies:
-- repo: {bintray: 'acdemiralp/makina/bm:acdemiralp'}
+  - repo: {bintray: 'acdemiralp/makina/bm:acdemiralp'}
+  - repo: {bintray: 'rwth-vr/conan/bm:RWTH-VR'}
 urls:
   github: acdemiralp/bm
 categories:

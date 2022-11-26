@@ -2,6 +2,7 @@ recipies:
   - repo: {bintray: 'bincrafters/public-conan/cygwin_installer:bincrafters'}
   - repo: {bintray: 'bitprim/bitprim/cygwin_installer'}
   - repo: {bintray: 'bitprim/bitprim/cygwin_installer:bitprim'}
+  - repo: {bintray: 'odant/conan/cygwin_installer:bincrafters'}
 urls: {}
 categories:
   - topic.tool

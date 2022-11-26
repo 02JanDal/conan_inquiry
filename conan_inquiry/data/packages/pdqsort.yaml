@@ -1,0 +1,9 @@
+recipies:
+  - repo: {bintray: 'bitprim/bitprim/pdqsort:bitprim'}
+urls:
+  github: orlp/pdqsort
+categories:
+  - topic.library.utility.algorithm
+  - standard.cpp.11
+  - standard.cpp.98
+  - status.5stable

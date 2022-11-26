@@ -1,0 +1,11 @@
+recipies:
+  - repo: {bintray: 'acdemiralp/makina/SLikeNet:acdemiralp'}
+urls:
+  github: SLikeSoft/SLikeNet
+categories:
+  - topic.library.games
+  - topic.library.network
+  - topic.library.graphics.3d
+  - topic.library.database
+  - standard.cpp
+  - status.5stable

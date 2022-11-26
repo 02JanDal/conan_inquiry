@@ -1,5 +1,6 @@
 recipies:
   - repo: {bintray: 'jsee23/public/uWebSockets:jsee23'}
+  - repo: {bintray: 'acdemiralp/makina/uWebSockets:acdemiralp'}
 urls:
   github: uNetworking/uWebSockets
 categories:

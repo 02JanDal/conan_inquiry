@@ -1,5 +1,6 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/date:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/date:bincrafters'}
+  - repo: {bintray: 'p-groarke/conan-public/date:p-groarke'}
 urls:
   github: HowardHinnant/date
 categories:

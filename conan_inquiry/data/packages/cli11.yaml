@@ -1,6 +1,7 @@
 recipies:
   - repo: {bintray: 'bincrafters/public-conan/cli11:bincrafters'}
   - repo: {bintray: 'cliutils/CLI11/CLI11'}
+  - repo: {bintray: 'cliutils/CLI11/CLI11:cliutils'}
   - repo: {bintray: 'ess-dmsc/conan/cli11:ess-dmsc'}
 urls:
   docs: https://cliutils.gitlab.io/CLI11Tutorial/

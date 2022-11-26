@@ -31,6 +31,10 @@ recipies:
       bintray: rwth-vr/conan/zlib:RWTH-VR
   - repo:
       bintray: vtpl1/conan-ffmpeg/zlib:conan
+  - repo:
+      bintray: foxostro/PinkTopaz/zlib:conan
+  - repo:
+      bintray: kenfred/conan-corner/zlib:conan
 urls:
   docs: http://zlib.net/manual.html
   github: madler/zlib

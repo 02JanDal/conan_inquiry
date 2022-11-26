@@ -5,5 +5,6 @@ urls:
 categories:
   - topic.library.database.lowlevel
   - topic.library.database.redis
+  - topic.library.network.service
   - standard.cpp.11
   - status.4beta

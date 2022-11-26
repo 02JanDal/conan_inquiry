@@ -1,6 +1,8 @@
 recipies:
   - repo: {bintray: 'theirix/conan-repo/http-parser:theirix'}
   - repo: {bintray: 'alekseevx/pft/http-parser:alekseevx'}
+  - repo: {bintray: 'bincrafters/public-conan/http-parser:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/libmicrohttpd:bincrafters'}
 urls:
   github: nodejs/http-parser
 categories:

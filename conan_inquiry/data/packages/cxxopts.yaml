@@ -1,5 +1,6 @@
 recipies:
-- repo: {bintray: 'squawkcpp/conan-cpp/cxxopts:conan-cpp'}
+  - repo: {bintray: 'squawkcpp/conan-cpp/cxxopts:conan-cpp'}
+  - repo: {bintray: 'acdemiralp/makina/cxxopts:acdemiralp'}
 urls:
   github: jarro2783/cxxopts
 categories:

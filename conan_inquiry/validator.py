@@ -156,6 +156,7 @@ def validate_packages(dir):
                 missing.append('short_description')
             print('missing in ' + pkg + ': ' + ', '.join(missing))
 
-    Draft4Validator.check_schema(schema)
-    for r in Draft4Validator(schema).iter_errors(data):
-        print('--- Error in {}\n{}'.format(data[r.path[0]]['id'], str(r)))
+    if False:
+        Draft4Validator.check_schema(schema)
+        for r in Draft4Validator(schema).iter_errors(data):
+            print('--- Error in {}\n{}'.format(data[r.path[0]]['id'], str(r)))

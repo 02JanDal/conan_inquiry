@@ -1,6 +1,5 @@
 recipies:
   - repo: {bintray: 'bincrafters/public-conan/caf:bincrafters'}
-  - repo: {bintray: 'sourcedelica/public-conan/caf:sourcedelica'}
 urls:
   website: https://actor-framework.org/
   github: actor-framework/actor-framework

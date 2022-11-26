@@ -1,0 +1,6 @@
+recipies:
+  - repo: {bintray: 'enhex/enhex/premake_generator:enhex'}
+urls:
+  github: memsharded/conan-premake
+categories:
+  - topic.tool.build_tools

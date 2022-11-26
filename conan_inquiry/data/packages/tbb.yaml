@@ -2,6 +2,7 @@ recipies:
   - repo: {bintray: 'conan-community/conan/TBB:conan'}
   - repo: {bintray: 'odant/conan/tbb:odant'}
   - repo: {bintray: 'tuncb/pangea/intel-tbb:tuncb'}
+  - repo: {bintray: 'rwth-vr/conan/TBB:RWTH-VR'}
 urls:
   website: https://www.threadingbuildingblocks.org/
 description: Intel® Threading Building Blocks (Intel® TBB) lets you easily write parallel C++ programs that take full advantage of multicore performance, that are portable and composable, and that have future-proof scalability.

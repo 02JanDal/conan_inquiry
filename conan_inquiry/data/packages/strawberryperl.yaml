@@ -9,6 +9,8 @@ recipies:
       bintray: odant/conan/strawberryperl:conan
   - repo:
       bintray: vtpl1/conan-ffmpeg/strawberryperl:conan
+  - repo:
+      bintray: danimtb/public-conan/strawberryperl:conan
 urls:
   docs: http://strawberryperl.com/support.html
   issues: https://rt.cpan.org/Public/Dist/Display.html?Name=Perl-Dist-Strawberry

@@ -1,0 +1,4 @@
+recipies:
+  - repo: {bintray: franc0is/conan/jsondiff-c}
+  - repo: {bintray: 'franc0is/conan/jsondiff-c:franc0is'}
+urls: {}

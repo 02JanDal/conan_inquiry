@@ -1,6 +1,8 @@
 recipies:
   - repo: {bintray: 'bincrafters/public-conan/libwebp:bincrafters'}
   - repo: {bintray: 'inexorgame/inexor-conan/libwebp:bincrafters'}
+  - repo: {bintray: 'danimtb/public-conan/libwebp:bincrafters'}
+  - repo: {bintray: 'danimtb/public-conan/libwebp:danimtb'}
 urls:
   github: webmproject/libwebp
   code: https://chromium.googlesource.com/webm/libwebp

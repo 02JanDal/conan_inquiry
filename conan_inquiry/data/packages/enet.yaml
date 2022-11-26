@@ -1,5 +1,7 @@
 recipies:
-- repo: {bintray: 'inexorgame/inexor-conan/ENet:inexorgame'}
+  - repo: {bintray: 'inexorgame/inexor-conan/ENet:inexorgame'}
+  - repo: {bintray: 'bincrafters/public-conan/enet:bincrafters'}
+  - repo: {bintray: 'inexorgame/inexor-conan/enet:bincrafters'}
 urls:
   github: lsalzman/enet
 categories:

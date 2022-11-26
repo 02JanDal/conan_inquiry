@@ -1,0 +1,3 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/m4_installer:bincrafters'}
+urls: {}

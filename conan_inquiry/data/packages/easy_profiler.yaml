@@ -1,0 +1,9 @@
+recipies:
+  - repo: {bintray: 'onyx/conan/easy_profiler:onyx'}
+  - repo: {bintray: 'odant/conan/easy_profiler:odant'}
+urls:
+  github: yse/easy_profiler
+categories:
+  - topic.tool.analyzer
+  - standard.cpp.11
+  - status.5stable

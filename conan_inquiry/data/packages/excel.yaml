@@ -1,0 +1,3 @@
+recipies:
+- repo: {bintray: 'igormironchik/public/excel:igormironchik'}
+urls: {}

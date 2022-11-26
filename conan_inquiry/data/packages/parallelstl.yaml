@@ -1,0 +1,22 @@
+recipies:
+  - repo: {bintray: 'acdemiralp/makina/parallelstl:acdemiralp'}
+urls:
+  github: intel/parallelstl
+description: Parallel STL is an implementation of the C++ standard library algorithms with support for execution policies, as specified in the working draft N4659 for the next version of the C++ standard, commonly called C++17. The implementation also supports the unsequenced execution policy specified in the ISO* C++ working group paper P0076R3.
+categories:
+  - topic.library.utility.container
+  - topic.library.utility.algorithm
+  - standard.cpp.11
+  - status.5stable
+code_example: |
+  #include <vector>
+  #include "pstl/execution"
+  #include "pstl/algorithm"
+
+  int main()
+  {
+      std::vector<int> data(10000000);
+      std::fill_n(pstl::execution::par_unseq, data.begin(), data.size(), -1);  // Fill the vector with -1
+
+      return 0;
+  }

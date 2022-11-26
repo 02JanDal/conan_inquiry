@@ -34,7 +34,7 @@ class GitLabTransformer(BaseTransformer):
                     stars=repo.star_count,
                     commits=repo.statistics['commit_count'],
                     issues_enabled=repo.issues_enabled,
-                    issues=repo.open_issues_count,
+                    issues=repo.open_issues_count if repo.issues_enabled else None,
                     mrs_enabled=repo.merge_requests_enabled,
                     mrs=None,
                     name=repo.name

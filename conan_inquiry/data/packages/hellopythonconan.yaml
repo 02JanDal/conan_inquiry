@@ -1,0 +1,4 @@
+recipies:
+  - repo: {bintray: 'danimtb/public-conan/HelloPythonConan:conan'}
+urls: {}
+exclude: true

@@ -1,0 +1,8 @@
+recipies:
+  - repo: {bintray: 'vuo/conan/freeframe:vuo'}
+urls:
+  sourceforge: https://sourceforge.net/projects/freeframe/
+description: FreeFrame is the open-source cross-platform real-time video effects plugin system for VJ softwares. FreeFrame is now well supported by most major VJ titles.
+categories:
+  - topic.library.graphics
+  - topic.library.multimedia.processing

@@ -1,6 +1,7 @@
 recipies:
   - repo: {bintray: 'bincrafters/public-conan/pugixml:bincrafters'}
   - repo: {bintray: 'inexorgame/inexor-conan/pugixml:inexorgame'}
+  - repo: {bintray: 'inexorgame/inexor-conan/pugixml:bincrafters'}
 urls: {}
 categories:
   - topic.library.fileformat.generic.xml

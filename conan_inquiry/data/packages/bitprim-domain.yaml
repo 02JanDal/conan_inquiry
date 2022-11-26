@@ -1,0 +1,8 @@
+recipies:
+- repo: {bintray: 'bitprim/bitprim/bitprim-domain:bitprim'}
+urls:
+  github: bitprim/bitprim-domain
+categories:
+  - topic.library.cryptocurrency
+  - standard.cpp.11
+short_description: Bitprim domain functionality

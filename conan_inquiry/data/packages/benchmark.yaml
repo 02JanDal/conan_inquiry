@@ -1,6 +1,8 @@
 recipies:
   - repo: {bintray: 'inexorgame/inexor-conan/benchmark:bincrafters'}
   - repo: {bintray: 'kenfred/conan-corner/benchmark:jjones646'}
+  - repo: {bintray: 'inexorgame/inexor-conan/benchmark:inexorgame'}
+  - repo: {bintray: 'kenfred/conan-corner/benchmark:kenfred'}
 urls:
   github: google/benchmark
 categories:

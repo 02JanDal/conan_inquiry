@@ -1,10 +1,10 @@
 recipies:
   - repo:
-      bintray: dimi309/conan-packages/glew:dimi309
-  - repo:
       bintray: foxostro/PinkTopaz/glew:coding3d
   - repo:
       bintray: rwth-vr/conan/glew:RWTH-VR
+  - repo:
+      bintray: bincrafters/public-conan/glew:bincrafters
 urls:
   website: http://glew.sourceforge.net/
   github: nigels-com/glew

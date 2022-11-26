@@ -5,6 +5,8 @@ recipies:
       bintray: bincrafters/public-conan/flatbuffers:uilianries
   - repo:
       bintray: ess-dmsc/conan/FlatBuffers:ess-dmsc
+  - repo:
+      bintray: aardappel/flatbuffers/flatbuffers:google
 urls:
   github: google/flatbuffers
 categories:

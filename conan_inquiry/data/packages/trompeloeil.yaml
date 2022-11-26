@@ -1,6 +1,7 @@
 recipies:
   - repo: {bintray: 'trompeloeil/trompeloeil/trompeloeil:rollbear'}
   - repo: {bintray: 'rwth-vr/conan/trompeloeil:RWTH-VR'}
+  - repo: {bintray: 'ess-dmsc/conan/trompeloeil:ess-dmsc'}
 urls: {}
 categories:
   - topic.library.development.mocking

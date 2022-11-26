@@ -1,0 +1,8 @@
+recipies:
+  - repo: {bintray: 'tuncb/pangea/bulkfilereader:tuncb'}
+urls:
+  github: tuncb/BulkFileReader
+categories:
+  - topic.library.io.filesystem
+  - standard.cpp.11
+  - status.5stable

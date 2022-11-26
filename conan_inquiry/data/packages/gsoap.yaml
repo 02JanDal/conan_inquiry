@@ -1,0 +1,15 @@
+recipies:
+  - repo: {bintray: 'jgsogo/conan-packages/gsoap:jgsogo'}
+urls:
+  website: https://www.genivia.com/dev.html
+  docs: https://www.genivia.com/doc/soapdoc2.html
+  sourceforge: https://sourceforge.net/projects/gsoap2/
+  openhub: gsoap
+description: The gSOAP toolkit is an extensive suite of portable C and C++ software to develop XML Web services with powerful type-safe XML data bindings. Easy-to-use code-generator tools allow you to directly integrate XML data in C and C++ (and C++11/C++14). Serializes native application data in XML. Includes WSDL/XSD schema binding and auto-coding tools, stub/skeleton compiler, Web server integration with Apache module and IIS extension, high-performance XML processing with schema validation, fast MIME/MTOM streaming, SOAP and REST (WCF compatible), WS-* protocols (WS-Security, WS-Policy, WS-ReliableMessaging, etc), XML-RPC and JSON.
+categories:
+  - topic.library.network.messages.rpc
+  - topic.library.network.soap
+  - standard.c
+  - standard.cpp.11
+  - standard.cpp.14
+  - status.5stable

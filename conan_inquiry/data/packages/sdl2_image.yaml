@@ -1,6 +1,11 @@
 recipies:
   - repo: {bintray: 'inexorgame/inexor-conan/SDL2_image:lasote'}
   - repo: {bintray: 'inexorgame/inexor-conan/SDL2_image:inexorgame'}
+  - repo: {bintray: 'bincrafters/public-conan/sdl2_image:bincrafters'}
+  - repo: {bintray: 'foxostro/PinkTopaz/SDL2_image:bincrafters'}
+  - repo: {bintray: 'inexorgame/inexor-conan/sdl2_image:bincrafters'}
+  - repo: {bintray: 'inexorgame/inexor-conan/sdl2_image_lowercase:inexorgame'}
+  - repo: {bintray: 'inexorgame/inexor-conan/sdl2_image_lowercase:lasote'}
 urls:
   website: https://www.libsdl.org/projects/SDL_image/
   docs: https://www.libsdl.org/projects/SDL_image/docs/SDL_image_frame.html

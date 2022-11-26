@@ -104,6 +104,9 @@ class Cache:
                             self.lock.release()
                         value = func()
 
+                        if isinstance(value, set) or isinstance(value, tuple):
+                            value = list(value)
+
                         if not isinstance(value, str) and not isinstance(value, int) and not isinstance(value, float) and not isinstance(value, list) and not isinstance(value, dict):
                             raise TypeError('Invalid type')
 

@@ -1,11 +1,14 @@
 import logging
 import os
 from collections import namedtuple
+
+from pprint import pprint
 from typing import Tuple, Set
 
 import re
 import requests
 import yaml
+from tqdm import tqdm
 
 from conan_inquiry.util.bintray import Bintray
 from conan_inquiry.util.general import load_packages, packages_directory
@@ -59,7 +62,7 @@ class BintrayFinder:
         Returns all repositories (tuple of repository owner and repository name) that are currently known
         """
         repos = set()
-        for pkg in self.packages:
+        for pkg in tqdm(self.packages, desc='gathering repositories'):
             for recipie in pkg['recipies']:
                 parts = recipie['repo']['bintray'].split('/')
                 repos.add(BintrayRepoDescriptor(parts[0], parts[1]))
@@ -134,12 +137,19 @@ class BintrayFinder:
         """
         Returns all packages in the known repositories
         """
+
+        def packages_in(client, repo: BintrayRepoDescriptor):
+            try:
+                return client.get_all('/repos/' + repo.repoowner + '/' + repo.reponame + '/packages')
+            except FileNotFoundError:
+                return []
+
         pkgs = [BintrayPackageDescriptor(repo.repoowner, repo.reponame, p['name'], p['linked'])
-                for repo in repos
-                for p in self.client.get_all('/repos/' + repo.repoowner + '/' + repo.reponame + '/packages')]
+                for repo in tqdm(repos, desc='finding packages')
+                for p in packages_in(self.client, repo)]
 
         # replace linked packages by their sources
-        for index, pkg in enumerate(pkgs):
+        for index, pkg in enumerate(tqdm(pkgs, desc='replacing linked packages by their sources')):
             if pkg.linked:
                 bt_package = self.client.get('/packages/' + pkg.repoowner + '/' + pkg.reponame + '/' + pkg.name)
                 pkgs[index] = BintrayPackageDescriptor(bt_package['owner'],
@@ -180,14 +190,14 @@ class BintrayFinder:
             print('Missing repository:', '/'.join(pkg[:3]))
 
     def generate_stubs(self):
-        for name in self.missing_packages:
+        for pkg in self.missing_packages:
             # pkg = self.http.get(self.url + '/' + name).json()
-            fname = self._default_package_filename(name)
+            fname = self._default_package_filename(pkg)
             logging.getLogger(__name__).info('Generating %s', os.path.basename(fname))
             with open(fname, 'w') as f:
                 yaml.dump(dict(
                     recipies=[
-                        dict(repo=dict(bintray=name.repoowner + '/' + name.reponame + '/' + name.name))
+                        dict(repo=dict(bintray=pkg.repoowner + '/' + pkg.reponame + '/' + pkg.name))
                     ],
                     urls=dict()
                 ), f)

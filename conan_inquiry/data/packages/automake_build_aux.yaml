@@ -1,0 +1,3 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/automake_build_aux:bincrafters'}
+urls: {}

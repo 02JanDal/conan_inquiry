@@ -1,0 +1,3 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/pthread-win32:bincrafters'}
+urls: {}

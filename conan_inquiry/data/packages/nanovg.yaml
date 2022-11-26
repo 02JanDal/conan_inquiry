@@ -1,0 +1,13 @@
+recipies:
+  - repo: {bintray: 'enhex/enhex/nanovg:enhex'}
+urls:
+  github: memononen/nanovg
+categories:
+  - topic.library.graphics.3d
+  - standard.c
+  - status.2prealpha
+code_example: |
+  nvgBeginPath(vg);
+  nvgRect(vg, 100,100, 120,30);
+  nvgFillColor(vg, nvgRGBA(255,192,0,255));
+  nvgFill(vg);

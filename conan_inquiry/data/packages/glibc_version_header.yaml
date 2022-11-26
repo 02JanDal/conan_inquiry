@@ -1,0 +1,7 @@
+recipies:
+  - repo: {bintray: 'bincrafters/public-conan/glibc_version_header:bincrafters'}
+urls:
+  github: wheybags/glibc_version_header
+categories:
+  - topic.library.utility
+  - standard.c

@@ -11,6 +11,8 @@ recipies:
       bintray: ogs/conan/Qt:osechet
   - repo:
       bintray: ogs/conan/libtiff:bilke
+  - repo:
+      bintray: bincrafters/public-conan/Qt:bincrafters
 urls:
   website: https://qt.io/
   docs: https://doc.qt.io/

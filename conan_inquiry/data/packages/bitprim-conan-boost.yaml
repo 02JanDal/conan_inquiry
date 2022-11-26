@@ -1,0 +1,4 @@
+recipies:
+  - repo: {bintray: 'bitprim/bitprim/bitprim-conan-boost:bitprim'}
+urls: {}
+see: boost

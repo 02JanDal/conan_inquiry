@@ -13,6 +13,8 @@ recipies:
       bintray: squawkcpp/conan-cpp/libpng:conan-cpp
   - repo:
       bintray: bitprim/bitprim/libpng:bitprim
+  - repo:
+      bintray: foxostro/PinkTopaz/libpng:bincrafters
 urls:
   website: http://www.libpng.org/pub/png/libpng.html
   docs: http://www.libpng.org/pub/png/libpng-manual.txt

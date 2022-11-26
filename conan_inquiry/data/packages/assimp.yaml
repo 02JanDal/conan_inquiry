@@ -5,6 +5,8 @@ recipies:
       bintray: rwth-vr/conan/assimp:RWTH-VR
   - repo:
       bintray: vuo/conan/oai:vuo
+  - repo:
+      bintray: onyx/conan/assimp:onyx
 urls:
   github: assimp/assimp
   website: http://assimp.sourceforge.net/

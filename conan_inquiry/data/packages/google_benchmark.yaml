@@ -1,0 +1,9 @@
+recipies:
+  - repo: {bintray: 'inexorgame/inexor-conan/google_benchmark:inexorgame'}
+  - repo: {bintray: 'ess-dmsc/conan/google-benchmark:ess-dmsc'}
+urls:
+  github: google/benchmark
+categories:
+  - topic.library.development.benchmarking
+  - standard.cpp.11
+  - status.5stable

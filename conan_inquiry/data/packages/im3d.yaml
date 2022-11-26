@@ -1,0 +1,17 @@
+recipies:
+  - repo: {bintray: 'acdemiralp/makina/im3d:acdemiralp'}
+urls:
+  github: john-chapman/im3d
+categories:
+  - standard.cpp.11
+  - status.3alpha
+  - topic.library.graphics.3d
+code_example: |
+  Im3d::PushDrawState();
+  Im3d::SetSize(2.0f);
+  Im3d::BeginLineLoop();
+      Im3d::Vertex(0.0f, 0.0f, 0.0f, Im3d::Color_Magenta);
+      Im3d::Vertex(1.0f, 1.0f, 0.0f, Im3d::Color_Yellow);
+      Im3d::Vertex(2.0f, 2.0f, 0.0f, Im3d::Color_Cyan);
+  Im3d::End();
+  Im3d::PopDrawState();

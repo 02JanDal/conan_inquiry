@@ -3,6 +3,7 @@ recipies:
   - repo: {bintray: 'inexorgame/inexor-conan/fmt:bincrafters'}
   - repo: {bintray: 'inexorgame/inexor-conan/fmt:memsharded'}
   - repo: {bintray: 'ess-dmsc/conan/fmt:ess-dmsc'}
+  - repo: {bintray: 'foxostro/PinkTopaz/fmt:bincrafters'}
 urls:
   github: fmtlib/fmt
   docs: http://fmtlib.net/latest/

@@ -11,6 +11,7 @@
   - topic.library.fileformat.image.tiff
   - topic.library.fileformat.audio
   - topic.library.fileformat.video
+  - topic.library.fileformat.executable
   - topic.library.serialization.highlevel
   - topic.library.serialization.lowlevel
   - topic.library.graphics.highlevel
@@ -37,6 +38,7 @@
   - topic.library.network.http.{server,client}
   - topic.library.network.mail
   - topic.library.network.sip
+  - topic.library.network.service
   - topic.library.browser
   - topic.library.system_framework
   - topic.library.io
@@ -63,7 +65,7 @@
   - topic.library.multimedia.processing
   - topic.library.database.lowlevel
   - topic.library.database.orm
-  - topic.library.database.{sqlite,mysql,odbc,redis}
+  - topic.library.database.{sqlite,mysql,odbc,redis,mongodb}
   - topic.library.statemachine
   - topic.library.ai
   - topic.library.drm

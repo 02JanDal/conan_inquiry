@@ -8,6 +8,8 @@ recipies:
       bintray: inexorgame/inexor-conan/gRPC:inexorgame
   - repo:
       bintray: kenfred/conan-corner/grpc:kenfred
+  - repo:
+      bintray: inexorgame/inexor-conan/grpc:inexorgame
 urls:
   website: https://grpc.io/
   docs: https://grpc.io/docs/

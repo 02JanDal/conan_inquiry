@@ -1,0 +1,4 @@
+recipies:
+  - repo: {bintray: 'ess-dmsc/conan/librdkafka-fake:ess-dmsc'}
+urls: {}
+exclude: true

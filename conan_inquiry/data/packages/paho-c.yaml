@@ -1,5 +1,6 @@
 recipies:
-- repo: {bintray: 'conan-community/conan/paho-c:conan'}
+  - repo: {bintray: 'conan-community/conan/paho-c:conan'}
+  - repo: {bintray: 'danimtb/public-conan/paho-c:danimtb'}
 urls: {}
 categories:
   - topic.library.network.pubsub.mqtt

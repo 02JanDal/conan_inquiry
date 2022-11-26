@@ -1,0 +1,10 @@
+recipies:
+  - repo: {bintray: 'bincrafters/public-conan/jsonrpc-cpp:bincrafters'}
+urls:
+  sourceforge: https://sourceforge.net/projects/jsonrpc-cpp/
+  docs: http://jsonrpc-cpp.sourceforge.net/index.php?n=Doc.UserDocumentation
+description: JsonRpc-Cpp is an OpenSource implementation of JSON-RPC protocol in C++. JSON-RPC is a lightweight remote procedure call protocol similar to XML-RPC.
+categories:
+  - topic.library.fileformat.generic.json
+  - topic.library.network.messages.rpc
+  - standard.cpp

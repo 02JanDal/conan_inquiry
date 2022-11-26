@@ -1,5 +1,6 @@
 recipies:
-- repo: {bintray: 'gasuketsu/conans/zmqpp:gasuketsu'}
+  - repo: {bintray: 'gasuketsu/conans/zmqpp:gasuketsu'}
+  - repo: {bintray: 'bincrafters/public-conan/zmqpp:bincrafters'}
 urls:
   github: zeromq/zmqpp
 categories:

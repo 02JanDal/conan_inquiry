@@ -1,0 +1,9 @@
+recipies:
+  - repo: {bintray: 'rwth-vr/conan/conduit:RWTH-VR'}
+urls:
+  docs: https://llnl-conduit.readthedocs.io/
+  github: llnl/conduit
+categories:
+  - standard.cpp
+  - status.5stable
+  - topic.library.scientific

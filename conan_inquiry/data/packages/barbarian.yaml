@@ -1,0 +1,3 @@
+recipies:
+- repo: {bintray: 'kwallner/testing/Barbarian:kwallner'}
+urls: {}

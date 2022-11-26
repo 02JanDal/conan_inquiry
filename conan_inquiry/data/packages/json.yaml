@@ -1,0 +1,4 @@
+recipies:
+  - repo: {bintray: 'uilianries/conan/json:taocpp'}
+  - repo: {bintray: 'taocpp/public-conan/json:taocpp'}
+urls: {}

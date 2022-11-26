@@ -1,6 +1,7 @@
 recipies:
   - repo: {bintray: 'bincrafters/public-conan/gflags:bincrafters'}
   - repo: {bintray: 'kenfred/conan-corner/gflags:kenfred'}
+  - repo: {bintray: 'inexorgame/inexor-conan/gflags:bincrafters'}
 urls: {}
 categories:
   - status.5stable

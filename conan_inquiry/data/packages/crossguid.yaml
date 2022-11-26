@@ -1,0 +1,3 @@
+recipies:
+- repo: {bintray: 'inexorgame/inexor-conan/crossguid:inexorgame'}
+urls: {}

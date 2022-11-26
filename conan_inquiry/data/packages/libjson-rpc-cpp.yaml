@@ -1,0 +1,9 @@
+recipies:
+  - repo: {bintray: 'bincrafters/public-conan/libjson-rpc-cpp:bincrafters'}
+urls:
+  github: cinemast/libjson-rpc-cpp
+categories:
+  - topic.library.fileformat.generic.json
+  - topic.library.network.messages.rpc
+  - standard.cpp
+  - status.5stable

@@ -1,0 +1,3 @@
+recipies:
+- repo: {bintray: 'onyx/conan/webby:onyx'}
+urls: {}

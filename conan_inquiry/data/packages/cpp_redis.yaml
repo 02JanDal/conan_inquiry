@@ -1,0 +1,9 @@
+recipies:
+  - repo: {bintray: 'squawkcpp/conan-cpp/cpp_redis:conan-cpp'}
+urls:
+  github: Cylix/cpp_redis
+categories:
+  - topic.library.network.service
+  - topic.library.database.redis
+  - standard.cpp.11
+  - status.5stable

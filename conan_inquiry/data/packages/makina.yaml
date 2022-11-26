@@ -1,0 +1,4 @@
+recipies:
+  - repo: {bintray: 'acdemiralp/makina/makina:acdemiralp'}
+urls: {}
+exclude: true # github repo gives 404; possibly made private?

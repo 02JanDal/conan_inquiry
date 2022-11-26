@@ -1,0 +1,3 @@
+recipies:
+- repo: {bintray: 'theodelrieu/conan-repo/darwin-toolchain:theodelrieu'}
+urls: {}

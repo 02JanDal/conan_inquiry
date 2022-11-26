@@ -19,7 +19,10 @@ class BintrayTransformer(BaseHTTPTransformer):
     def transform(self, package):
         for recipie in package.recipies:
             if 'repo' in recipie and 'bintray' in recipie.repo:
-                bt_package = self.bt.get('/packages/' + recipie.repo.bintray)
+                try:
+                    bt_package = self.bt.get('/packages/' + recipie.repo.bintray)
+                except FileNotFoundError:
+                    continue
 
                 if 'linked_to_repos' in bt_package and bt_package['linked_to_repos'] and 'conan-center' in bt_package['linked_to_repos']:
                     # if the package has been linked to conan-center that repository "replaces" the current one

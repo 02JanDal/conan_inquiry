@@ -1,5 +1,6 @@
 recipies:
-- repo: {bintray: 'conan-community/conan/tweetnacl:conan'}
+  - repo: {bintray: 'conan-community/conan/tweetnacl:conan'}
+  - repo: {bintray: 'danimtb/public-conan/tweetnacl:danimtb'}
 urls: {}
 categories:
   - topic.library.network.crypto

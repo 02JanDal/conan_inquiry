@@ -1,0 +1,3 @@
+recipies:
+- repo: {bintray: 'artalus/conan-public/tgbot_cpp:Artalus'}
+urls: {}

@@ -1,0 +1,3 @@
+recipies:
+- repo: {bintray: 'kenfred/conan-corner/gmock:kenfred'}
+urls: {}

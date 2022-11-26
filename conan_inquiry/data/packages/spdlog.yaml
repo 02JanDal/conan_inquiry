@@ -3,6 +3,7 @@ recipies:
   - repo: {bintray: 'inexorgame/inexor-conan/spdlog:bincrafters'}
   - repo: {bintray: 'inexorgame/inexor-conan/spdlog:memsharded'}
   - repo: {bintray: 'rwth-vr/conan/spdlog:RWTH-VR'}
+  - repo: {bintray: 'foxostro/PinkTopaz/spdlog:bincrafters'}
 urls: {}
 categories:
   - topic.library.logging

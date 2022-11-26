@@ -5,6 +5,9 @@ recipies:
   - repo: {bintray: 'foxostro/PinkTopaz/SDL2:lasote'}
   - repo: {bintray: 'rwth-vr/conan/SDL2:RWTH-VR'}
   - repo: {bintray: 'rwth-vr/conan/sdl2:RWTH-VR'}
+  - repo: {bintray: 'inexorgame/inexor-conan/sdl2:bincrafters'}
+  - repo: {bintray: 'acdemiralp/makina/sdl2:acdemiralp'}
+  - repo: {bintray: 'foxostro/PinkTopaz/SDL2:bincrafters'}
 urls:
   code: https://hg.libsdl.org/SDL
   website: https://www.libsdl.org/

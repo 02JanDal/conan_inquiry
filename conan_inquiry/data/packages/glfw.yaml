@@ -1,7 +1,5 @@
 recipies:
   - repo:
-      bintray: dimi309/conan-packages/glfw:dimi309
-  - repo:
       bintray: bincrafters/public-conan/glfw:bincrafters
 urls:
   website: http://www.glfw.org/

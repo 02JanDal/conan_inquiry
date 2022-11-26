@@ -1,0 +1,8 @@
+recipies:
+  - repo: {bintray: 'ess-dmsc/conan/Qt-Color-Widgets:ess-dmsc'}
+urls:
+  github: ess-dmsc/Qt-Color-Widgets
+categories:
+  - topic.library.qt
+  - topic.library.graphics.highlevel
+  - standard.cpp.11

@@ -1,0 +1,4 @@
+recipies:
+  - repo: {bintray: 'uilianries/conan/foobar:uilianries'}
+urls: {}
+exclude: true

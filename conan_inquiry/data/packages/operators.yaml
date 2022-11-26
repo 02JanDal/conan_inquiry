@@ -1,0 +1,4 @@
+recipies:
+  - repo: {bintray: 'bincrafters/public-conan/operators:bincrafters'}
+  - repo: {bintray: 'taocpp/public-conan/operators:taocpp'}
+urls: {}

@@ -1,0 +1,3 @@
+recipies:
+- repo: {bintray: 'jgsogo/conan-packages/libB:demo'}
+urls: {}

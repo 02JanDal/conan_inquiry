@@ -1,0 +1,8 @@
+recipies:
+  - repo: {bintray: 'bincrafters/public-conan/android_ndk_installer:bincrafters'}
+urls:
+  website: https://developer.android.com/ndk/
+  docs: https://developer.android.com/ndk/reference/
+  github: android-ndk/ndk
+  code: https://android.googlesource.com/platform/ndk/
+short_description: The Android NDK is a toolset that lets you implement parts of your app in native code, using languages such as C and C++.

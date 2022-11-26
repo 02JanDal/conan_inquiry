@@ -1,0 +1,3 @@
+recipies:
+- repo: {bintray: 'conan-community/conan/box2d:conan'}
+urls: {}

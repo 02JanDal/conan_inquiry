@@ -1,5 +1,6 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/libtiff:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/libtiff:bincrafters'}
+  - repo: {bintray: 'inexorgame/inexor-conan/libtiff:bincrafters'}
 urls:
   gitlab: libtiff/libtiff
 categories:

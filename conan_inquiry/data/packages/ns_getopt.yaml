@@ -1,0 +1,27 @@
+recipies:
+  - repo: {bintray: 'p-groarke/conan-public/ns_getopt:p-groarke'}
+urls:
+  github: p-groarke/ns_getopt
+categories:
+  - topic.library.terminal.cli_parsing
+  - standard.cpp.17
+  - status.2prealpha
+code_example: |
+  std::vector<opt::argument> args = {
+      {"test", opt::type::no_arg, [](){}, 't', "This is a simple flag."}
+      , {"requiredarg", opt::type::required_arg, [](std::string&& s){}, '\0',
+              "This argument requires a value."}
+      , {"optional", opt::type::optional_arg, [](std::string&& s){}, 'o',
+              "This parameter has an optional argument."}
+      , {"default", opt::type::default_arg, [](std::string&& s){}, 'd',
+              "An example of an argument with default value.", "my_default_val"}
+      , {"multi", opt::type::multi_arg, [](std::vector<std::string>&& v){}, 'm',
+              "This accepts multiple, space seperated, values.\n"
+              "You can also have long descriptions that get\n"
+              "automatically aligned simply by using \\n in\n"
+              "your description."}
+      , {"in_file", opt::type::raw_arg, [](std::string&& s){},
+              "Description for file 1.\nIt can be multiple\nlines too."}
+      , {"out_file", opt::type::raw_arg, [](std::string&& s){},
+              "Description for out_file. Raw arguments are optional."}
+  };

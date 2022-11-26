@@ -1,7 +1,5 @@
 recipies:
   - repo:
-      bintray: dimi309/conan-packages/vorbis:dimi309
-  - repo:
       bintray: bincrafters/public-conan/vorbis:bincrafters
 urls:
   website: https://www.xiph.org/vorbis/

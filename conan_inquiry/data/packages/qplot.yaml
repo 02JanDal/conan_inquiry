@@ -1,0 +1,9 @@
+recipies:
+  - repo: {bintray: 'ess-dmsc/conan/qplot:ess-dmsc'}
+urls:
+  github: ess-dmsc/qplot
+categories:
+  - topic.library.graphics
+  - topic.library.qt
+  - standard.cpp
+  - status.2prealpha

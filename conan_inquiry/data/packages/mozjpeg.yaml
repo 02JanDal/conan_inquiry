@@ -1,0 +1,8 @@
+recipies:
+  - repo: {bintray: 'bincrafters/public-conan/mozjpeg:bincrafters'}
+urls:
+  github: mozilla/mozjpeg
+categories:
+  - topic.library.fileformat.image.jpeg
+  - standard.c
+  - status.5stable

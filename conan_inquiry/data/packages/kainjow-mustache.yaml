@@ -1,6 +1,7 @@
 recipies:
   - repo: {bintray: 'inexorgame/inexor-conan/kainjow-mustache:inexorgame'}
   - repo: {bintray: 'inexorgame/inexor-conan/Kainjow_Mustache:inexorgame'}
+  - repo: {bintray: 'bincrafters/public-conan/kainjow-mustache:bincrafters'}
 urls:
   github: kainjow/Mustache
 categories:

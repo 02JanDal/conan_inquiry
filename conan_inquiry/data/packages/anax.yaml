@@ -1,5 +1,6 @@
 recipies:
-- repo: {bintray: 'onyx/conan/anax:bincrafters'}
+  - repo: {bintray: 'onyx/conan/anax:onyx'}
+  - repo: {bintray: 'bincrafters/public-conan/anax:bincrafters'}
 urls:
   github: miguelmartin75/anax
 categories:

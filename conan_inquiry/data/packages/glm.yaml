@@ -7,6 +7,10 @@ recipies:
       bintray: inexorgame/inexor-conan/glm:g-truc
   - repo:
       bintray: rwth-vr/conan/glm:RWTH-VR
+  - repo:
+      bintray: bincrafters/public-conan/glm:g-truc
+  - repo:
+      bintray: foxostro/PinkTopaz/glm:dlarudgus20
 urls:
   website: https://glm.g-truc.net
   github: g-truc/glm

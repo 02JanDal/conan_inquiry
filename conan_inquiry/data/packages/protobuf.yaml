@@ -13,6 +13,8 @@ recipies:
       bintray: kenfred/conan-corner/Protobuf:kenfred
   - repo:
       bintray: sourcedelica/conan/Protobuf:sourcedelica
+  - repo:
+      bintray: inexorgame/inexor-conan/protobuf:bincrafters
 urls:
   github: google/protobuf
 name: Protobuf

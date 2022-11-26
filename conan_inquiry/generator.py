@@ -80,7 +80,12 @@ class Generator:
                 packages = [os.path.join(self.packages_dir, f)
                             for f in os.listdir(self.packages_dir)
                             if os.path.isfile(os.path.join(self.packages_dir, f))]
-                with ThreadPoolExecutor(len(packages)) as executor:
+
+                if 'PARTITION' in os.environ:
+                    partition = int(os.environ.get('PARTITION'))
+                    packages = packages[partition*50:(partition+1)*50]
+
+                with ThreadPoolExecutor(min(len(packages), 50)) as executor:
                     # Generate for all packages
                     futures = [executor.submit(transform_package, package) for package in packages]
                     for _ in tqdm(as_completed(futures),

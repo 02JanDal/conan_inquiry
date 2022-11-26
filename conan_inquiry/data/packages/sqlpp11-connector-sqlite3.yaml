@@ -1,0 +1,3 @@
+recipies:
+- repo: {bintray: 'bincrafters/public-conan/sqlpp11-connector-sqlite3:bincrafters'}
+urls: {}

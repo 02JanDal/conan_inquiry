@@ -1,0 +1,9 @@
+recipies:
+  - repo: {bintray: 'artalus/conan-public/elfio:Artalus'}
+urls:
+  github: serge1/ELFIO
+  sourceforge: https://sourceforge.net/projects/elfio/
+categories:
+  - topic.library.fileformat.executable
+  - standard.cpp
+  - status.5stable

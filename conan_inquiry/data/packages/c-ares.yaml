@@ -2,6 +2,7 @@ recipies:
   - repo: {bintray: 'conan-community/conan/c-ares:conan'}
   - repo: {bintray: 'inexorgame/inexor-conan/c-ares:inexorgame'}
   - repo: {bintray: 'kenfred/conan-corner/c-ares:lhcorralo'}
+  - repo: {bintray: 'kenfred/conan-corner/c-ares:conan'}
 urls:
   website: https://c-ares.haxx.se/
   docs: https://c-ares.haxx.se/docs.html

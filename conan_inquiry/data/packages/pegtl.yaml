@@ -1,5 +1,7 @@
 recipies:
   - repo: {bintray: 'degoodmanwilson/opensource/PEGTL:DEGoodmanWilson'}
+  - repo: {bintray: 'bincrafters/public-conan/pegtl:bincrafters'}
+  - repo: {bintray: 'taocpp/public-conan/pegtl:taocpp'}
 urls:
   github: taocpp/PEGTL
 categories:

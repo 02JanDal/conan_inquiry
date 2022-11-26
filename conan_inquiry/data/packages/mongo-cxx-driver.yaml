@@ -1,0 +1,30 @@
+recipies:
+  - repo: {bintray: 'bisect/bisect/mongo-cxx-driver:bisect'}
+  - repo: {bintray: 'degoodmanwilson/opensource/mongocxx:DEGoodmanWilson'}
+urls:
+  github: mongodb/mongo-cxx-driver
+  docs: https://mongodb.github.io/mongo-cxx-driver/api/
+categories:
+  - standard.cpp.11
+  - status.5stable
+  - topic.library.network.service
+  - topic.library.network.database.mongodb
+code_example: |
+  mongocxx::instance instance{}; // This should be done only once.
+  mongocxx::uri uri("mongodb://localhost:27017");
+  mongocxx::client client(uri);
+  mongocxx::database db = client["mydb"];
+  mongocxx::collection coll = db["test"];
+
+  mongocxx::cursor cursor = collection.find(
+    document{} << "i" << open_document <<
+      "$gt" << 50 <<
+      "$lte" << 100
+    << close_document << finalize);
+  for(auto doc : cursor) {
+    std::cout << bsoncxx::to_json(doc) << "\n";
+  }
+
+  collection.update_one(document{} << "i" << 10 << finalize,
+                        document{} << "$set" << open_document <<
+                          "i" << 110 << close_document << finalize);

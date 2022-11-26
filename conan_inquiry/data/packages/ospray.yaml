@@ -1,0 +1,8 @@
+recipies:
+  - repo: {bintray: 'acdemiralp/makina/ospray:acdemiralp'}
+urls:
+  github: ospray/ospray
+categories:
+  - topic.library.graphics.3d
+  - standard.cpp.11
+  - status.5stable

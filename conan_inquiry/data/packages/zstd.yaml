@@ -1,5 +1,6 @@
 recipies:
-- repo: {bintray: 'bincrafters/public-conan/zstd:bincrafters'}
+  - repo: {bintray: 'bincrafters/public-conan/zstd:bincrafters'}
+  - repo: {bintray: 'uilianries/conan/zstd:uilianries'}
 urls:
   github: facebook/zstd
 categories:

@@ -1,0 +1,9 @@
+recipies:
+  - repo: {bintray: 'squawkcpp/conan-cpp/chromaprint:conan-cpp'}
+urls:
+  github: acoustid/chromaprint
+categories:
+  - topic.library.multimedia.audio
+  - topic.library.multimedia.processing
+  - standard.cpp.11
+  - status.5stable

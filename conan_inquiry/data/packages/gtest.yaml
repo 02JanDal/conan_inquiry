@@ -20,6 +20,8 @@ recipies:
       bintray: vtpl1/conan-ffmpeg/gtest:lasote
   - repo:
       bintray: odant/conan/googletest:odant
+  - repo:
+      bintray: inexorgame/inexor-conan/gtest:bincrafters
 urls:
   docs: https://github.com/google/googletest/blob/master/googletest/docs/Primer.md
 description: |

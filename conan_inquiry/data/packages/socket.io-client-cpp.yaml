@@ -1,0 +1,3 @@
+recipies:
+- repo: {bintray: 'acdemiralp/makina/socket.io-client-cpp:acdemiralp'}
+urls: {}
